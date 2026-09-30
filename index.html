@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KUTTIADY RANGE MUSABAQA 2026 | Official Grand Portal</title>
 
+  <!-- Typography: Cinzel Decorative, Space Grotesk, Plus Jakarta Sans, Manjari -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@600;700;800&family=Manjari:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@600;700;800&family=Manjari:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -35,7 +36,7 @@
       position: relative;
     }
 
-    /* 44. PRELOADER */
+    /* PRELOADER */
     #preloader {
       position: fixed;
       inset: 0;
@@ -66,7 +67,7 @@
       text-transform: uppercase;
     }
 
-    /* 1. BACKGROUND LAYERS & MOSQUE SILHOUETTE */
+    /* BACKGROUND ATMOSPHERE */
     .bg-star-pattern {
       position: fixed;
       inset: 0;
@@ -103,7 +104,7 @@
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 180'%3E%3Cpath fill='%23D4A84F' d='M0 180V120h40v-20c0-10 10-20 20-20s20 10 20 20v20h40V80h10V40h5l5-20 5 20h5v40h10v40h40V90c0-25 25-45 50-45s50 20 50 45v30h40v-40h10V40h5l5-20 5 20h5v40h10v40h40v-20c0-10 10-20 20-20s20 10 20 20v20h40v60H0z'/%3E%3C/svg%3E");
     }
 
-    /* 9. NAVBAR */
+    /* NAVBAR */
     .navbar {
       position: fixed;
       top: 0;
@@ -176,7 +177,7 @@
       border-radius: 50%;
     }
 
-    /* 1. HERO SECTION */
+    /* HERO SECTION */
     .hero-section {
       min-height: 100vh;
       display: flex;
@@ -240,7 +241,7 @@
       margin-bottom: 30px;
     }
 
-    /* 5 & 6. COUNTDOWN CONTAINER & GOLD SHINE */
+    /* COUNTDOWN */
     .countdown-wrapper {
       max-width: 620px;
       width: 100%;
@@ -306,7 +307,7 @@
       display: block;
     }
 
-    /* 8. HERO BUTTONS */
+    /* HERO BUTTONS */
     .hero-btn-row {
       display: flex;
       gap: 14px;
@@ -352,7 +353,7 @@
       background: rgba(16, 58, 112, 0.4);
     }
 
-    /* 10. ISLAMIC INTRO SECTION */
+    /* SECTION LAYOUT */
     .section-wrap {
       max-width: 900px;
       margin: 0 auto;
@@ -360,29 +361,13 @@
       position: relative;
       z-index: 1;
     }
-    .quote-block {
-      text-align: center;
-      background: radial-gradient(circle at center, rgba(16, 58, 112, 0.2) 0%, transparent 70%);
-      padding: 30px 15px;
-    }
-    .arabic-text {
-      font-family: 'Amiri', serif;
-      font-size: clamp(24px, 5vw, 38px);
-      color: var(--gold-light);
-      margin-bottom: 8px;
-    }
-    .quote-meaning {
-      font-size: 14.5px;
-      color: var(--text-muted);
-      font-style: italic;
-    }
 
-    /* 11 & 12. COMPETITION OVERVIEW CARDS */
+    /* COMPETITION OVERVIEW CARDS */
     .overview-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
       gap: 16px;
-      margin-top: 30px;
+      margin-top: 20px;
     }
     .overview-card {
       background: var(--glass-bg);
@@ -415,12 +400,49 @@
       color: var(--text-muted);
     }
 
-    /* 13-16. TIMELINE & PROGRAMMES */
+    /* 2-DAY SELECTOR */
+    .day-switch-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 20px 0 16px;
+    }
+    .day-selector-btn {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-subtle);
+      border-radius: 14px;
+      padding: 13px;
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.3s;
+    }
+    .day-selector-btn.active {
+      border: 1.5px solid var(--gold-primary);
+      background: rgba(16, 58, 112, 0.5);
+      box-shadow: 0 6px 20px rgba(212, 168, 79, 0.2);
+    }
+    .day-selector-btn .d-tag {
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: var(--gold-light);
+      text-transform: uppercase;
+      display: block;
+    }
+    .day-selector-btn .d-main {
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      margin-top: 3px;
+      display: block;
+    }
+
+    /* SEARCH & STAGE FILTERS */
     .filter-bar {
       display: flex;
       flex-direction: column;
       gap: 14px;
-      margin: 30px 0 24px;
+      margin-bottom: 24px;
     }
     .search-box {
       width: 100%;
@@ -463,7 +485,7 @@
       box-shadow: 0 4px 15px rgba(212, 168, 79, 0.3);
     }
 
-    /* Timeline Styling */
+    /* TIMELINE */
     .timeline-wrap {
       position: relative;
       padding-left: 24px;
@@ -497,7 +519,7 @@
       box-shadow: 0 0 12px #34D399;
     }
 
-    /* Card Details */
+    /* PROGRAM CARDS */
     .prog-card {
       background: var(--glass-bg);
       border: 1px solid var(--glass-border);
@@ -575,7 +597,20 @@
     }
     .view-link:hover { gap: 7px; }
 
-    /* 17. DETAILS POPUP MODAL */
+    /* BREAK CARD */
+    .prog-card.break-item {
+      background: rgba(245, 158, 11, 0.05);
+      border: 1px dashed rgba(245, 158, 11, 0.35);
+      text-align: center;
+      padding: 13px;
+    }
+    .prog-card.break-item .card-title {
+      color: #fcd34d;
+      font-size: 15px;
+      margin-bottom: 0;
+    }
+
+    /* DETAILS POPUP MODAL */
     .modal-overlay {
       position: fixed;
       inset: 0;
@@ -657,7 +692,7 @@
       cursor: pointer;
     }
 
-    /* 42. MOBILE BOTTOM NAVIGATION */
+    /* MOBILE NAVIGATION */
     .mobile-bottom-nav {
       display: none;
       position: fixed;
@@ -684,7 +719,7 @@
     .m-nav-item.active { color: var(--gold-light); }
     .m-nav-icon { font-size: 16px; }
 
-    /* 43. BACK TO TOP BUTTON */
+    /* BACK TO TOP */
     .back-to-top {
       position: fixed;
       bottom: 24px;
@@ -712,7 +747,7 @@
     }
     .back-to-top:hover { transform: translateY(-3px); }
 
-    /* 46. FOOTER */
+    /* FOOTER */
     footer {
       border-top: 1px solid var(--glass-subtle);
       background: #03070f;
@@ -741,6 +776,7 @@
 </head>
 <body>
 
+  <!-- Preloader -->
   <div id="preloader">
     <div class="preloader-ring"></div>
     <div class="preloader-title">KUTTIADY RJM 2026</div>
@@ -750,6 +786,7 @@
   <div class="faint-crescent"></div>
   <div class="mosque-silhouette"></div>
 
+  <!-- Sticky Navbar -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <div class="nav-brand">
@@ -766,6 +803,7 @@
     </div>
   </nav>
 
+  <!-- Hero Section -->
   <section class="hero-section" id="hero">
     <div class="hero-badge">✦ OFFICIAL COMPETITION PORTAL ✦</div>
     
@@ -775,8 +813,9 @@
     </h1>
     
     <div class="hero-malayalam">കുറ്റ്യാടി റേഞ്ച് മുസാബഖ 2026</div>
-    <div class="hero-date">OCTOBER 02, 2026 • FRIDAY</div>
+    <div class="hero-date">OCTOBER 03 & 04, 2026</div>
 
+    <!-- Countdown Wrapper -->
     <div class="countdown-wrapper">
       <div class="countdown-header" id="countdownHeader">THE COUNTDOWN BEGINS</div>
       <div class="countdown-grid">
@@ -787,19 +826,21 @@
       </div>
     </div>
 
+    <!-- Hero Actions -->
     <div class="hero-btn-row">
       <a href="#schedule" class="btn-gold">EXPLORE PROGRAMMES →</a>
       <a href="#overview" class="btn-glass">VIEW CATEGORIES</a>
     </div>
   </section>
 
-  <div class="section-wrap">
-    <div class="quote-block">
-      <div class="arabic-text">وَقُلْ رَبِّ زِدْنِي عِلْمًا</div>
-      <div class="quote-meaning">“My Lord, increase me in knowledge.”</div>
+  <!-- Competition Categories Overview -->
+  <div class="section-wrap" id="overview">
+    <div style="text-align: center; margin-bottom: 10px;">
+      <span style="font-size: 11px; letter-spacing: 2px; color: var(--gold-primary); text-transform: uppercase;">A JOURNEY OF TALENT</span>
+      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 26px; margin-top: 4px;">COMPETITION CATEGORIES</h2>
     </div>
 
-    <div class="overview-grid" id="overview">
+    <div class="overview-grid">
       <div class="overview-card">
         <span class="overview-icon">📖</span>
         <div class="overview-title">QUR'AN</div>
@@ -813,7 +854,7 @@
       <div class="overview-card">
         <span class="overview-icon">🧠</span>
         <div class="overview-title">QUIZ</div>
-        <div class="overview-sub">Islamic Knowledge</div>
+        <div class="overview-sub">Knowledge Competitions</div>
       </div>
       <div class="overview-card">
         <span class="overview-icon">✍️</span>
@@ -823,12 +864,26 @@
     </div>
   </div>
 
+  <!-- Complete 2-Day Programme Schedule Timeline -->
   <section class="section-wrap" id="schedule">
-    <div style="text-align: center; margin-bottom: 20px;">
-      <span style="font-size: 11px; letter-spacing: 2px; color: var(--gold-primary); text-transform: uppercase;">OCTOBER 02, 2026</span>
+    <div style="text-align: center; margin-bottom: 10px;">
+      <span style="font-size: 11px; letter-spacing: 2px; color: var(--gold-primary); text-transform: uppercase;">STAGE SCHEDULES & TIMINGS</span>
       <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 28px; margin-top: 4px;">COMPETITION TIMELINE</h2>
     </div>
 
+    <!-- Day Selector Buttons -->
+    <div class="day-switch-row">
+      <div class="day-selector-btn active" onclick="switchDay('2026-10-03')">
+        <span class="d-tag">Day 01</span>
+        <span class="d-main">Saturday, Oct 03</span>
+      </div>
+      <div class="day-selector-btn" onclick="switchDay('2026-10-04')">
+        <span class="d-tag">Day 02</span>
+        <span class="d-main">Sunday, Oct 04</span>
+      </div>
+    </div>
+
+    <!-- Filter Bar -->
     <div class="filter-bar">
       <input type="text" id="scheduleSearch" class="search-box" placeholder="🔍 Search programme, category or stage..." oninput="renderTimeline()">
       <div class="stage-filters">
@@ -842,16 +897,17 @@
     <div class="timeline-wrap" id="timelineContainer"></div>
   </section>
 
+  <!-- Interactive Details Modal -->
   <div class="modal-overlay" id="detailsModal" onclick="closeModalOnBackdrop(event)">
     <div class="modal-content">
       <div class="modal-header-star">✦</div>
       <span class="stage-pill" id="mStage">STAGE 01</span>
-      <h3 class="modal-title" id="mTitle">Qur'an Recitation</h3>
+      <h3 class="modal-title" id="mTitle">Program Title</h3>
       
       <div class="modal-spec-grid">
         <div class="spec-item">
           <span>Date</span>
-          <strong>02 October 2026</strong>
+          <strong id="mDate">03 October 2026</strong>
         </div>
         <div class="spec-item">
           <span>Timing</span>
@@ -871,14 +927,17 @@
     </div>
   </div>
 
+  <!-- Mobile Bottom Nav -->
   <div class="mobile-bottom-nav">
     <a href="#hero" class="m-nav-item active"><span class="m-nav-icon">⌂</span>Home</a>
     <a href="#schedule" class="m-nav-item"><span class="m-nav-icon">▣</span>Schedule</a>
     <a href="#overview" class="m-nav-item"><span class="m-nav-icon">🏆</span>Categories</a>
   </div>
 
+  <!-- Back to Top -->
   <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
 
+  <!-- Footer -->
   <footer>
     <div class="footer-brand">✦ KUTTIADY RANGE MUSABAQA 2026 ✦</div>
     <p>A celebration of knowledge, talent & excellence.</p>
@@ -886,24 +945,81 @@
   </footer>
 
   <script>
-    // Event Data for October 02, 2026
+    // Complete 2-Day Programs Dataset
     const competitionEvents = [
-      { id: 1, stage: 1, title: 'ഖിറാഅത്ത് (Qur\'an Recitation)', cat: 'Junior', start: '08:30', end: '09:30', venue: 'Main Stage' },
-      { id: 2, stage: 2, title: 'ഹിഫ്ള് (Hifz)', cat: 'Sub Junior', start: '08:30', end: '09:45', venue: 'Stage 02' },
-      { id: 3, stage: 3, title: 'സീനിയർ ക്വിസ് (Islamic Quiz)', cat: 'Senior', start: '09:00', end: '10:00', venue: 'Auditorium' },
-      { id: 4, stage: 1, title: 'മലയാള പ്രസംഗം (Malayalam Speech)', cat: 'Junior', start: '09:30', end: '11:00', venue: 'Main Stage' },
-      { id: 5, stage: 2, title: 'അറബി ഗാനം (Arabic Song)', cat: 'Kids', start: '09:45', end: '11:00', venue: 'Stage 02' },
-      { id: 6, stage: 1, title: 'മാപ്പിളപ്പാട്ട് (Mappilapattu)', cat: 'Super Senior', start: '11:00', end: '12:30', venue: 'Main Stage' },
-      { id: 7, stage: 2, title: 'ഇംഗ്ലീഷ് പ്രസംഗം (English Speech)', cat: 'Senior', start: '11:00', end: '12:00', venue: 'Stage 02' },
-      { id: 8, stage: 3, title: 'ഡിജിറ്റൽ ഡിസൈനിംഗ് (Digital Poster)', cat: 'Muallim', start: '11:00', end: '12:00', venue: 'Media Hall' },
-      { id: 9, stage: 1, title: 'നിസ്കാരം & ഭക്ഷണം (Prayer & Lunch)', cat: 'General', start: '12:30', end: '13:30', venue: 'Dining Hall', isBreak: true },
-      { id: 10, stage: 1, title: 'ജനറൽ ദഫ് മുട്ട് (Duff Muttu)', cat: 'General', start: '14:00', end: '16:00', venue: 'Main Stage' },
-      { id: 11, stage: 2, title: 'ബുർദ ആലാപനം (Burda)', cat: 'Muallim', start: '14:00', end: '15:30', venue: 'Stage 02' }
+      // DAY 1 - STAGE 1 (Oct 03)
+      { id: 101, day: '2026-10-03', stage: 1, title: 'കിഡ്സ് കഥാകഥനം', cat: 'Kids', start: '09:00', end: '09:50', venue: 'Stage 01' },
+      { id: 102, day: '2026-10-03', stage: 1, title: 'സബ്ജൂനിയർ മദ്‌ഹുനബി ഗാനം', cat: 'Sub Junior', start: '09:50', end: '11:00', venue: 'Stage 01' },
+      { id: 103, day: '2026-10-03', stage: 1, title: 'ജൂനിയർ പ്രസംഗം', cat: 'Junior', start: '11:00', end: '12:00', venue: 'Stage 01' },
+      { id: 104, day: '2026-10-03', stage: 1, title: 'സൂപ്പർ സീനിയർ ഇസ്ലാമിക് അറബി ഗാനം', cat: 'Super Senior', start: '12:00', end: '13:00', venue: 'Stage 01' },
+      { id: 105, day: '2026-10-03', stage: 1, title: 'അലുംനി മാപ്പിളപ്പാട്ട്', cat: 'Alumni', start: '13:00', end: '13:15', venue: 'Stage 01' },
+      { id: 106, day: '2026-10-03', stage: 1, title: 'മാഷപ്പ്', cat: 'General', start: '13:15', end: '13:30', venue: 'Stage 01' },
+      { id: 107, day: '2026-10-03', stage: 1, title: 'നിസ്കാരം & ഭക്ഷണം', cat: 'General', start: '13:30', end: '14:00', venue: 'Dining Hall', isBreak: true },
+      { id: 108, day: '2026-10-03', stage: 1, title: 'ജനറൽ മൗലൂദ്', cat: 'General', start: '14:00', end: '15:30', venue: 'Stage 01' },
+      { id: 109, day: '2026-10-03', stage: 1, title: 'ജനറൽ ബുർദ', cat: 'General', start: '15:30', end: '17:30', venue: 'Stage 01' },
+      { id: 110, day: '2026-10-03', stage: 1, title: 'മുഅല്ലിം സമസ്ത കിസ്സപ്പാട്ട്', cat: 'Muallim', start: '17:40', end: '18:00', venue: 'Stage 01' },
+      { id: 111, day: '2026-10-03', stage: 1, title: 'നിസ്കാരം', cat: 'General', start: '18:00', end: '18:45', venue: 'Prayer Hall', isBreak: true },
+      { id: 112, day: '2026-10-03', stage: 1, title: 'ജനറൽ ദഫ് മുട്ട്', cat: 'General', start: '18:45', end: '19:10', venue: 'Stage 01' },
+      { id: 113, day: '2026-10-03', stage: 1, title: 'മുഅല്ലിം ബുർദ', cat: 'Muallim', start: '19:10', end: '19:35', venue: 'Stage 01' },
+
+      // DAY 1 - STAGE 2 (Oct 03)
+      { id: 120, day: '2026-10-03', stage: 2, title: 'സബ്ജൂനിയർ ഖിറാഅത്ത്', cat: 'Sub Junior', start: '09:00', end: '09:50', venue: 'Stage 02' },
+      { id: 121, day: '2026-10-03', stage: 2, title: 'കിഡ്സ് ഫാത്തിഹ പാരായണം', cat: 'Kids', start: '09:50', end: '10:40', venue: 'Stage 02' },
+      { id: 122, day: '2026-10-03', stage: 2, title: 'സബ്ജൂനിയർ ഹിഫ്ള്', cat: 'Sub Junior', start: '10:40', end: '11:40', venue: 'Stage 02' },
+      { id: 123, day: '2026-10-03', stage: 2, title: 'സബ്ജൂനിയർ ഓർമ പരിശോധന', cat: 'Sub Junior', start: '11:40', end: '12:30', venue: 'Stage 02' },
+      { id: 124, day: '2026-10-03', stage: 2, title: 'മുഅല്ലിം മുശാഅറ & മുനാഖശ', cat: 'Muallim', start: '12:30', end: '13:30', venue: 'Stage 02' },
+      { id: 125, day: '2026-10-03', stage: 2, title: 'നിസ്കാരം & ഭക്ഷണം', cat: 'General', start: '13:30', end: '14:30', venue: 'Dining Hall', isBreak: true },
+      { id: 126, day: '2026-10-03', stage: 2, title: 'മുഅല്ലിം ഹിസ്ബ്', cat: 'Muallim', start: '14:30', end: '15:00', venue: 'Stage 02' },
+      { id: 127, day: '2026-10-03', stage: 2, title: 'മുഅല്ലിം ഹിഫ്ള്', cat: 'Muallim', start: '15:00', end: '15:30', venue: 'Stage 02' },
+      { id: 128, day: '2026-10-03', stage: 2, title: 'മുഅല്ലിം ബാങ്ക്', cat: 'Muallim', start: '15:30', end: '16:00', venue: 'Stage 02' },
+      { id: 129, day: '2026-10-03', stage: 2, title: 'മുഅല്ലിം അറബിക് പ്രസംഗം', cat: 'Muallim', start: '16:00', end: '16:30', venue: 'Stage 02' },
+      { id: 130, day: '2026-10-03', stage: 2, title: 'മുഅല്ലിം നിമിഷ പ്രസംഗം', cat: 'Muallim', start: '16:30', end: '16:50', venue: 'Stage 02' },
+      { id: 131, day: '2026-10-03', stage: 2, title: 'അലുംനി മാസ്റ്റർ ഹണ്ട്', cat: 'Alumni', start: '17:00', end: '17:30', venue: 'Stage 02' },
+      { id: 132, day: '2026-10-03', stage: 2, title: 'അലുംനി നിമിഷ പ്രസംഗം', cat: 'Alumni', start: '17:30', end: '18:00', venue: 'Stage 02' },
+
+      // DAY 1 - STAGE 3 (Oct 03)
+      { id: 140, day: '2026-10-03', stage: 3, title: 'സീനിയർ ക്വിസ്', cat: 'Senior', start: '08:00', end: '09:00', venue: 'Stage 03' },
+      { id: 141, day: '2026-10-03', stage: 3, title: 'സൂപ്പർ സീനിയർ പദപ്പയറ്റ്', cat: 'Super Senior', start: '09:00', end: '10:00', venue: 'Stage 03' },
+      { id: 142, day: '2026-10-03', stage: 3, title: 'ജൂനിയർ കുരുന്നുകൾ ടെസ്റ്റ്', cat: 'Junior', start: '10:00', end: '10:45', venue: 'Stage 03' },
+      { id: 143, day: '2026-10-03', stage: 3, title: 'മുഅല്ലിം പ്രബന്ധം', cat: 'Muallim', start: '11:00', end: '12:00', venue: 'Stage 03' },
+      { id: 144, day: '2026-10-03', stage: 3, title: 'മുഅല്ലിം & അലുംനി ഡിജിറ്റൽ പോസ്റ്റർ ഡിസൈനിംഗ്', cat: 'Muallim', start: '11:00', end: '12:00', venue: 'Stage 03' },
+
+      // DAY 2 - STAGE 1 (Oct 04)
+      { id: 201, day: '2026-10-04', stage: 1, title: 'സൂപ്പർ സീനിയർ മാപ്പിളപ്പാട്ട്', cat: 'Super Senior', start: '08:00', end: '09:00', venue: 'Stage 01' },
+      { id: 202, day: '2026-10-04', stage: 1, title: 'സീനിയർ ഇസ്ലാമിക ഗാനം (അറബി)', cat: 'Senior', start: '09:00', end: '10:00', venue: 'Stage 01' },
+      { id: 203, day: '2026-10-04', stage: 1, title: 'ജൂനിയർ ഇസ്ലാമിക് ഗാനം', cat: 'Junior', start: '10:00', end: '11:00', venue: 'Stage 01' },
+      { id: 204, day: '2026-10-04', stage: 1, title: 'സീനിയർ മലയാള പ്രസംഗം', cat: 'Senior', start: '11:00', end: '12:00', venue: 'Stage 01' },
+      { id: 205, day: '2026-10-04', stage: 1, title: 'ജൂനിയർ ഇസ്ലാമിക സമൂഹഗാനം', cat: 'Junior', start: '12:00', end: '13:15', venue: 'Stage 01' },
+      { id: 206, day: '2026-10-04', stage: 1, title: 'നിസ്കാരം & ഭക്ഷണം', cat: 'General', start: '13:15', end: '14:00', venue: 'Dining Hall', isBreak: true },
+      { id: 207, day: '2026-10-04', stage: 1, title: 'സീനിയർ മാപ്പിളപ്പാട്ട്', cat: 'Senior', start: '14:00', end: '15:00', venue: 'Stage 01' },
+      { id: 208, day: '2026-10-04', stage: 1, title: 'ജനറൽ അറബി സംഘഗാനം', cat: 'General', start: '15:00', end: '16:00', venue: 'Stage 01' },
+
+      // DAY 2 - STAGE 2 (Oct 04)
+      { id: 220, day: '2026-10-04', stage: 2, title: 'സൂപ്പർ സീനിയർ പ്രസംഗം', cat: 'Super Senior', start: '09:00', end: '09:30', venue: 'Stage 02' },
+      { id: 221, day: '2026-10-04', stage: 2, title: 'സീനിയർ ഇംഗ്ലീഷ് പ്രസംഗം', cat: 'Senior', start: '09:30', end: '10:30', venue: 'Stage 02' },
+      { id: 222, day: '2026-10-04', stage: 2, title: 'ജൂനിയർ ഉർദു ഗാനം', cat: 'Junior', start: '10:30', end: '11:30', venue: 'Stage 02' },
+      { id: 223, day: '2026-10-04', stage: 2, title: 'സീനിയർ ഉർദു പ്രസംഗം', cat: 'Senior', start: '11:30', end: '12:15', venue: 'Stage 02' },
+      { id: 224, day: '2026-10-04', stage: 2, title: 'സൂപ്പർ സീനിയർ പാടിപ്പറയൽ', cat: 'Super Senior', start: '12:15', end: '13:15', venue: 'Stage 02' },
+      { id: 225, day: '2026-10-04', stage: 2, title: 'നിസ്കാരം & ഭക്ഷണം', cat: 'General', start: '13:15', end: '14:00', venue: 'Dining Hall', isBreak: true },
+      { id: 226, day: '2026-10-04', stage: 2, title: 'ജൂനിയർ അറബി ഗാനം', cat: 'Junior', start: '14:00', end: '15:00', venue: 'Stage 02' },
+      { id: 227, day: '2026-10-04', stage: 2, title: 'സൂപ്പർ സീനിയർ അറബി പ്രസംഗം', cat: 'Super Senior', start: '15:00', end: '16:00', venue: 'Stage 02' },
+
+      // DAY 2 - STAGE 3 (Oct 04)
+      { id: 240, day: '2026-10-04', stage: 3, title: 'ജൂനിയർ ഹിഫ്ള്', cat: 'Junior', start: '08:00', end: '09:00', venue: 'Stage 03' },
+      { id: 241, day: '2026-10-04', stage: 3, title: 'ജൂനിയർ ഖിറാഅത്ത്', cat: 'Junior', start: '09:00', end: '09:50', venue: 'Stage 03' },
+      { id: 242, day: '2026-10-04', stage: 3, title: 'സീനിയർ ഖിറാഅത്ത്', cat: 'Senior', start: '09:50', end: '10:45', venue: 'Stage 03' },
+      { id: 243, day: '2026-10-04', stage: 3, title: 'സൂപ്പർ സീനിയർ ഖിറാഅത്ത്', cat: 'Super Senior', start: '10:45', end: '11:45', venue: 'Stage 03' },
+      { id: 244, day: '2026-10-04', stage: 3, title: 'സീനിയർ ഹിഫ്ള്', cat: 'Senior', start: '11:45', end: '12:30', venue: 'Stage 03' },
+      { id: 245, day: '2026-10-04', stage: 3, title: 'സീനിയർ ബാങ്ക്', cat: 'Senior', start: '12:30', end: '13:15', venue: 'Stage 03' },
+      { id: 246, day: '2026-10-04', stage: 3, title: 'നിസ്കാരം & ഭക്ഷണം', cat: 'General', start: '13:15', end: '14:00', venue: 'Dining Hall', isBreak: true },
+      { id: 247, day: '2026-10-04', stage: 3, title: 'ജൂനിയർ ബാങ്ക്', cat: 'Junior', start: '14:00', end: '14:45', venue: 'Stage 03' },
+      { id: 248, day: '2026-10-04', stage: 3, title: 'സൂപ്പർ സീനിയർ ഹിഫ്ള്', cat: 'Super Senior', start: '14:45', end: '15:30', venue: 'Stage 03' }
     ];
 
+    let selectedDay = '2026-10-03';
     let currentStage = 'all';
 
-    // 44. Preloader Dismiss
+    // Preloader Dismiss
     window.addEventListener('load', () => {
       setTimeout(() => {
         const loader = document.getElementById('preloader');
@@ -912,7 +1028,7 @@
       }, 700);
     });
 
-    // 9. Navbar Scroll Effect & Back-to-top
+    // Navbar Scroll & Back to Top
     window.addEventListener('scroll', () => {
       const nav = document.getElementById('navbar');
       const btt = document.getElementById('backToTop');
@@ -929,6 +1045,14 @@
       const [h, m] = str.split(':').map(Number);
       const ampm = h >= 12 ? 'PM' : 'AM';
       return `${h % 12 || 12}:${m.toString().padStart(2, '0')} ${ampm}`;
+    }
+
+    function switchDay(day) {
+      selectedDay = day;
+      const btns = document.querySelectorAll('.day-selector-btn');
+      btns[0].classList.toggle('active', day === '2026-10-03');
+      btns[1].classList.toggle('active', day === '2026-10-04');
+      renderTimeline();
     }
 
     function setStage(stage) {
@@ -948,25 +1072,39 @@
       const now = new Date();
 
       const filtered = competitionEvents.filter(ev => {
+        const matchDay = ev.day === selectedDay;
         const matchStage = currentStage === 'all' || ev.stage === currentStage;
         const matchQuery = ev.title.toLowerCase().includes(query) ||
-                             ev.cat.toLowerCase().includes(query) ||
-                             `stage ${ev.stage}`.includes(query);
-        return matchStage && matchQuery;
+                           ev.cat.toLowerCase().includes(query) ||
+                           `stage ${ev.stage}`.includes(query);
+        return matchDay && matchStage && matchQuery;
       });
 
       if (!filtered.length) {
-        container.innerHTML = `<div style="padding: 40px; color: var(--text-muted); text-align: center;">No competitions found.</div>`;
+        container.innerHTML = `<div style="padding: 40px; color: var(--text-muted); text-align: center;">No programmes found matching search.</div>`;
         return;
       }
 
       container.innerHTML = filtered.map(ev => {
         const [sH, sM] = ev.start.split(':').map(Number);
         const [eH, eM] = ev.end.split(':').map(Number);
-        const startObj = new Date(2026, 9, 2, sH, sM, 0); // Oct 2, 2026
-        const endObj = new Date(2026, 9, 2, eH, eM, 0);
+        const [y, m, d] = ev.day.split('-').map(Number);
 
+        const startObj = new Date(y, m - 1, d, sH, sM, 0);
+        const endObj = new Date(y, m - 1, d, eH, eM, 0);
         const isLive = now >= startObj && now <= endObj;
+
+        if (ev.isBreak) {
+          return `
+            <div class="timeline-node">
+              <div class="node-dot"></div>
+              <div class="prog-card break-item">
+                <div class="card-time" style="margin-bottom: 4px;">${formatTime12(ev.start)} – ${formatTime12(ev.end)}</div>
+                <div class="card-title">${ev.title}</div>
+              </div>
+            </div>
+          `;
+        }
 
         return `
           <div class="timeline-node ${isLive ? 'live' : ''}">
@@ -990,10 +1128,11 @@
     // Modal Control
     function openModal(id) {
       const item = competitionEvents.find(e => e.id === id);
-      if (!item) return;
+      if (!item || item.isBreak) return;
 
       document.getElementById('mStage').innerText = `STAGE 0${item.stage}`;
       document.getElementById('mTitle').innerText = item.title;
+      document.getElementById('mDate').innerText = item.day === '2026-10-03' ? '03 October 2026 (Day 01)' : '04 October 2026 (Day 02)';
       document.getElementById('mTime').innerText = `${formatTime12(item.start)} – ${formatTime12(item.end)}`;
       document.getElementById('mCat').innerText = item.cat;
       document.getElementById('mVenue').innerText = item.venue;
@@ -1009,9 +1148,9 @@
       if (e.target.id === 'detailsModal') closeModal();
     }
 
-    // 5. Countdown to October 2, 2026 08:00 AM
+    // Countdown to Day 1: October 03, 2026 08:00 AM
     function updateCountdown() {
-      const target = new Date(2026, 9, 2, 8, 0, 0).getTime();
+      const target = new Date(2026, 9, 3, 8, 0, 0).getTime();
       const now = new Date().getTime();
       const diff = target - now;
 
@@ -1036,6 +1175,7 @@
     }
 
     setInterval(updateCountdown, 1000);
+    setInterval(renderTimeline, 30000);
     updateCountdown();
     renderTimeline();
   </script>
