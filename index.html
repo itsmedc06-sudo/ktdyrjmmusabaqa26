@@ -3,411 +3,492 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KUTTIADI RJM MUSABAQA 2026 | Official Schedule</title>
+  <title>Kuttiadi RJM Musabaqa 2026 | Schedule Portal</title>
 
-  <!-- Premium Typography: Cinzel Decorative, Amiri, Outfit, and Manjari for Bold Malayalam -->
+  <!-- Google Modern Ultra-Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@1,700&family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@600;700;800;900&family=Manjari:wght@700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&family=Manjari:wght@700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg-dark: #020c08;
-      --bg-card: rgba(6, 26, 18, 0.75);
-      --card-border: rgba(212, 175, 55, 0.22);
-      --gold-primary: #d4af37;
-      --gold-light: #fef08a;
-      --gold-shimmer: linear-gradient(135deg, #fff3a8 0%, #d4af37 40%, #aa771c 70%, #ffd700 100%);
-      --emerald-glow: #10b981;
-      --text-muted: #94a3b8;
+      --bg-base: #040907;
+      --surface-glass: rgba(13, 26, 20, 0.65);
+      --surface-hover: rgba(22, 45, 35, 0.85);
+      --border-glass: rgba(212, 175, 55, 0.22);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --gold-primary: #f59e0b;
+      --gold-glow: #fbbf24;
+      --emerald-accent: #10b981;
+      --text-white: #ffffff;
+      --text-dim: #94a3b8;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      background-color: var(--bg-dark);
-      background-image: 
-        radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.18) 0%, transparent 60%),
-        radial-gradient(circle at 10% 90%, rgba(212, 175, 55, 0.12) 0%, transparent 50%),
-        url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 0l10 30H80L48 48l12 32-30-20-30 20 12-32L0 30h30z' fill='%23d4af37' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
-      background-attachment: fixed;
-      font-family: 'Outfit', sans-serif;
-      color: #f8fafc;
+      background-color: var(--bg-base);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--text-white);
       min-height: 100vh;
       overflow-x: hidden;
-      padding-bottom: 70px;
       position: relative;
+      padding-bottom: 90px;
     }
 
-    /* Ambient Floating Particles/Stars */
-    .stars-layer {
+    /* Ambient Dynamic Glowing Meshes (World Class SaaS / Web3 Feel) */
+    .ambient-glow-1 {
       position: fixed;
-      inset: 0;
+      top: -150px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 450px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.2) 0%, rgba(245, 158, 11, 0.1) 45%, transparent 70%);
+      filter: blur(90px);
       pointer-events: none;
       z-index: 0;
-      background: radial-gradient(1.5px 1.5px at 20px 30px, #fef08a, rgba(0,0,0,0)),
-                  radial-gradient(1.5px 1.5px at 40px 70px, #ffffff, rgba(0,0,0,0)),
-                  radial-gradient(1.5px 1.5px at 150px 160px, #d4af37, rgba(0,0,0,0)),
-                  radial-gradient(2px 2px at 250px 100px, #10b981, rgba(0,0,0,0)),
-                  radial-gradient(1px 1px at 320px 220px, #fef08a, rgba(0,0,0,0));
-      background-repeat: repeat;
-      background-size: 350px 350px;
-      opacity: 0.45;
-      animation: floatStars 25s linear infinite;
-    }
-    @keyframes floatStars {
-      from { transform: translateY(0); }
-      to { transform: translateY(-350px); }
     }
 
-    .container {
-      max-width: 680px;
+    .ambient-glow-2 {
+      position: fixed;
+      bottom: -100px;
+      right: -100px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.12) 0%, transparent 60%);
+      filter: blur(100px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Subtle Architectural Islamic Geometry Canvas */
+    .geometric-backdrop {
+      position: fixed;
+      inset: 0;
+      background-image: 
+        radial-gradient(1px 1px at 20px 30px, rgba(255,255,255,0.15), rgba(0,0,0,0)),
+        radial-gradient(1.5px 1.5px at 120px 140px, rgba(245, 158, 11, 0.35), rgba(0,0,0,0)),
+        url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0 L65 35 L100 50 L65 65 L50 100 L35 65 L0 50 L35 35 Z' fill='none' stroke='%23f59e0b' stroke-width='0.4' stroke-opacity='0.08'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.6;
+    }
+
+    /* Modern Glass Navigation Bar */
+    .top-navbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: rgba(4, 9, 7, 0.75);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 14px 20px;
+    }
+    .nav-inner {
+      max-width: 780px;
       margin: 0 auto;
-      padding: 0 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+      background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .brand-dot {
+      width: 9px;
+      height: 9px;
+      background: var(--gold-primary);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--gold-primary);
+    }
+    .status-pill {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #34d399;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 5px 12px;
+      border-radius: 99px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .status-ping {
+      width: 6px;
+      height: 6px;
+      background: #34d399;
+      border-radius: 50%;
+      animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+    @keyframes ping {
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(2.4); opacity: 0; }
+    }
+
+    /* Container */
+    .app-container {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 30px 18px 0;
       position: relative;
       z-index: 1;
     }
 
-    /* Header Styling */
-    .header-section {
+    /* Hero Section */
+    .hero-panel {
       text-align: center;
-      padding: 45px 16px 20px;
-      position: relative;
+      margin-bottom: 24px;
     }
-
-    .arabic-bismillah {
-      font-family: 'Amiri', serif;
-      font-size: 20px;
-      color: var(--gold-light);
-      letter-spacing: 2px;
-      margin-bottom: 8px;
-      opacity: 0.9;
-    }
-
-    .badge-sub {
+    .hero-badge {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: rgba(212, 175, 55, 0.1);
-      border: 1px solid rgba(212, 175, 55, 0.35);
-      color: var(--gold-light);
-      font-size: 10.5px;
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      color: #fde68a;
+      font-size: 11px;
       font-weight: 700;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      padding: 5px 14px;
-      border-radius: 99px;
-      margin-bottom: 12px;
-      backdrop-filter: blur(8px);
-      box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
-    }
-
-    .main-title {
-      font-family: 'Cinzel Decorative', cursive, serif;
-      font-size: clamp(23px, 6vw, 36px);
-      font-weight: 900;
       letter-spacing: 1.5px;
-      background: var(--gold-shimmer);
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 99px;
+      margin-bottom: 14px;
+    }
+    .hero-heading {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(26px, 6vw, 40px);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .hero-heading span {
+      background: linear-gradient(135deg, #fef08a 0%, #f59e0b 50%, #d97706 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 6px;
-      text-shadow: 0 0 35px rgba(212, 175, 55, 0.25);
     }
-
-    .sub-title {
+    .hero-sub {
       font-family: 'Manjari', sans-serif;
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 700;
-      color: #cbd5e1;
-      letter-spacing: 0.5px;
+      color: #94a3b8;
     }
 
-    /* Luxury Countdown Timer */
-    .timer-wrap {
-      background: linear-gradient(135deg, rgba(8, 38, 26, 0.8) 0%, rgba(3, 18, 12, 0.9) 100%);
-      border: 1px solid rgba(212, 175, 55, 0.3);
-      border-radius: 18px;
-      padding: 16px 14px;
-      margin: 18px 0 24px;
-      backdrop-filter: blur(14px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.4), inset 0 0 20px rgba(212, 175, 55, 0.05);
-      text-align: center;
+    /* Futuristic Live Countdown Component */
+    .countdown-card {
+      background: var(--surface-glass);
+      border: 1px solid var(--border-glass);
+      border-radius: 20px;
+      padding: 16px;
+      margin-bottom: 24px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
     }
-    .timer-title {
-      font-family: 'Cinzel', serif;
-      font-size: 11px;
-      letter-spacing: 2px;
-      color: var(--gold-light);
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-    .timer-grid {
+    .cd-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 8px;
+      gap: 10px;
     }
-    .timer-box {
+    .cd-cell {
       background: rgba(0, 0, 0, 0.45);
-      border: 1px solid rgba(212, 175, 55, 0.15);
-      border-radius: 10px;
-      padding: 8px 4px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 14px;
+      padding: 10px 4px;
+      text-align: center;
+      transition: all 0.3s;
     }
-    .timer-num {
-      font-family: 'Cinzel', serif;
-      font-size: clamp(20px, 5vw, 28px);
-      font-weight: 800;
+    .cd-cell:hover {
+      border-color: rgba(245, 158, 11, 0.4);
+      transform: translateY(-2px);
+    }
+    .cd-val {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(24px, 5.5vw, 32px);
+      font-weight: 700;
       color: #fff;
       display: block;
       line-height: 1;
     }
-    .timer-label {
-      font-size: 9.5px;
+    .cd-lbl {
+      font-size: 10px;
+      font-weight: 700;
       letter-spacing: 1px;
-      color: var(--text-muted);
+      color: #64748b;
       text-transform: uppercase;
-      margin-top: 5px;
+      margin-top: 6px;
       display: block;
-      font-weight: 600;
     }
 
-    /* Day Switch */
-    .day-switch {
+    /* Day Segment Selector */
+    .day-selector-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 12px;
       margin-bottom: 16px;
     }
-    .day-tab {
-      background: rgba(8, 30, 21, 0.65);
-      border: 1px solid var(--card-border);
-      border-radius: 14px;
-      padding: 12px;
+    .day-card-btn {
+      background: var(--surface-glass);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 14px;
       cursor: pointer;
-      text-align: center;
-      transition: all 0.3s ease;
-      backdrop-filter: blur(10px);
+      text-align: left;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
     }
-    .day-tab.active {
-      background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(6, 78, 59, 0.75) 100%);
+    .day-card-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(16, 185, 129, 0.1) 100%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .day-card-btn:hover {
+      border-color: rgba(245, 158, 11, 0.4);
+    }
+    .day-card-btn.active {
       border: 1.5px solid var(--gold-primary);
-      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.2);
+      background: rgba(24, 48, 38, 0.7);
+      box-shadow: 0 8px 30px rgba(245, 158, 11, 0.15);
     }
-    .day-tab .tab-title {
-      font-family: 'Cinzel', serif;
-      font-size: 14.5px;
+    .day-card-btn.active::before {
+      opacity: 1;
+    }
+    .d-tag {
+      position: relative;
+      z-index: 1;
+      font-size: 11px;
       font-weight: 800;
-      letter-spacing: 1.2px;
+      letter-spacing: 1px;
+      color: var(--gold-glow);
+      text-transform: uppercase;
       display: block;
-      color: var(--gold-light);
     }
-    .day-tab .tab-date {
-      font-size: 11.5px;
-      color: #cbd5e1;
+    .d-main {
+      position: relative;
+      z-index: 1;
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
       margin-top: 3px;
       display: block;
     }
 
-    /* Search Input */
-    .search-wrapper {
+    /* Live Search Toolbar */
+    .search-bar-wrap {
       position: relative;
       margin-bottom: 14px;
     }
-    .search-input {
+    .search-field {
       width: 100%;
-      background: rgba(8, 30, 21, 0.75);
-      border: 1px solid rgba(212, 175, 55, 0.25);
-      border-radius: 12px;
-      padding: 13px 18px 13px 44px;
+      background: var(--surface-glass);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 14px 18px 14px 44px;
       color: #fff;
-      font-size: 13.5px;
+      font-size: 14px;
+      font-family: inherit;
       outline: none;
-      transition: all 0.3s ease;
-      font-family: 'Outfit', sans-serif;
+      backdrop-filter: blur(12px);
+      transition: all 0.3s;
     }
-    .search-input:focus {
+    .search-field:focus {
       border-color: var(--gold-primary);
-      box-shadow: 0 0 18px rgba(212, 175, 55, 0.22);
+      box-shadow: 0 0 25px rgba(245, 158, 11, 0.18);
+      background: rgba(18, 38, 30, 0.9);
     }
-    .search-icon {
+    .search-field::placeholder { color: #64748b; }
+    .search-icon-pos {
       position: absolute;
-      left: 15px;
+      left: 16px;
       top: 50%;
       transform: translateY(-50%);
       font-size: 15px;
-      opacity: 0.6;
+      opacity: 0.5;
     }
 
-    /* Stage Buttons */
-    .stage-filters {
+    /* Stage Pill Filters */
+    .filter-pills {
       display: flex;
       gap: 8px;
       overflow-x: auto;
-      padding-bottom: 14px;
+      padding-bottom: 16px;
       scrollbar-width: none;
     }
-    .stage-filters::-webkit-scrollbar { display: none; }
-    
-    .stage-btn {
+    .filter-pills::-webkit-scrollbar { display: none; }
+    .pill-btn {
       flex-shrink: 0;
-      background: rgba(10, 36, 26, 0.65);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(18, 38, 30, 0.6);
+      border: 1px solid var(--border-subtle);
       color: #94a3b8;
-      padding: 8px 16px;
+      padding: 8px 18px;
       border-radius: 99px;
       font-size: 12px;
       font-weight: 700;
-      letter-spacing: 0.8px;
+      letter-spacing: 0.5px;
       cursor: pointer;
-      transition: all 0.25s ease;
+      transition: all 0.25s;
     }
-    .stage-btn.active {
-      background: var(--gold-shimmer);
-      color: #04130d;
-      font-weight: 800;
+    .pill-btn:hover { color: #fff; border-color: rgba(255,255,255,0.2); }
+    .pill-btn.active {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #040907;
       border-color: transparent;
-      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+      box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
+      font-weight: 800;
     }
 
-    /* Event Cards */
-    .events-stack {
+    /* Timeline & Modern Cards */
+    .timeline-container {
       display: flex;
       flex-direction: column;
       gap: 12px;
     }
 
-    .event-card {
-      background: var(--bg-card);
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
-      padding: 16px 18px;
+    .web-card {
+      background: var(--surface-glass);
+      border: 1px solid var(--border-glass);
+      border-radius: 18px;
+      padding: 18px 20px;
       backdrop-filter: blur(14px);
-      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
       cursor: pointer;
       position: relative;
-      transition: all 0.28s ease;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    .event-card:hover {
+    .web-card:hover {
+      background: var(--surface-hover);
+      border-color: rgba(245, 158, 11, 0.5);
       transform: translateY(-2px);
-      border-color: rgba(212, 175, 55, 0.5);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
     }
-    .event-card.live {
-      border: 1.5px solid var(--emerald-glow);
-      background: linear-gradient(135deg, rgba(6, 78, 59, 0.85) 0%, rgba(8, 28, 20, 0.95) 100%);
-      box-shadow: 0 0 25px rgba(16, 185, 129, 0.3);
+    .web-card.is-live {
+      border: 1.5px solid var(--emerald-accent);
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(6, 26, 18, 0.95) 100%);
+      box-shadow: 0 0 30px rgba(16, 185, 129, 0.25);
     }
 
-    .card-top {
+    .card-head {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
-    .stage-tag {
-      font-family: 'Cinzel', serif;
-      font-size: 10.5px;
-      font-weight: 800;
+    .stage-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
       letter-spacing: 1px;
-      padding: 3px 8px;
-      border-radius: 6px;
-      background: rgba(212, 175, 55, 0.12);
-      border: 1px solid rgba(212, 175, 55, 0.3);
-      color: var(--gold-light);
+      color: var(--gold-glow);
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      padding: 4px 10px;
+      border-radius: 8px;
     }
-    .time-range {
+    .time-slot {
       font-size: 12.5px;
       font-weight: 600;
       color: #cbd5e1;
     }
 
-    /* Program Title in Malayalam */
-    .event-title {
+    .card-title {
       font-family: 'Manjari', sans-serif;
-      font-size: 18.5px;
+      font-size: 19px;
       font-weight: 700;
       color: #ffffff;
       line-height: 1.45;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
-    .item-icon {
-      font-size: 15px;
+    .prog-icon {
+      font-size: 16px;
       opacity: 0.9;
     }
 
-    .card-bottom {
+    .card-foot {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-top: 6px;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 10px;
+      border-top: 1px solid var(--border-subtle);
     }
 
-    /* Category Badges */
-    .cat-pill {
+    /* Premium Category Tags */
+    .cat-badge {
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 0.6px;
-      padding: 3px 10px;
-      border-radius: 6px;
+      padding: 4px 12px;
+      border-radius: 7px;
       text-transform: uppercase;
     }
-    .cat-kids { background: rgba(244, 63, 94, 0.15); border: 1px solid #f43f5e; color: #fda4af; }
-    .cat-subjunior { background: rgba(249, 115, 22, 0.15); border: 1px solid #f97316; color: #fdba74; }
-    .cat-junior { background: rgba(59, 130, 246, 0.15); border: 1px solid #3b82f6; color: #93c5fd; }
-    .cat-senior { background: rgba(168, 85, 247, 0.15); border: 1px solid #a855f7; color: #d8b4fe; }
-    .cat-supersenior { background: rgba(236, 72, 153, 0.15); border: 1px solid #ec4899; color: #f472b6; }
-    .cat-muallim { background: rgba(16, 185, 129, 0.15); border: 1px solid #10b981; color: #6ee7b7; }
-    .cat-alumni { background: rgba(20, 184, 166, 0.15); border: 1px solid #14b8a6; color: #5eead4; }
-    .cat-general { background: rgba(212, 175, 55, 0.15); border: 1px solid #d4af37; color: #fde68a; }
+    .cat-kids { background: rgba(244, 63, 94, 0.14); border: 1px solid #f43f5e; color: #fda4af; }
+    .cat-subjunior { background: rgba(249, 115, 22, 0.14); border: 1px solid #f97316; color: #fdba74; }
+    .cat-junior { background: rgba(59, 130, 246, 0.14); border: 1px solid #3b82f6; color: #93c5fd; }
+    .cat-senior { background: rgba(168, 85, 247, 0.14); border: 1px solid #a855f7; color: #d8b4fe; }
+    .cat-supersenior { background: rgba(236, 72, 153, 0.14); border: 1px solid #ec4899; color: #f472b6; }
+    .cat-muallim { background: rgba(16, 185, 129, 0.14); border: 1px solid #10b981; color: #6ee7b7; }
+    .cat-alumni { background: rgba(20, 184, 166, 0.14); border: 1px solid #14b8a6; color: #5eead4; }
+    .cat-general { background: rgba(245, 158, 11, 0.14); border: 1px solid #f59e0b; color: #fde68a; }
 
-    .live-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      font-size: 10px;
+    .live-chip {
+      font-size: 10.5px;
       font-weight: 800;
-      color: #a7f3d0;
-      background: rgba(16, 185, 129, 0.2);
-      border: 1px solid #10b981;
-      padding: 3px 8px;
-      border-radius: 99px;
       letter-spacing: 1px;
+      color: #34d399;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid #10b981;
+      padding: 3px 10px;
+      border-radius: 99px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
-    .live-dot {
-      width: 6px; height: 6px;
-      background: #10b981;
+    .live-dot-pulse {
+      width: 6px;
+      height: 6px;
+      background: #34d399;
       border-radius: 50%;
-      box-shadow: 0 0 8px #10b981;
-      animation: pulseDot 1s infinite alternate;
-    }
-    @keyframes pulseDot {
-      from { transform: scale(0.8); opacity: 0.6; }
-      to { transform: scale(1.3); opacity: 1; }
+      box-shadow: 0 0 10px #34d399;
     }
 
-    /* Break Card */
-    .event-card.break-card {
-      background: rgba(217, 119, 6, 0.08);
+    /* Interval Break Card */
+    .web-card.break-item {
+      background: rgba(245, 158, 11, 0.05);
       border: 1px dashed rgba(245, 158, 11, 0.35);
       text-align: center;
-      padding: 12px;
+      padding: 14px;
     }
-    .event-card.break-card .event-title {
+    .web-card.break-item .card-title {
       justify-content: center;
       color: #fcd34d;
       font-size: 15px;
       margin-bottom: 0;
     }
 
-    /* Mihrab Arched Modal Popup */
-    .modal-overlay {
+    /* Modern Web App Modal Popup */
+    .app-modal-backdrop {
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.78);
-      backdrop-filter: blur(8px);
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(12px);
       z-index: 100;
       display: flex;
       align-items: center;
@@ -415,169 +496,179 @@
       padding: 20px;
       opacity: 0;
       pointer-events: none;
-      transition: opacity 0.3s ease;
+      transition: opacity 0.3s;
     }
-    .modal-overlay.active {
+    .app-modal-backdrop.is-open {
       opacity: 1;
       pointer-events: auto;
     }
-    .mihrab-modal {
-      background: linear-gradient(180deg, #062316 0%, #03120c 100%);
-      border: 1.5px solid var(--gold-primary);
-      border-radius: 40px 40px 24px 24px; /* Subtle Mihrab arch curve */
+    .app-modal-sheet {
+      background: linear-gradient(180deg, #0e241b 0%, #05100c 100%);
+      border: 1px solid var(--gold-primary);
+      border-radius: 28px;
       max-width: 440px;
       width: 100%;
-      padding: 32px 24px 26px;
+      padding: 32px 24px;
       text-align: center;
       position: relative;
-      box-shadow: 0 15px 50px rgba(0,0,0,0.8), 0 0 30px rgba(212, 175, 55, 0.2);
-      transform: scale(0.92);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.9), 0 0 40px rgba(245, 158, 11, 0.15);
+      transform: scale(0.95);
       transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
-    .modal-overlay.active .mihrab-modal {
+    .app-modal-backdrop.is-open .app-modal-sheet {
       transform: scale(1);
     }
-    .modal-arch-deco {
-      font-size: 26px;
-      color: var(--gold-light);
-      margin-bottom: 6px;
+    .modal-cat-tag {
+      display: inline-block;
+      margin-bottom: 12px;
     }
-    .modal-title {
+    .modal-main-heading {
       font-family: 'Manjari', sans-serif;
       font-size: 22px;
       font-weight: 700;
       color: #fff;
-      margin: 12px 0 16px;
       line-height: 1.4;
-    }
-    .modal-details {
-      background: rgba(0, 0, 0, 0.35);
-      border: 1px solid rgba(212, 175, 55, 0.15);
-      border-radius: 14px;
-      padding: 12px;
       margin-bottom: 20px;
+    }
+    .modal-meta-grid {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 14px;
       display: flex;
       justify-content: space-around;
-      font-size: 13px;
+      margin-bottom: 24px;
     }
-    .modal-details div span {
+    .meta-box span {
       display: block;
-      font-size: 10.5px;
-      color: var(--text-muted);
+      font-size: 10px;
+      color: var(--text-dim);
       text-transform: uppercase;
-      margin-bottom: 3px;
+      margin-bottom: 4px;
+      font-weight: 600;
     }
-    .modal-details div strong {
-      color: var(--gold-light);
-      font-family: 'Cinzel', serif;
+    .meta-box strong {
+      font-family: 'Space Grotesk', sans-serif;
+      color: var(--gold-glow);
+      font-size: 14px;
     }
-    .close-modal-btn {
-      background: var(--gold-shimmer);
+    .modal-dismiss-btn {
+      width: 100%;
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
       border: none;
-      padding: 10px 28px;
-      border-radius: 99px;
-      font-family: 'Cinzel', serif;
-      font-weight: 800;
-      color: #04130d;
-      font-size: 12px;
-      letter-spacing: 1px;
+      padding: 13px;
+      border-radius: 14px;
+      color: #040907;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.5px;
       cursor: pointer;
-      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+      box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
     }
 
     footer {
       text-align: center;
-      margin-top: 45px;
-      color: var(--text-muted);
+      margin-top: 50px;
+      color: #64748b;
       font-size: 12px;
     }
-    footer .org {
-      font-family: 'Cinzel', serif;
-      color: var(--gold-light);
-      font-weight: 700;
-      font-size: 13px;
-      letter-spacing: 1px;
-      margin-bottom: 3px;
+    footer strong {
+      color: #cbd5e1;
+      font-weight: 600;
     }
   </style>
 </head>
 <body>
 
-  <div class="stars-layer"></div>
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+  <div class="geometric-backdrop"></div>
 
-  <header class="header-section">
-    <div class="arabic-bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
-    <div class="badge-sub">✦ Official Event Schedule ✦</div>
-    <h1 class="main-title">Kuttiadi RJM Musabaqa 2026</h1>
-    <p class="sub-title">കുറ്റ്യാടി റെയ്ഞ്ച് ജംഇയ്യത്തുൽ മുഅല്ലിമീൻ • Oct 03 & 04</p>
-  </header>
+  <!-- Modern App Top Navbar -->
+  <nav class="top-navbar">
+    <div class="nav-inner">
+      <div class="brand-title">
+        <span class="brand-dot"></span>
+        KUTTIADI RJM 2026
+      </div>
+      <div class="status-pill">
+        <span class="status-ping"></span>
+        OFFICIAL LIVE PORTAL
+      </div>
+    </div>
+  </nav>
 
-  <div class="container">
+  <main class="app-container">
     
-    <!-- Countdown Timer -->
-    <div class="timer-wrap">
-      <div class="timer-title" id="timerHeading">Musabaqa Starts In</div>
-      <div class="timer-grid">
-        <div class="timer-box"><span class="timer-num" id="tDays">00</span><span class="timer-label">Days</span></div>
-        <div class="timer-box"><span class="timer-num" id="tHours">00</span><span class="timer-label">Hours</span></div>
-        <div class="timer-box"><span class="timer-num" id="tMins">00</span><span class="timer-label">Mins</span></div>
-        <div class="timer-box"><span class="timer-num" id="tSecs">00</span><span class="timer-label">Secs</span></div>
+    <!-- Hero Dashboard Header -->
+    <header class="hero-panel">
+      <div class="hero-badge">✦ Stage Schedules & Timings ✦</div>
+      <h1 class="hero-heading">KUTTIADI RANGE <span>MUSABAQA</span></h1>
+      <p class="hero-sub">കുറ്റ്യാടി റെയ്ഞ്ച് ജംഇയ്യത്തുൽ മുഅല്ലിമീൻ • Oct 03 & 04</p>
+    </header>
+
+    <!-- Modern Countdown Panel -->
+    <section class="countdown-card">
+      <div class="cd-grid">
+        <div class="cd-cell"><span class="cd-val" id="tDays">00</span><span class="cd-lbl">Days</span></div>
+        <div class="cd-cell"><span class="cd-val" id="tHours">00</span><span class="cd-lbl">Hours</span></div>
+        <div class="cd-cell"><span class="cd-val" id="tMins">00</span><span class="cd-lbl">Minutes</span></div>
+        <div class="cd-cell"><span class="cd-val" id="tSecs">00</span><span class="cd-lbl">Seconds</span></div>
+      </div>
+    </section>
+
+    <!-- Segment Switcher (Days) -->
+    <div class="day-selector-grid">
+      <div class="day-card-btn active" onclick="switchDay('2026-10-03')">
+        <span class="d-tag">Day 01</span>
+        <span class="d-main">Saturday, Oct 03</span>
+      </div>
+      <div class="day-card-btn" onclick="switchDay('2026-10-04')">
+        <span class="d-tag">Day 02</span>
+        <span class="d-main">Sunday, Oct 04</span>
       </div>
     </div>
 
-    <!-- Day Navigation -->
-    <div class="day-switch">
-      <div class="day-tab active" onclick="switchDay('2026-10-03')">
-        <span class="tab-title">Day 01</span>
-        <span class="tab-date">Saturday, Oct 03</span>
-      </div>
-      <div class="day-tab" onclick="switchDay('2026-10-04')">
-        <span class="tab-title">Day 02</span>
-        <span class="tab-date">Sunday, Oct 04</span>
-      </div>
+    <!-- Live Search & Filtering -->
+    <div class="search-bar-wrap">
+      <span class="search-icon-pos">🔍</span>
+      <input type="text" id="liveSearch" class="search-field" placeholder="Search program, category, or stage..." oninput="renderSchedule()">
     </div>
 
-    <!-- Live Filter Search -->
-    <div class="search-wrapper">
-      <span class="search-icon">🔍</span>
-      <input type="text" id="liveSearch" class="search-input" placeholder="Search program, category or stage..." oninput="renderSchedule()">
+    <!-- Filter Pills -->
+    <div class="filter-pills">
+      <button class="pill-btn active" onclick="switchStage('all')">ALL STAGES</button>
+      <button class="pill-btn" onclick="switchStage(1)">STAGE 01</button>
+      <button class="pill-btn" onclick="switchStage(2)">STAGE 02</button>
+      <button class="pill-btn" onclick="switchStage(3)">STAGE 03</button>
     </div>
 
-    <!-- Stage Pills -->
-    <div class="stage-filters">
-      <button class="stage-btn active" onclick="switchStage('all')">ALL STAGES</button>
-      <button class="stage-btn" onclick="switchStage(1)">STAGE 01</button>
-      <button class="stage-btn" onclick="switchStage(2)">STAGE 02</button>
-      <button class="stage-btn" onclick="switchStage(3)">STAGE 03</button>
-    </div>
-
-    <!-- Event Cards Container -->
-    <div id="scheduleTimeline" class="events-stack"></div>
+    <!-- Events List Timeline -->
+    <section id="scheduleTimeline" class="timeline-container"></section>
 
     <footer>
-      <p class="org">KUTTIADI RANGE JAMIYYATHUL MU'ALLIMEEN</p>
-      <p>Musabaqa 2026 Portal • Crafted with Excellence</p>
+      <p>Organized by <strong>KUTTIADI RANGE JAMIYYATHUL MU'ALLIMEEN</strong></p>
+      <p style="margin-top: 4px; opacity: 0.6;">Musabaqa Schedule Engine 2026</p>
     </footer>
 
-  </div>
+  </main>
 
-  <!-- Arched Islamic Popup Modal -->
-  <div class="modal-overlay" id="eventModal" onclick="closeModal(event)">
-    <div class="mihrab-modal">
-      <div class="modal-arch-deco">🕌</div>
-      <span class="cat-pill" id="mCat">Category</span>
-      <h2 class="modal-title" id="mTitle">Program Title</h2>
-      <div class="modal-details">
-        <div><span>Stage</span><strong id="mStage">Stage 01</strong></div>
-        <div><span>Time</span><strong id="mTime">09:00 AM</strong></div>
-        <div><span>Type</span><strong id="mType">Competition</strong></div>
+  <!-- Interactive Modal Popup -->
+  <div class="app-modal-backdrop" id="eventModal" onclick="closeModal(event)">
+    <div class="app-modal-sheet">
+      <span class="cat-badge modal-cat-tag" id="mCat">Category</span>
+      <h2 class="modal-main-heading" id="mTitle">Program Title</h2>
+      <div class="modal-meta-grid">
+        <div class="meta-box"><span>Stage</span><strong id="mStage">Stage 01</strong></div>
+        <div class="meta-box"><span>Time Slot</span><strong id="mTime">09:00 AM</strong></div>
+        <div class="meta-box"><span>Category</span><strong id="mType">Competition</strong></div>
       </div>
-      <button class="close-modal-btn" onclick="hideModal()">CLOSE</button>
+      <button class="modal-dismiss-btn" onclick="hideModal()">CLOSE DETAILS</button>
     </div>
   </div>
 
   <script>
-    // Event Data with Appropriate Mic/Speech/Song Icons
     const scheduleData = [
       // DAY 1 - STAGE 1
       { day: '2026-10-03', stage: 1, title: 'കിഡ്സ് കഥാകഥനം', catKey: 'kids', catLabel: 'Kids', icon: '🎙️', start: '09:00', end: '09:50', isBreak: false },
@@ -660,15 +751,15 @@
 
     function switchDay(day) {
       selectedDay = day;
-      const tabs = document.querySelectorAll('.day-tab');
-      tabs[0].classList.toggle('active', day === '2026-10-03');
-      tabs[1].classList.toggle('active', day === '2026-10-04');
+      const buttons = document.querySelectorAll('.day-card-btn');
+      buttons[0].classList.toggle('active', day === '2026-10-03');
+      buttons[1].classList.toggle('active', day === '2026-10-04');
       renderSchedule();
     }
 
     function switchStage(stage) {
       selectedStage = stage;
-      document.querySelectorAll('.stage-btn').forEach(btn => {
+      document.querySelectorAll('.pill-btn').forEach(btn => {
         const text = btn.innerText;
         if (stage === 'all' && text.includes('ALL')) btn.classList.add('active');
         else if (stage !== 'all' && text.includes(`STAGE 0${stage}`)) btn.classList.add('active');
@@ -692,7 +783,7 @@
       });
 
       if (matched.length === 0) {
-        timeline.innerHTML = `<div style="text-align:center; padding: 45px 15px; color:#64748b; font-size:14px;">No programs found matching your search.</div>`;
+        timeline.innerHTML = `<div style="text-align:center; padding: 50px 15px; color:#64748b; font-size:14px;">No programs found matching your search criteria.</div>`;
         return;
       }
 
@@ -708,30 +799,30 @@
 
         if (ev.isBreak) {
           return `
-            <div class="event-card break-card">
-              <div class="time-range">${formatTime12(ev.start)} – ${formatTime12(ev.end)}</div>
-              <div class="event-title">${ev.icon} ${ev.title}</div>
+            <div class="web-card break-item">
+              <div class="time-slot" style="margin-bottom: 4px;">${formatTime12(ev.start)} – ${formatTime12(ev.end)}</div>
+              <div class="card-title">${ev.icon} ${ev.title}</div>
             </div>
           `;
         }
 
         return `
-          <div class="event-card ${isLive ? 'live' : ''}" onclick="openModal(${index})">
-            <div class="card-top">
-              <span class="stage-tag">STAGE 0${ev.stage}</span>
-              <span class="time-range">${formatTime12(ev.start)} – ${formatTime12(ev.end)}</span>
+          <div class="web-card ${isLive ? 'is-live' : ''}" onclick="openModal(${index})">
+            <div class="card-head">
+              <span class="stage-label">STAGE 0${ev.stage}</span>
+              <span class="time-slot">${formatTime12(ev.start)} – ${formatTime12(ev.end)}</span>
             </div>
-            <div class="event-title"><span class="item-icon">${ev.icon}</span> ${ev.title}</div>
-            <div class="card-bottom">
-              <span class="cat-pill cat-${ev.catKey}">${ev.catLabel}</span>
-              ${isLive ? `<span class="live-badge"><span class="live-dot"></span> LIVE NOW</span>` : ''}
+            <div class="card-title"><span class="prog-icon">${ev.icon}</span> ${ev.title}</div>
+            <div class="card-foot">
+              <span class="cat-badge cat-${ev.catKey}">${ev.catLabel}</span>
+              ${isLive ? `<span class="live-chip"><span class="live-dot-pulse"></span> LIVE NOW</span>` : ''}
             </div>
           </div>
         `;
       }).join('');
     }
 
-    // Modal popup logic
+    // Modal Control
     function openModal(index) {
       const ev = scheduleData[index];
       if (ev.isBreak) return;
@@ -742,28 +833,31 @@
       
       const cat = document.getElementById('mCat');
       cat.innerText = ev.catLabel;
-      cat.className = `cat-pill cat-${ev.catKey}`;
+      cat.className = `cat-badge cat-${ev.catKey} modal-cat-tag`;
       
       document.getElementById('mType').innerText = ev.icon === '🎙️' ? 'Speech / Recitation' : 'Competition';
-      document.getElementById('eventModal').classList.add('active');
+      document.getElementById('eventModal').classList.add('is-open');
     }
 
     function hideModal() {
-      document.getElementById('eventModal').classList.remove('active');
+      document.getElementById('eventModal').classList.remove('is-open');
     }
 
     function closeModal(e) {
       if (e.target.id === 'eventModal') hideModal();
     }
 
-    // Live Countdown Timer
+    // Countdown Logic (Target: Oct 3, 2026 08:00 AM)
     function updateCountdown() {
-      const eventTarget = new Date(2026, 9, 3, 8, 0, 0).getTime(); // Oct 3, 2026 08:00 AM
+      const eventTarget = new Date(2026, 9, 3, 8, 0, 0).getTime();
       const now = new Date().getTime();
       const diff = eventTarget - now;
 
       if (diff <= 0) {
-        document.getElementById('timerHeading').innerText = "MUSABAQA IS LIVE NOW";
+        document.getElementById('tDays').innerText = '00';
+        document.getElementById('tHours').innerText = '00';
+        document.getElementById('tMins').innerText = '00';
+        document.getElementById('tSecs').innerText = '00';
         return;
       }
 
