@@ -23,6 +23,7 @@
       --glass-panel: rgba(6, 35, 25, 0.65);
       --glass-border: rgba(226, 194, 117, 0.25);
       --glass-subtle: rgba(255, 255, 255, 0.05);
+      --live-green: #10b981;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
@@ -169,6 +170,15 @@
       background: var(--champagne-gold);
       border-radius: 50%;
       box-shadow: 0 0 8px var(--champagne-gold);
+    }
+    .nav-status.live {
+      border-color: rgba(16, 185, 129, 0.4);
+      color: #34d399;
+      background: rgba(16, 185, 129, 0.12);
+    }
+    .nav-status.live .status-dot {
+      background: #10b981;
+      box-shadow: 0 0 10px #10b981;
     }
 
     /* HERO SECTION */
@@ -454,6 +464,7 @@
       box-shadow: 0 4px 15px rgba(226, 194, 117, 0.25);
     }
 
+    /* TIMELINE */
     .timeline-wrap {
       position: relative;
       padding-left: 24px;
@@ -470,7 +481,10 @@
     .timeline-node {
       position: relative;
       margin-bottom: 16px;
+      transition: all 0.3s ease;
     }
+
+    /* TIMELINE DOTS (Upcoming, Live, Completed) */
     .node-dot {
       position: absolute;
       left: -24px;
@@ -480,9 +494,39 @@
       border-radius: 50%;
       background: var(--bg-emerald-deep);
       border: 2px solid var(--champagne-gold);
+      box-shadow: 0 0 8px rgba(226, 194, 117, 0.3);
+      transition: all 0.3s;
     }
 
-    /* CARDS WITH FIXED MALAYALAM SPACING */
+    /* COMPLETED STATUS (Muted / Soft Dimmed) */
+    .timeline-node.status-completed {
+      opacity: 0.55;
+    }
+    .timeline-node.status-completed .node-dot {
+      border-color: var(--text-muted);
+      background: rgba(155, 176, 165, 0.2);
+      box-shadow: none;
+    }
+    .timeline-node.status-completed:hover {
+      opacity: 0.85;
+    }
+
+    /* LIVE STATUS (Pulsing Emerald Green) */
+    .timeline-node.status-live {
+      opacity: 1;
+    }
+    .timeline-node.status-live .node-dot {
+      background: var(--live-green);
+      border-color: #34d399;
+      box-shadow: 0 0 15px #10b981;
+      animation: pulseGreenDot 1.4s infinite alternate;
+    }
+    @keyframes pulseGreenDot {
+      from { transform: scale(0.9); box-shadow: 0 0 6px #10b981; }
+      to { transform: scale(1.3); box-shadow: 0 0 18px #34d399; }
+    }
+
+    /* CARDS */
     .prog-card {
       background: var(--glass-panel);
       border: 1px solid var(--glass-border);
@@ -497,6 +541,12 @@
       border-color: var(--champagne-gold);
       box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
+    .timeline-node.status-live .prog-card {
+      border: 1.5px solid var(--live-green);
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(6, 35, 25, 0.9) 100%);
+      box-shadow: 0 0 30px rgba(16, 185, 129, 0.22);
+    }
+
     .card-top-row {
       display: flex;
       justify-content: space-between;
@@ -535,6 +585,8 @@
       padding-top: 8px;
       border-top: 1px solid var(--glass-subtle);
     }
+
+    /* BADGES */
     .cat-tag {
       font-size: 10px;
       font-weight: 700;
@@ -546,6 +598,28 @@
       border: 1px solid var(--glass-border);
       color: var(--gold-soft);
     }
+
+    .status-badge {
+      font-size: 9.5px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      padding: 3px 8px;
+      border-radius: 99px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .badge-completed {
+      color: #cbd5e1;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .badge-live {
+      color: #34d399;
+      background: rgba(16, 185, 129, 0.18);
+      border: 1px solid #10b981;
+    }
+
     .view-link {
       font-size: 11px;
       font-weight: 700;
@@ -692,7 +766,7 @@
       <div class="nav-brand">
         <span>✦</span> KUTTIADY RJM 2026
       </div>
-      <div class="nav-status">
+      <div class="nav-status" id="navLivePill">
         <span class="status-dot"></span> COMING SOON
       </div>
     </div>
@@ -921,6 +995,7 @@
     function renderTimeline() {
       const container = document.getElementById('timelineContainer');
       const query = document.getElementById('scheduleSearch').value.trim().toLowerCase();
+      const now = new Date();
 
       const filtered = competitionEvents.filter(ev => {
         const matchDay = ev.day === selectedDay;
@@ -937,9 +1012,27 @@
       }
 
       container.innerHTML = filtered.map(ev => {
+        const [sH, sM] = ev.start.split(':').map(Number);
+        const [eH, eM] = ev.end.split(':').map(Number);
+        const [y, m, d] = ev.day.split('-').map(Number);
+
+        const startObj = new Date(y, m - 1, d, sH, sM, 0);
+        const endObj = new Date(y, m - 1, d, eH, eM, 0);
+
+        let statusClass = 'status-upcoming';
+        let statusBadge = '';
+
+        if (now > endObj) {
+          statusClass = 'status-completed';
+          statusBadge = '<span class="status-badge badge-completed">✓ COMPLETED</span>';
+        } else if (now >= startObj && now <= endObj) {
+          statusClass = 'status-live';
+          statusBadge = '<span class="status-badge badge-live">● LIVE NOW</span>';
+        }
+
         if (ev.isBreak) {
           return `
-            <div class="timeline-node">
+            <div class="timeline-node ${statusClass}">
               <div class="node-dot"></div>
               <div class="prog-card break-item">
                 <div class="card-time" style="margin-bottom: 4px;">${formatTime12(ev.start)} – ${formatTime12(ev.end)}</div>
@@ -950,7 +1043,7 @@
         }
 
         return `
-          <div class="timeline-node">
+          <div class="timeline-node ${statusClass}">
             <div class="node-dot"></div>
             <div class="prog-card">
               <div class="card-top-row">
@@ -960,6 +1053,7 @@
               <div class="card-title">${ev.title}</div>
               <div class="card-bottom-row">
                 <span class="cat-tag">${ev.cat}</span>
+                ${statusBadge}
                 <span class="view-link" onclick="openModal(${ev.id})">VIEW DETAILS →</span>
               </div>
             </div>
@@ -995,8 +1089,12 @@
       const now = new Date().getTime();
       const diff = target - now;
 
+      const livePill = document.getElementById('navLivePill');
+
       if (diff <= 0) {
         document.getElementById('countdownHeader').innerText = "COMPETITIONS ARE LIVE";
+        livePill.innerHTML = '<span class="status-dot"></span> LIVE NOW';
+        livePill.classList.add('live');
         return;
       }
 
@@ -1012,6 +1110,7 @@
     }
 
     setInterval(updateCountdown, 1000);
+    setInterval(renderTimeline, 30000);
     updateCountdown();
     renderTimeline();
   </script>
