@@ -417,10 +417,11 @@
       display: block;
     }
 
+    /* SEARCH & FILTER GROUP */
     .filter-bar {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 10px;
       margin-bottom: 22px;
     }
     .search-box {
@@ -438,13 +439,16 @@
       border-color: var(--champagne-gold);
       box-shadow: 0 0 20px rgba(226, 194, 117, 0.2);
     }
-    .stage-filters {
+
+    .filter-slider {
       display: flex;
       gap: 8px;
       overflow-x: auto;
       scrollbar-width: none;
+      padding-bottom: 4px;
     }
-    .stage-filters::-webkit-scrollbar { display: none; }
+    .filter-slider::-webkit-scrollbar { display: none; }
+
     .stage-btn {
       flex-shrink: 0;
       background: rgba(4, 20, 15, 0.7);
@@ -462,6 +466,29 @@
       color: var(--bg-emerald-deep);
       border-color: transparent;
       box-shadow: 0 4px 15px rgba(226, 194, 117, 0.25);
+    }
+
+    .cat-filter-btn {
+      flex-shrink: 0;
+      background: rgba(6, 35, 25, 0.5);
+      border: 1px solid rgba(226, 194, 117, 0.15);
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 99px;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .cat-filter-btn:hover {
+      border-color: rgba(226, 194, 117, 0.35);
+      color: var(--ivory-white);
+    }
+    .cat-filter-btn.active {
+      background: rgba(226, 194, 117, 0.2);
+      border-color: var(--champagne-gold);
+      color: var(--gold-soft);
+      box-shadow: 0 2px 10px rgba(226, 194, 117, 0.2);
     }
 
     /* TIMELINE */
@@ -484,7 +511,6 @@
       transition: all 0.3s ease;
     }
 
-    /* TIMELINE DOTS (Upcoming, Live, Completed) */
     .node-dot {
       position: absolute;
       left: -24px;
@@ -498,7 +524,7 @@
       transition: all 0.3s;
     }
 
-    /* COMPLETED STATUS (Muted / Soft Dimmed) */
+    /* COMPLETED STATUS */
     .timeline-node.status-completed {
       opacity: 0.55;
     }
@@ -511,7 +537,7 @@
       opacity: 0.85;
     }
 
-    /* LIVE STATUS (Pulsing Emerald Green) */
+    /* LIVE STATUS */
     .timeline-node.status-live {
       opacity: 1;
     }
@@ -586,7 +612,6 @@
       border-top: 1px solid var(--glass-subtle);
     }
 
-    /* BADGES */
     .cat-tag {
       font-size: 10px;
       font-weight: 700;
@@ -790,7 +815,7 @@
       <span>MUSABAQA</span>
     </h1>
     
-    <div class="hero-malayalam">കുറ്റ്യാടി റേഞ്ച് മുസാബഖ 2026</div>
+    <div class="hero-malayalam">കുറ്റ്യാടി റെയ്ഞ്ച് മുസാബഖ 2026</div>
     <div class="hero-date">OCTOBER 03 & 04, 2026</div>
 
     <div class="countdown-wrapper">
@@ -831,11 +856,26 @@
     <!-- Search & Filters -->
     <div class="filter-bar">
       <input type="text" id="scheduleSearch" class="search-box" placeholder="🔍 Search programme, category or stage..." oninput="renderTimeline()">
-      <div class="stage-filters">
-        <button class="stage-btn active" onclick="setStage('all')">ALL</button>
+      
+      <!-- Stage Filter (Row 1) -->
+      <div class="filter-slider">
+        <button class="stage-btn active" onclick="setStage('all')">ALL STAGES</button>
         <button class="stage-btn" onclick="setStage(1)">STAGE 01</button>
         <button class="stage-btn" onclick="setStage(2)">STAGE 02</button>
         <button class="stage-btn" onclick="setStage(3)">STAGE 03</button>
+      </div>
+
+      <!-- Category Filter Slider (Row 2 - Sleek & Compact) -->
+      <div class="filter-slider">
+        <button class="cat-filter-btn active" onclick="setCategory('all')">ALL</button>
+        <button class="cat-filter-btn" onclick="setCategory('Kids')">Kids</button>
+        <button class="cat-filter-btn" onclick="setCategory('Sub Junior')">Sub Junior</button>
+        <button class="cat-filter-btn" onclick="setCategory('Junior')">Junior</button>
+        <button class="cat-filter-btn" onclick="setCategory('Senior')">Senior</button>
+        <button class="cat-filter-btn" onclick="setCategory('Super Senior')">Super Senior</button>
+        <button class="cat-filter-btn" onclick="setCategory('Muallim')">Muallim</button>
+        <button class="cat-filter-btn" onclick="setCategory('Alumni')">Alumni</button>
+        <button class="cat-filter-btn" onclick="setCategory('General')">General</button>
       </div>
     </div>
 
@@ -952,6 +992,7 @@
 
     let selectedDay = '2026-10-03';
     let currentStage = 'all';
+    let currentCategory = 'all';
 
     window.addEventListener('load', () => {
       setTimeout(() => {
@@ -992,6 +1033,17 @@
       renderTimeline();
     }
 
+    function setCategory(cat) {
+      currentCategory = cat;
+      document.querySelectorAll('.cat-filter-btn').forEach(btn => {
+        const txt = btn.innerText.trim();
+        if (cat === 'all' && txt === 'ALL') btn.classList.add('active');
+        else if (cat !== 'all' && txt === cat) btn.classList.add('active');
+        else btn.classList.remove('active');
+      });
+      renderTimeline();
+    }
+
     function renderTimeline() {
       const container = document.getElementById('timelineContainer');
       const query = document.getElementById('scheduleSearch').value.trim().toLowerCase();
@@ -1000,10 +1052,11 @@
       const filtered = competitionEvents.filter(ev => {
         const matchDay = ev.day === selectedDay;
         const matchStage = currentStage === 'all' || ev.stage === currentStage;
+        const matchCategory = currentCategory === 'all' || ev.cat === currentCategory || ev.isBreak;
         const matchQuery = ev.title.toLowerCase().includes(query) ||
                            ev.cat.toLowerCase().includes(query) ||
                            `stage ${ev.stage}`.includes(query);
-        return matchDay && matchStage && matchQuery;
+        return matchDay && matchStage && matchCategory && matchQuery;
       });
 
       if (!filtered.length) {
@@ -1093,8 +1146,6 @@
 
       if (diff <= 0) {
         document.getElementById('countdownHeader').innerText = "COMPETITIONS ARE LIVE";
-        livePill.innerHTML = '<span class="status-dot"></span> LIVE NOW';
-        livePill.classList.add('live');
         return;
       }
 
@@ -1110,7 +1161,6 @@
     }
 
     setInterval(updateCountdown, 1000);
-    setInterval(renderTimeline, 30000);
     updateCountdown();
     renderTimeline();
   </script>
