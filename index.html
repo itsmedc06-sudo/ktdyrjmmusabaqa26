@@ -3,502 +3,585 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KUTTIADI RJM MUSABAQA 2026 | Grand Schedule Portal</title>
+  <title>KUTTIADY RANGE MUSABAQA 2026 | Official Grand Portal</title>
 
-  <!-- Google Ultra Aesthetic Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&family=Manjari:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@600;700;800&family=Manjari:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg-dark: #020617;
-      --surface-glass: rgba(15, 23, 42, 0.72);
-      --surface-hover: rgba(30, 41, 59, 0.88);
-      --border-glass: rgba(245, 158, 11, 0.22);
-      --border-subtle: rgba(255, 255, 255, 0.08);
-      --gold-primary: #f59e0b;
-      --gold-glow: #fbbf24;
-      --teal-glow: #06b6d4;
-      --emerald-glow: #10b981;
-      --text-white: #f8fafc;
-      --text-dim: #94a3b8;
+      --navy-950: #050A16;
+      --navy-900: #08152B;
+      --royal-blue: #103A70;
+      --gold-primary: #D4A84F;
+      --gold-light: #F4D98A;
+      --gold-gradient: linear-gradient(135deg, #F4D98A 0%, #D4A84F 50%, #996515 100%);
+      --text-white: #F5F7FB;
+      --text-muted: #94A8C5;
+      --glass-bg: rgba(8, 21, 43, 0.72);
+      --glass-border: rgba(212, 168, 79, 0.22);
+      --glass-subtle: rgba(255, 255, 255, 0.06);
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
 
     body {
-      background-color: var(--bg-dark);
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--navy-950);
       color: var(--text-white);
-      min-height: 100vh;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       overflow-x: hidden;
+      min-height: 100vh;
       position: relative;
-      padding-bottom: 90px;
     }
 
-    /* Modern Dynamic Aura & Ambient Glow (Obsidian + Teal + Gold) */
-    .ambient-teal {
-      position: fixed;
-      top: -120px;
-      left: 15%;
-      width: 550px;
-      height: 450px;
-      background: radial-gradient(circle, rgba(6, 182, 212, 0.16) 0%, transparent 65%);
-      filter: blur(90px);
-      pointer-events: none;
-      z-index: 0;
-    }
-    .ambient-gold {
-      position: fixed;
-      top: 100px;
-      right: 5%;
-      width: 500px;
-      height: 450px;
-      background: radial-gradient(circle, rgba(245, 158, 11, 0.14) 0%, transparent 65%);
-      filter: blur(95px);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    /* Subtle Floating Islamic Sparkles/Stars */
-    .sparkle-layer {
+    /* 44. PRELOADER */
+    #preloader {
       position: fixed;
       inset: 0;
+      background: var(--navy-950);
+      z-index: 10000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.6s ease, visibility 0.6s;
+    }
+    .preloader-ring {
+      width: 70px;
+      height: 70px;
+      border: 2px dashed var(--gold-primary);
+      border-radius: 50%;
+      animation: rotateRing 8s linear infinite;
+      margin-bottom: 20px;
+    }
+    @keyframes rotateRing {
+      to { transform: rotate(360deg); }
+    }
+    .preloader-title {
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      letter-spacing: 4px;
+      color: var(--gold-light);
+      text-transform: uppercase;
+    }
+
+    /* 1. BACKGROUND LAYERS & MOSQUE SILHOUETTE */
+    .bg-star-pattern {
+      position: fixed;
+      inset: 0;
+      background-image: 
+        radial-gradient(1px 1px at 30px 40px, rgba(244, 217, 138, 0.3), transparent),
+        radial-gradient(1.5px 1.5px at 150px 180px, rgba(16, 58, 112, 0.6), transparent),
+        url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 0 L52 28 L80 40 L52 52 L40 80 L28 52 L0 40 L28 28 Z' fill='none' stroke='%23D4A84F' stroke-width='0.5' stroke-opacity='0.04'/%3E%3C/svg%3E");
       pointer-events: none;
       z-index: 0;
-      background: 
-        radial-gradient(1.5px 1.5px at 40px 60px, #fbbf24, transparent),
-        radial-gradient(1.5px 1.5px at 140px 180px, #38bdf8, transparent),
-        radial-gradient(2px 2px at 280px 110px, #f59e0b, transparent),
-        radial-gradient(1px 1px at 320px 290px, #ffffff, transparent);
-      background-size: 360px 360px;
-      opacity: 0.5;
-      animation: floatSparkles 24s linear infinite;
     }
-    @keyframes floatSparkles {
-      from { transform: translateY(0); }
-      to { transform: translateY(-360px); }
-    }
-
-    /* Elegant Festive Thoraanam (Islamic Bunting Garland) */
-    .festive-thoraanam {
-      position: relative;
-      width: 100%;
-      height: 38px;
-      overflow: hidden;
-      z-index: 10;
+    .faint-crescent {
+      position: fixed;
+      top: 50px;
+      right: 8%;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      box-shadow: -18px 18px 0 0 rgba(212, 168, 79, 0.06);
       pointer-events: none;
-      opacity: 0.85;
+      z-index: 0;
+      transform: rotate(-15deg);
     }
-    .thoraanam-svg {
+    .mosque-silhouette {
+      position: fixed;
+      bottom: 0;
+      left: 0;
       width: 100%;
-      height: 100%;
+      height: 180px;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.06;
+      background: repeat-x bottom center;
+      background-size: 600px 180px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 180'%3E%3Cpath fill='%23D4A84F' d='M0 180V120h40v-20c0-10 10-20 20-20s20 10 20 20v20h40V80h10V40h5l5-20 5 20h5v40h10v40h40V90c0-25 25-45 50-45s50 20 50 45v30h40v-40h10V40h5l5-20 5 20h5v40h10v40h40v-20c0-10 10-20 20-20s20 10 20 20v20h40v60H0z'/%3E%3C/svg%3E");
     }
 
-    /* Top Sticky Modern App Nav */
-    .top-navbar {
-      position: sticky;
+    /* 9. NAVBAR */
+    .navbar {
+      position: fixed;
       top: 0;
-      z-index: 50;
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      background: rgba(2, 6, 23, 0.8);
-      border-bottom: 1px solid var(--border-subtle);
-      padding: 12px 20px;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 16px 24px;
+      transition: all 0.3s ease;
     }
-    .nav-inner {
-      max-width: 740px;
+    .navbar.scrolled {
+      background: rgba(5, 10, 22, 0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--glass-subtle);
+      padding: 12px 24px;
+    }
+    .nav-container {
+      max-width: 1100px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    .brand-title {
-      font-family: 'Space Grotesk', sans-serif;
+    .nav-brand {
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
       font-weight: 700;
-      font-size: 14.5px;
-      letter-spacing: 0.5px;
-      color: #fff;
+      letter-spacing: 1px;
+      color: var(--text-white);
       display: flex;
       align-items: center;
       gap: 8px;
     }
-    .brand-dot {
-      width: 8px;
-      height: 8px;
-      background: var(--gold-primary);
-      border-radius: 50%;
-      box-shadow: 0 0 10px var(--gold-primary);
-    }
-    .status-pill {
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: 0.8px;
-      color: #38bdf8;
-      background: rgba(56, 189, 248, 0.12);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      padding: 5px 12px;
-      border-radius: 99px;
+    .nav-brand span { color: var(--gold-primary); }
+    .nav-links {
       display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 12.5px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold-light); }
+    .nav-status {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 5px 14px;
+      border-radius: 99px;
+      border: 1px solid rgba(212, 168, 79, 0.3);
+      color: var(--gold-light);
+      background: rgba(212, 168, 79, 0.08);
+      display: inline-flex;
       align-items: center;
       gap: 6px;
     }
-    .status-ping {
+    .nav-status.live {
+      border-color: #10B981;
+      color: #34D399;
+      background: rgba(16, 185, 129, 0.1);
+    }
+    .status-dot {
       width: 6px;
       height: 6px;
-      background: #38bdf8;
+      background: currentColor;
       border-radius: 50%;
-      animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
-    }
-    @keyframes ping {
-      0% { transform: scale(1); opacity: 1; }
-      100% { transform: scale(2.2); opacity: 0; }
     }
 
-    .app-container {
-      max-width: 740px;
-      margin: 0 auto;
-      padding: 24px 16px 0;
+    /* 1. HERO SECTION */
+    .hero-section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 110px 20px 40px;
       position: relative;
       z-index: 1;
     }
-
-    /* Hero Section with Floating Accents */
-    .hero-panel {
-      text-align: center;
-      margin-bottom: 22px;
-      position: relative;
-    }
-    .floating-accent {
-      position: absolute;
-      font-size: 19px;
-      filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.5));
-      animation: gentleBob 3s ease-in-out infinite alternate;
-      pointer-events: none;
-    }
-    .accent-mic { top: 0px; left: 12%; }
-    .accent-trophy { top: 10px; right: 12%; animation-delay: 1.5s; }
-    @keyframes gentleBob {
-      from { transform: translateY(0) rotate(-6deg); }
-      to { transform: translateY(-8px) rotate(6deg); }
-    }
-
     .hero-badge {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: rgba(245, 158, 11, 0.1);
-      border: 1px solid rgba(245, 158, 11, 0.28);
-      color: #fde68a;
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      padding: 5px 14px;
+      padding: 6px 16px;
       border-radius: 99px;
-      margin-bottom: 12px;
+      border: 1px solid var(--glass-border);
+      background: rgba(212, 168, 79, 0.08);
+      color: var(--gold-light);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      animation: pulseAura 4s infinite alternate;
     }
-    .hero-heading {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(24px, 6vw, 38px);
-      font-weight: 800;
+    @keyframes pulseAura {
+      0% { box-shadow: 0 0 10px rgba(212, 168, 79, 0.1); }
+      100% { box-shadow: 0 0 25px rgba(212, 168, 79, 0.25); }
+    }
+    .hero-title-main {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: clamp(28px, 6vw, 56px);
+      font-weight: 900;
       line-height: 1.15;
-      letter-spacing: -0.5px;
-      color: #fff;
+      letter-spacing: 2px;
+      color: var(--text-white);
       margin-bottom: 6px;
     }
-    .hero-heading span {
-      background: linear-gradient(135deg, #fef08a 0%, #f59e0b 50%, #d97706 100%);
+    .hero-title-main span {
+      background: var(--gold-gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      display: block;
     }
-    .hero-sub {
+    .hero-malayalam {
       font-family: 'Manjari', sans-serif;
-      font-size: 15.5px;
+      font-size: 18px;
       font-weight: 700;
-      color: #94a3b8;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    .hero-date {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 13.5px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: var(--gold-primary);
+      text-transform: uppercase;
+      margin-bottom: 30px;
     }
 
-    /* Modern Countdown Dashboard */
-    .countdown-card {
-      background: var(--surface-glass);
-      border: 1px solid var(--border-glass);
-      border-radius: 18px;
-      padding: 14px;
-      margin-bottom: 22px;
+    /* 5 & 6. COUNTDOWN CONTAINER & GOLD SHINE */
+    .countdown-wrapper {
+      max-width: 620px;
+      width: 100%;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 24px 18px;
       backdrop-filter: blur(16px);
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+      margin-bottom: 24px;
     }
-    .cd-grid {
+    .countdown-wrapper::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 20%;
+      height: 200%;
+      background: linear-gradient(to right, transparent, rgba(244, 217, 138, 0.15), transparent);
+      transform: rotate(30deg);
+      animation: lightShine 6s infinite ease-in-out;
+    }
+    @keyframes lightShine {
+      0%, 60% { left: -60%; }
+      100% { left: 140%; }
+    }
+    .countdown-header {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      color: var(--gold-light);
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+    .countdown-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 8px;
+      gap: 10px;
     }
-    .cd-cell {
-      background: rgba(2, 6, 23, 0.65);
-      border: 1px solid rgba(255, 255, 255, 0.05);
+    .countdown-box {
+      background: rgba(5, 10, 22, 0.7);
+      border: 1px solid var(--glass-subtle);
       border-radius: 12px;
-      padding: 9px 4px;
-      text-align: center;
-      transition: all 0.3s;
+      padding: 10px 4px;
     }
-    .cd-cell:hover {
-      border-color: rgba(245, 158, 11, 0.45);
-      transform: translateY(-2px);
-    }
-    .cd-val {
+    .countdown-val {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(22px, 5vw, 29px);
+      font-size: clamp(24px, 5.5vw, 36px);
       font-weight: 700;
       color: #fff;
       display: block;
       line-height: 1;
     }
-    .cd-lbl {
+    .countdown-lbl {
       font-size: 9.5px;
       font-weight: 700;
-      letter-spacing: 1px;
-      color: #64748b;
+      letter-spacing: 1.5px;
+      color: var(--text-muted);
       text-transform: uppercase;
-      margin-top: 5px;
+      margin-top: 6px;
       display: block;
     }
 
-    /* Day Segment Selector */
-    .day-selector-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-bottom: 15px;
+    /* 8. HERO BUTTONS */
+    .hero-btn-row {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
     }
-    .day-card-btn {
-      background: var(--surface-glass);
-      border: 1px solid var(--border-subtle);
-      border-radius: 14px;
-      padding: 13px;
-      cursor: pointer;
-      text-align: left;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-      overflow: hidden;
-    }
-    .day-card-btn:hover { border-color: rgba(245, 158, 11, 0.4); }
-    .day-card-btn.active {
-      border: 1.5px solid var(--gold-primary);
-      background: rgba(30, 41, 59, 0.7);
-      box-shadow: 0 6px 25px rgba(245, 158, 11, 0.16);
-    }
-    .d-tag {
-      font-size: 10.5px;
-      font-weight: 800;
-      letter-spacing: 1px;
-      color: var(--gold-glow);
-      text-transform: uppercase;
-      display: block;
-    }
-    .d-main {
-      font-size: 14.5px;
+    .btn-gold {
+      background: var(--gold-gradient);
+      color: var(--navy-950);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 13px;
       font-weight: 700;
-      color: #fff;
-      margin-top: 2px;
-      display: block;
-    }
-
-    /* Search Bar */
-    .search-bar-wrap {
-      position: relative;
-      margin-bottom: 14px;
-    }
-    .search-field {
-      width: 100%;
-      background: var(--surface-glass);
-      border: 1px solid var(--border-subtle);
+      letter-spacing: 1px;
+      text-decoration: none;
+      padding: 13px 26px;
       border-radius: 12px;
-      padding: 13px 18px 13px 44px;
-      color: #fff;
-      font-size: 13.5px;
-      font-family: inherit;
-      outline: none;
-      backdrop-filter: blur(12px);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 8px 24px rgba(212, 168, 79, 0.25);
       transition: all 0.3s;
     }
-    .search-field:focus {
-      border-color: var(--gold-primary);
-      box-shadow: 0 0 20px rgba(245, 158, 11, 0.18);
-      background: rgba(15, 23, 42, 0.9);
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(212, 168, 79, 0.4);
     }
-    .search-field::placeholder { color: #64748b; }
-    .search-icon-pos {
-      position: absolute;
-      left: 15px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 15px;
-      opacity: 0.5;
+    .btn-glass {
+      background: var(--glass-bg);
+      color: var(--text-white);
+      border: 1px solid var(--glass-subtle);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-decoration: none;
+      padding: 13px 26px;
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s;
+    }
+    .btn-glass:hover {
+      border-color: var(--gold-primary);
+      background: rgba(16, 58, 112, 0.4);
     }
 
-    /* Stage Pill Filters */
-    .filter-pills {
+    /* 10. ISLAMIC INTRO SECTION */
+    .section-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 70px 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .quote-block {
+      text-align: center;
+      background: radial-gradient(circle at center, rgba(16, 58, 112, 0.2) 0%, transparent 70%);
+      padding: 30px 15px;
+    }
+    .arabic-text {
+      font-family: 'Amiri', serif;
+      font-size: clamp(24px, 5vw, 38px);
+      color: var(--gold-light);
+      margin-bottom: 8px;
+    }
+    .quote-meaning {
+      font-size: 14.5px;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    /* 11 & 12. COMPETITION OVERVIEW CARDS */
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 16px;
+      margin-top: 30px;
+    }
+    .overview-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-subtle);
+      border-radius: 16px;
+      padding: 22px 18px;
+      backdrop-filter: blur(12px);
+      text-align: center;
+      transition: all 0.35s ease-out;
+    }
+    .overview-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--gold-primary);
+      box-shadow: 0 12px 30px rgba(16, 58, 112, 0.35);
+    }
+    .overview-icon {
+      font-size: 26px;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .overview-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+    .overview-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* 13-16. TIMELINE & PROGRAMMES */
+    .filter-bar {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin: 30px 0 24px;
+    }
+    .search-box {
+      width: 100%;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-subtle);
+      border-radius: 14px;
+      padding: 13px 18px;
+      color: #fff;
+      font-size: 13.5px;
+      outline: none;
+      transition: all 0.3s;
+    }
+    .search-box:focus {
+      border-color: var(--gold-primary);
+      box-shadow: 0 0 20px rgba(212, 168, 79, 0.2);
+    }
+    .stage-filters {
       display: flex;
       gap: 8px;
       overflow-x: auto;
-      padding-bottom: 15px;
       scrollbar-width: none;
     }
-    .filter-pills::-webkit-scrollbar { display: none; }
-    .pill-btn {
+    .stage-filters::-webkit-scrollbar { display: none; }
+    .stage-btn {
       flex-shrink: 0;
-      background: rgba(15, 23, 42, 0.65);
-      border: 1px solid var(--border-subtle);
-      color: #94a3b8;
-      padding: 8px 16px;
+      background: rgba(8, 21, 43, 0.8);
+      border: 1px solid var(--glass-subtle);
+      color: var(--text-muted);
+      padding: 8px 18px;
       border-radius: 99px;
-      font-size: 11.5px;
+      font-size: 12px;
       font-weight: 700;
-      letter-spacing: 0.5px;
       cursor: pointer;
-      transition: all 0.25s;
+      transition: all 0.2s;
     }
-    .pill-btn:hover { color: #fff; border-color: rgba(255,255,255,0.2); }
-    .pill-btn.active {
-      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-      color: #020617;
+    .stage-btn.active {
+      background: var(--gold-gradient);
+      color: var(--navy-950);
       border-color: transparent;
-      box-shadow: 0 4px 18px rgba(245, 158, 11, 0.3);
-      font-weight: 800;
+      box-shadow: 0 4px 15px rgba(212, 168, 79, 0.3);
     }
 
-    /* Cards Stack */
-    .timeline-container {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .web-card {
-      background: var(--surface-glass);
-      border: 1px solid var(--border-glass);
-      border-radius: 16px;
-      padding: 16px 18px;
-      backdrop-filter: blur(14px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
-      cursor: pointer;
+    /* Timeline Styling */
+    .timeline-wrap {
       position: relative;
-      transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+      padding-left: 24px;
     }
-    .web-card:hover {
-      background: var(--surface-hover);
-      border-color: rgba(245, 158, 11, 0.5);
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    .timeline-wrap::before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      bottom: 10px;
+      left: 7px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--gold-primary), var(--royal-blue), transparent);
     }
-    .web-card.is-live {
-      border: 1.5px solid var(--emerald-glow);
-      background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(15, 23, 42, 0.95) 100%);
-      box-shadow: 0 0 25px rgba(16, 185, 129, 0.25);
+    .timeline-node {
+      position: relative;
+      margin-bottom: 18px;
+    }
+    .node-dot {
+      position: absolute;
+      left: -24px;
+      top: 18px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--navy-950);
+      border: 2px solid var(--gold-primary);
+    }
+    .timeline-node.live .node-dot {
+      background: #10B981;
+      border-color: #34D399;
+      box-shadow: 0 0 12px #34D399;
     }
 
-    .card-head {
+    /* Card Details */
+    .prog-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 16px 20px;
+      backdrop-filter: blur(14px);
+      transition: all 0.3s;
+    }
+    .prog-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--gold-primary);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+    }
+    .prog-card.live-card {
+      border: 1.5px solid #10B981;
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(8, 21, 43, 0.95) 100%);
+    }
+    .card-top-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 9px;
+      margin-bottom: 8px;
     }
-    .stage-label {
+    .stage-pill {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 10.5px;
+      font-size: 10px;
       font-weight: 700;
-      letter-spacing: 0.8px;
-      color: var(--gold-glow);
-      background: rgba(245, 158, 11, 0.12);
-      border: 1px solid rgba(245, 158, 11, 0.3);
-      padding: 3px 9px;
+      letter-spacing: 1px;
+      color: var(--gold-light);
+      background: rgba(212, 168, 79, 0.1);
+      border: 1px solid rgba(212, 168, 79, 0.3);
+      padding: 3px 8px;
       border-radius: 6px;
     }
-    .time-slot {
-      font-size: 12px;
+    .card-time {
+      font-size: 12.5px;
       font-weight: 600;
       color: #cbd5e1;
     }
-
-    /* Program Title in Malayalam (No Emojis) */
     .card-title {
       font-family: 'Manjari', sans-serif;
       font-size: 18.5px;
       font-weight: 700;
-      color: #ffffff;
-      line-height: 1.45;
+      color: #fff;
+      line-height: 1.4;
       margin-bottom: 12px;
     }
-
-    .card-foot {
+    .card-bottom-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding-top: 8px;
-      border-top: 1px solid var(--border-subtle);
+      border-top: 1px solid var(--glass-subtle);
     }
-
-    /* Clean Category Badges (No Emojis, Pure Sleek Glass) */
-    .cat-badge {
+    .cat-tag {
       font-size: 10.5px;
       font-weight: 700;
-      letter-spacing: 0.6px;
-      padding: 4px 11px;
+      letter-spacing: 0.5px;
+      padding: 3px 10px;
       border-radius: 6px;
       text-transform: uppercase;
+      background: rgba(16, 58, 112, 0.4);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #E2E8F0;
     }
-    .cat-kids { background: rgba(244, 63, 94, 0.14); border: 1px solid #f43f5e; color: #fda4af; }
-    .cat-subjunior { background: rgba(249, 115, 22, 0.14); border: 1px solid #f97316; color: #fdba74; }
-    .cat-junior { background: rgba(59, 130, 246, 0.14); border: 1px solid #3b82f6; color: #93c5fd; }
-    .cat-senior { background: rgba(168, 85, 247, 0.14); border: 1px solid #a855f7; color: #d8b4fe; }
-    .cat-supersenior { background: rgba(236, 72, 153, 0.14); border: 1px solid #ec4899; color: #f472b6; }
-    .cat-muallim { background: rgba(16, 185, 129, 0.14); border: 1px solid #10b981; color: #6ee7b7; }
-    .cat-alumni { background: rgba(20, 184, 166, 0.14); border: 1px solid #14b8a6; color: #5eead4; }
-    .cat-general { background: rgba(245, 158, 11, 0.14); border: 1px solid #f59e0b; color: #fde68a; }
-
-    .live-chip {
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 0.8px;
-      color: #34d399;
-      background: rgba(16, 185, 129, 0.15);
-      border: 1px solid #10b981;
-      padding: 3px 9px;
-      border-radius: 99px;
-      display: flex;
+    .view-link {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--gold-light);
+      cursor: pointer;
+      display: inline-flex;
       align-items: center;
-      gap: 5px;
+      gap: 4px;
+      transition: gap 0.2s;
     }
-    .live-dot-pulse {
-      width: 6px;
-      height: 6px;
-      background: #34d399;
-      border-radius: 50%;
-      box-shadow: 0 0 8px #34d399;
-    }
+    .view-link:hover { gap: 7px; }
 
-    /* Interval Break Card */
-    .web-card.break-item {
-      background: rgba(245, 158, 11, 0.05);
-      border: 1px dashed rgba(245, 158, 11, 0.35);
-      text-align: center;
-      padding: 12px;
-    }
-    .web-card.break-item .card-title {
-      color: #fcd34d;
-      font-size: 15px;
-      margin-bottom: 0;
-    }
-
-    /* Interactive Event Details Pop-up Modal */
-    .app-modal-backdrop {
+    /* 17. DETAILS POPUP MODAL */
+    .modal-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(2, 6, 23, 0.85);
+      background: rgba(5, 10, 22, 0.85);
       backdrop-filter: blur(12px);
-      z-index: 100;
+      z-index: 2000;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -507,345 +590,397 @@
       pointer-events: none;
       transition: opacity 0.3s;
     }
-    .app-modal-backdrop.is-open {
+    .modal-overlay.open {
       opacity: 1;
       pointer-events: auto;
     }
-    .app-modal-sheet {
-      background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
-      border: 1.5px solid var(--gold-primary);
+    .modal-content {
+      background: linear-gradient(180deg, #0d1e38 0%, #050a16 100%);
+      border: 1px solid var(--gold-primary);
       border-radius: 24px;
       max-width: 440px;
       width: 100%;
-      padding: 30px 22px;
+      padding: 30px 24px;
       text-align: center;
       position: relative;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.9), 0 0 35px rgba(245, 158, 11, 0.2);
-      transform: scale(0.95);
-      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.9);
+      transform: scale(0.92);
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
-    .app-modal-backdrop.is-open .app-modal-sheet {
-      transform: scale(1);
+    .modal-overlay.open .modal-content { transform: scale(1); }
+    .modal-header-star {
+      font-size: 20px;
+      color: var(--gold-light);
+      margin-bottom: 6px;
     }
-    .modal-sparkles {
-      font-size: 26px;
-      margin-bottom: 8px;
-      display: block;
-      filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.5));
-    }
-    .modal-main-heading {
+    .modal-title {
       font-family: 'Manjari', sans-serif;
       font-size: 22px;
       font-weight: 700;
       color: #fff;
-      line-height: 1.4;
-      margin: 12px 0 18px;
+      margin: 10px 0 18px;
     }
-    .modal-meta-grid {
-      background: rgba(2, 6, 23, 0.55);
-      border: 1px solid var(--border-subtle);
+    .modal-spec-grid {
+      background: rgba(5, 10, 22, 0.6);
+      border: 1px solid var(--glass-subtle);
       border-radius: 14px;
-      padding: 12px;
-      display: flex;
-      justify-content: space-around;
+      padding: 14px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
       margin-bottom: 22px;
+      text-align: left;
     }
-    .meta-box span {
+    .spec-item span {
       display: block;
       font-size: 10px;
-      color: var(--text-dim);
+      color: var(--text-muted);
       text-transform: uppercase;
-      margin-bottom: 4px;
-      font-weight: 600;
+      letter-spacing: 1px;
     }
-    .meta-box strong {
+    .spec-item strong {
       font-family: 'Space Grotesk', sans-serif;
-      color: var(--gold-glow);
       font-size: 13.5px;
+      color: var(--gold-light);
     }
-    .modal-dismiss-btn {
+    .modal-close-btn {
       width: 100%;
-      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      background: var(--gold-gradient);
       border: none;
       padding: 12px;
       border-radius: 12px;
-      color: #020617;
+      color: var(--navy-950);
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 700;
       font-size: 13px;
-      letter-spacing: 0.5px;
+      letter-spacing: 1px;
       cursor: pointer;
-      box-shadow: 0 4px 18px rgba(245, 158, 11, 0.3);
     }
 
-    footer {
-      text-align: center;
-      margin-top: 45px;
-      color: #64748b;
-      font-size: 12px;
+    /* 42. MOBILE BOTTOM NAVIGATION */
+    .mobile-bottom-nav {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(5, 10, 22, 0.92);
+      backdrop-filter: blur(20px);
+      border-top: 1px solid var(--glass-subtle);
+      z-index: 1000;
+      padding: 8px 16px;
+      justify-content: space-around;
     }
-    footer strong {
-      color: #cbd5e1;
+    .m-nav-item {
+      color: var(--text-muted);
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 10px;
       font-weight: 600;
+      gap: 4px;
+    }
+    .m-nav-item.active { color: var(--gold-light); }
+    .m-nav-icon { font-size: 16px; }
+
+    /* 43. BACK TO TOP BUTTON */
+    .back-to-top {
+      position: fixed;
+      bottom: 24px;
+      right: 20px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--gold-gradient);
+      color: var(--navy-950);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 4px 15px rgba(212, 168, 79, 0.3);
+      z-index: 900;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s, transform 0.3s;
+    }
+    .back-to-top.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .back-to-top:hover { transform: translateY(-3px); }
+
+    /* 46. FOOTER */
+    footer {
+      border-top: 1px solid var(--glass-subtle);
+      background: #03070f;
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--text-muted);
+      font-size: 12px;
+      position: relative;
+      z-index: 1;
+    }
+    .footer-brand {
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+      color: var(--gold-light);
+      margin-bottom: 6px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .mobile-bottom-nav { display: flex; }
+      body { padding-bottom: 65px; }
+      .back-to-top { bottom: 75px; }
+      .countdown-grid { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
 <body>
 
-  <!-- Aesthetic Festive Thoraanam (Garland) -->
-  <div class="festive-thoraanam">
-    <svg class="thoraanam-svg" preserveAspectRatio="none" viewBox="0 0 1200 40">
-      <path d="M0,0 Q100,25 200,0 Q300,25 400,0 Q500,25 600,0 Q700,25 800,0 Q900,25 1000,0 Q1100,25 1200,0" fill="none" stroke="rgba(245, 158, 11, 0.35)" stroke-width="1.5"/>
-      <!-- Hanging Pennants -->
-      <polygon points="90,13 100,32 110,13" fill="#f59e0b" opacity="0.6"/>
-      <polygon points="290,13 300,32 310,13" fill="#06b6d4" opacity="0.6"/>
-      <polygon points="490,13 500,32 510,13" fill="#10b981" opacity="0.6"/>
-      <polygon points="690,13 700,32 710,13" fill="#f59e0b" opacity="0.6"/>
-      <polygon points="890,13 900,32 910,13" fill="#06b6d4" opacity="0.6"/>
-      <polygon points="1090,13 1100,32 1110,13" fill="#10b981" opacity="0.6"/>
-    </svg>
+  <div id="preloader">
+    <div class="preloader-ring"></div>
+    <div class="preloader-title">KUTTIADY RJM 2026</div>
   </div>
 
-  <div class="ambient-teal"></div>
-  <div class="ambient-gold"></div>
-  <div class="sparkle-layer"></div>
+  <div class="bg-star-pattern"></div>
+  <div class="faint-crescent"></div>
+  <div class="mosque-silhouette"></div>
 
-  <!-- Modern Top Navigation Bar -->
-  <nav class="top-navbar">
-    <div class="nav-inner">
-      <div class="brand-title">
-        <span class="brand-dot"></span>
-        KUTTIADI RJM 2026
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <span>✦</span> KUTTIADY RJM 2026
       </div>
-      <div class="status-pill">
-        <span class="status-ping"></span>
-        OFFICIAL LIVE PORTAL
+      <ul class="nav-links">
+        <li><a href="#hero">HOME</a></li>
+        <li><a href="#overview">COMPETITIONS</a></li>
+        <li><a href="#schedule">SCHEDULE</a></li>
+      </ul>
+      <div class="nav-status" id="livePill">
+        <span class="status-dot"></span> COMING SOON
       </div>
     </div>
   </nav>
 
-  <main class="app-container">
+  <section class="hero-section" id="hero">
+    <div class="hero-badge">✦ OFFICIAL COMPETITION PORTAL ✦</div>
     
-    <!-- Hero Dashboard Header with Mic & Trophy Accents -->
-    <header class="hero-panel">
-      <div class="floating-accent accent-mic">🎙️</div>
-      <div class="floating-accent accent-trophy">🏆</div>
+    <h1 class="hero-title-main">
+      KUTTIADY RANGE
+      <span>MUSABAQA</span>
+    </h1>
+    
+    <div class="hero-malayalam">കുറ്റ്യാടി റേഞ്ച് മുസാബഖ 2026</div>
+    <div class="hero-date">OCTOBER 02, 2026 • FRIDAY</div>
 
-      <div class="hero-badge">✦ Stage Schedules & Timings ✦</div>
-      <h1 class="hero-heading">KUTTIADI RANGE <span>MUSABAQA</span></h1>
-      <p class="hero-sub">കുറ്റ്യാടി റെയ്ഞ്ച് ജംഇയ്യത്തുൽ മുഅല്ലിമീൻ • Oct 03 & 04</p>
-    </header>
-
-    <!-- Modern Countdown Panel -->
-    <section class="countdown-card">
-      <div class="cd-grid">
-        <div class="cd-cell"><span class="cd-val" id="tDays">00</span><span class="cd-lbl">Days</span></div>
-        <div class="cd-cell"><span class="cd-val" id="tHours">00</span><span class="cd-lbl">Hours</span></div>
-        <div class="cd-cell"><span class="cd-val" id="tMins">00</span><span class="cd-lbl">Minutes</span></div>
-        <div class="cd-cell"><span class="cd-val" id="tSecs">00</span><span class="cd-lbl">Seconds</span></div>
-      </div>
-    </section>
-
-    <!-- Segment Switcher (Days) -->
-    <div class="day-selector-grid">
-      <div class="day-card-btn active" onclick="switchDay('2026-10-03')">
-        <span class="d-tag">Day 01</span>
-        <span class="d-main">Saturday, Oct 03</span>
-      </div>
-      <div class="day-card-btn" onclick="switchDay('2026-10-04')">
-        <span class="d-tag">Day 02</span>
-        <span class="d-main">Sunday, Oct 04</span>
+    <div class="countdown-wrapper">
+      <div class="countdown-header" id="countdownHeader">THE COUNTDOWN BEGINS</div>
+      <div class="countdown-grid">
+        <div class="countdown-box"><span class="countdown-val" id="cDays">00</span><span class="countdown-lbl">Days</span></div>
+        <div class="countdown-box"><span class="countdown-val" id="cHours">00</span><span class="countdown-lbl">Hours</span></div>
+        <div class="countdown-box"><span class="countdown-val" id="cMins">00</span><span class="countdown-lbl">Minutes</span></div>
+        <div class="countdown-box"><span class="countdown-val" id="cSecs">00</span><span class="countdown-lbl">Seconds</span></div>
       </div>
     </div>
 
-    <!-- Live Search & Filtering -->
-    <div class="search-bar-wrap">
-      <span class="search-icon-pos">🔍</span>
-      <input type="text" id="liveSearch" class="search-field" placeholder="Search program, category, or stage..." oninput="renderSchedule()">
+    <div class="hero-btn-row">
+      <a href="#schedule" class="btn-gold">EXPLORE PROGRAMMES →</a>
+      <a href="#overview" class="btn-glass">VIEW CATEGORIES</a>
+    </div>
+  </section>
+
+  <div class="section-wrap">
+    <div class="quote-block">
+      <div class="arabic-text">وَقُلْ رَبِّ زِدْنِي عِلْمًا</div>
+      <div class="quote-meaning">“My Lord, increase me in knowledge.”</div>
     </div>
 
-    <!-- Filter Pills -->
-    <div class="filter-pills">
-      <button class="pill-btn active" onclick="switchStage('all')">ALL STAGES</button>
-      <button class="pill-btn" onclick="switchStage(1)">STAGE 01</button>
-      <button class="pill-btn" onclick="switchStage(2)">STAGE 02</button>
-      <button class="pill-btn" onclick="switchStage(3)">STAGE 03</button>
-    </div>
-
-    <!-- Events List Timeline -->
-    <section id="scheduleTimeline" class="timeline-container"></section>
-
-    <footer>
-      <p>Organized by <strong>KUTTIADI RANGE JAMIYYATHUL MU'ALLIMEEN</strong></p>
-      <p style="margin-top: 4px; opacity: 0.6;">Musabaqa Schedule Engine 2026</p>
-    </footer>
-
-  </main>
-
-  <!-- Interactive Event Details Pop-up Modal (Prize, Mic, Glowing details) -->
-  <div class="app-modal-backdrop" id="eventModal" onclick="closeModal(event)">
-    <div class="app-modal-sheet">
-      <span class="modal-sparkles">✨ 🏆 🎙️</span>
-      <span class="cat-badge" id="mCat">Category</span>
-      <h2 class="modal-main-heading" id="mTitle">Program Title</h2>
-      <div class="modal-meta-grid">
-        <div class="meta-box"><span>Stage</span><strong id="mStage">Stage 01</strong></div>
-        <div class="meta-box"><span>Time Slot</span><strong id="mTime">09:00 AM</strong></div>
-        <div class="meta-box"><span>Session</span><strong id="mType">Competition</strong></div>
+    <div class="overview-grid" id="overview">
+      <div class="overview-card">
+        <span class="overview-icon">📖</span>
+        <div class="overview-title">QUR'AN</div>
+        <div class="overview-sub">Recitation & Hifz</div>
       </div>
-      <button class="modal-dismiss-btn" onclick="hideModal()">CLOSE</button>
+      <div class="overview-card">
+        <span class="overview-icon">🎤</span>
+        <div class="overview-title">SPEECH</div>
+        <div class="overview-sub">Elocution & Presentations</div>
+      </div>
+      <div class="overview-card">
+        <span class="overview-icon">🧠</span>
+        <div class="overview-title">QUIZ</div>
+        <div class="overview-sub">Islamic Knowledge</div>
+      </div>
+      <div class="overview-card">
+        <span class="overview-icon">✍️</span>
+        <div class="overview-title">ACADEMIC</div>
+        <div class="overview-sub">Creative & Writing Arts</div>
+      </div>
     </div>
   </div>
 
+  <section class="section-wrap" id="schedule">
+    <div style="text-align: center; margin-bottom: 20px;">
+      <span style="font-size: 11px; letter-spacing: 2px; color: var(--gold-primary); text-transform: uppercase;">OCTOBER 02, 2026</span>
+      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 28px; margin-top: 4px;">COMPETITION TIMELINE</h2>
+    </div>
+
+    <div class="filter-bar">
+      <input type="text" id="scheduleSearch" class="search-box" placeholder="🔍 Search programme, category or stage..." oninput="renderTimeline()">
+      <div class="stage-filters">
+        <button class="stage-btn active" onclick="setStage('all')">ALL</button>
+        <button class="stage-btn" onclick="setStage(1)">STAGE 01</button>
+        <button class="stage-btn" onclick="setStage(2)">STAGE 02</button>
+        <button class="stage-btn" onclick="setStage(3)">STAGE 03</button>
+      </div>
+    </div>
+
+    <div class="timeline-wrap" id="timelineContainer"></div>
+  </section>
+
+  <div class="modal-overlay" id="detailsModal" onclick="closeModalOnBackdrop(event)">
+    <div class="modal-content">
+      <div class="modal-header-star">✦</div>
+      <span class="stage-pill" id="mStage">STAGE 01</span>
+      <h3 class="modal-title" id="mTitle">Qur'an Recitation</h3>
+      
+      <div class="modal-spec-grid">
+        <div class="spec-item">
+          <span>Date</span>
+          <strong>02 October 2026</strong>
+        </div>
+        <div class="spec-item">
+          <span>Timing</span>
+          <strong id="mTime">09:00 AM</strong>
+        </div>
+        <div class="spec-item">
+          <span>Category</span>
+          <strong id="mCat">Junior</strong>
+        </div>
+        <div class="spec-item">
+          <span>Venue</span>
+          <strong id="mVenue">Main Stage</strong>
+        </div>
+      </div>
+
+      <button class="modal-close-btn" onclick="closeModal()">CLOSE DETAILS</button>
+    </div>
+  </div>
+
+  <div class="mobile-bottom-nav">
+    <a href="#hero" class="m-nav-item active"><span class="m-nav-icon">⌂</span>Home</a>
+    <a href="#schedule" class="m-nav-item"><span class="m-nav-icon">▣</span>Schedule</a>
+    <a href="#overview" class="m-nav-item"><span class="m-nav-icon">🏆</span>Categories</a>
+  </div>
+
+  <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+  <footer>
+    <div class="footer-brand">✦ KUTTIADY RANGE MUSABAQA 2026 ✦</div>
+    <p>A celebration of knowledge, talent & excellence.</p>
+    <p style="margin-top: 6px; opacity: 0.5;">© 2026 KUTTIADY RJM. All rights reserved.</p>
+  </footer>
+
   <script>
-    // Clean Program Names (Pure Malayalam, No Emojis inside categories)
-    const scheduleData = [
-      // DAY 1 - STAGE 1
-      { day: '2026-10-03', stage: 1, title: 'കിഡ്സ് കഥാകഥനം', catKey: 'kids', catLabel: 'Kids', start: '09:00', end: '09:50', isBreak: false },
-      { day: '2026-10-03', stage: 1, title: 'സബ്ജൂനിയർ മദ്‌ഹുനബി ഗാനം', catKey: 'subjunior', catLabel: 'Sub Junior', start: '09:50', end: '11:00', isBreak: false },
-      { day: '2026-10-03', stage: 1, title: 'ജൂനിയർ പ്രസംഗം', catKey: 'junior', catLabel: 'Junior', start: '11:00', end: '12:00', isBreak: false },
-      { day: '2026-10-03', stage: 1, title: 'സൂപ്പർ സീനിയർ ഇസ്ലാമിക് അറബി ഗാനം', catKey: 'supersenior', catLabel: 'Super Senior', start: '12:00', end: '13:00', isBreak: false },
-      { day: '2026-10-03', stage: 1, title: 'അലുംനി മാപ്പിളപ്പാട്ട്', catKey: 'alumni', catLabel: 'Alumni', start: '13:00', end: '13:15', isBreak: false },
-      { day: '2026-10-03', stage: 1, title: 'മാഷപ്പ്', catKey: 'general', catLabel: 'General', start: '13:15', end: '13:30', isBreak: false },
-      { day: '2026-10-03', stage: 1, title: 'നിസ്കാരം & ഭക്ഷണം', catKey: 'break', catLabel: 'Break', start: '13:30', end: '14:00', isBreak: true },
-      { day: '2026-10-03', stage: 1, title: 'ജനറൽ മൗലൂദ്', catKey: 'general', catLabel: 'General', start: '14:00', end: '15:30', isBreak: false },
-      { day: '2026-10-03', stage: 1, title: 'ജനറൽ ബുർദ', catKey: 'general', catLabel: 'General', start: '15:30', end: '17:30', isBreak: false },
-      { day: '2026-10-03', stage: 1, title: 'മുഅല്ലിം സമസ്ത കിസ്സപ്പാട്ട്', catKey: 'muallim', catLabel: 'Muallim', start: '17:40', end: '18:00', isBreak: false },
-      { day: '2026-10-03', stage: 1, title: 'നിസ്കാരം', catKey: 'break', catLabel: 'Break', start: '18:00', end: '18:45', isBreak: true },
-      { day: '2026-10-03', stage: 1, title: 'ജനറൽ ദഫ് മുട്ട്', catKey: 'general', catLabel: 'General', start: '18:45', end: '19:10', isBreak: false },
-      { day: '2026-10-03', stage: 1, title: 'മുഅല്ലിം ബുർദ', catKey: 'muallim', catLabel: 'Muallim', start: '19:10', end: '19:35', isBreak: false },
-
-      // DAY 1 - STAGE 2
-      { day: '2026-10-03', stage: 2, title: 'സബ്ജൂനിയർ ഖിറാഅത്ത്', catKey: 'subjunior', catLabel: 'Sub Junior', start: '09:00', end: '09:50', isBreak: false },
-      { day: '2026-10-03', stage: 2, title: 'കിഡ്സ് ഫാത്തിഹ പാരായണം', catKey: 'kids', catLabel: 'Kids', start: '09:50', end: '10:40', isBreak: false },
-      { day: '2026-10-03', stage: 2, title: 'സബ്ജൂനിയർ ഹിഫ്ള്', catKey: 'subjunior', catLabel: 'Sub Junior', start: '10:40', end: '11:40', isBreak: false },
-      { day: '2026-10-03', stage: 2, title: 'സബ്ജൂനിയർ ഓർമ പരിശോധന', catKey: 'subjunior', catLabel: 'Sub Junior', start: '11:40', end: '12:30', isBreak: false },
-      { day: '2026-10-03', stage: 2, title: 'മുഅല്ലിം മുശാഅറ & മുനാഖശ', catKey: 'muallim', catLabel: 'Muallim', start: '12:30', end: '13:30', isBreak: false },
-      { day: '2026-10-03', stage: 2, title: 'നിസ്കാരം & ഭക്ഷണം', catKey: 'break', catLabel: 'Break', start: '13:30', end: '14:30', isBreak: true },
-      { day: '2026-10-03', stage: 2, title: 'മുഅല്ലിം ഹിസ്ബ്', catKey: 'muallim', catLabel: 'Muallim', start: '14:30', end: '15:00', isBreak: false },
-      { day: '2026-10-03', stage: 2, title: 'മുഅല്ലിം ഹിഫ്ള്', catKey: 'muallim', catLabel: 'Muallim', start: '15:00', end: '15:30', isBreak: false },
-      { day: '2026-10-03', stage: 2, title: 'മുഅല്ലിം ബാങ്ക്', catKey: 'muallim', catLabel: 'Muallim', start: '15:30', end: '16:00', isBreak: false },
-      { day: '2026-10-03', stage: 2, title: 'മുഅല്ലിം അറബിക് പ്രസംഗം', catKey: 'muallim', catLabel: 'Muallim', start: '16:00', end: '16:30', isBreak: false },
-      { day: '2026-10-03', stage: 2, title: 'മുഅല്ലിം നിമിഷ പ്രസംഗം', catKey: 'muallim', catLabel: 'Muallim', start: '16:30', end: '16:50', isBreak: false },
-      { day: '2026-10-03', stage: 2, title: 'അലുംനി മാസ്റ്റർ ഹണ്ട്', catKey: 'alumni', catLabel: 'Alumni', start: '17:00', end: '17:30', isBreak: false },
-      { day: '2026-10-03', stage: 2, title: 'അലുംനി നിമിഷ പ്രസംഗം', catKey: 'alumni', catLabel: 'Alumni', start: '17:30', end: '18:00', isBreak: false },
-
-      // DAY 1 - STAGE 3
-      { day: '2026-10-03', stage: 3, title: 'സീനിയർ ക്വിസ്', catKey: 'senior', catLabel: 'Senior', start: '08:00', end: '09:00', isBreak: false },
-      { day: '2026-10-03', stage: 3, title: 'സൂപ്പർ സീനിയർ പദപ്പയറ്റ്', catKey: 'supersenior', catLabel: 'Super Senior', start: '09:00', end: '10:00', isBreak: false },
-      { day: '2026-10-03', stage: 3, title: 'ജൂനിയർ കുരുന്നുകൾ ടെസ്റ്റ്', catKey: 'junior', catLabel: 'Junior', start: '10:00', end: '10:45', isBreak: false },
-      { day: '2026-10-03', stage: 3, title: 'മുഅല്ലിം പ്രബന്ധം', catKey: 'muallim', catLabel: 'Muallim', start: '11:00', end: '12:00', isBreak: false },
-      { day: '2026-10-03', stage: 3, title: 'മുഅല്ലിം & അലുംനി ഡിജിറ്റൽ പോസ്റ്റർ ഡിസൈനിംഗ്', catKey: 'muallim', catLabel: 'Muallim & Alumni', start: '11:00', end: '12:00', isBreak: false },
-
-      // DAY 2 - STAGE 1
-      { day: '2026-10-04', stage: 1, title: 'സൂപ്പർ സീനിയർ മാപ്പിളപ്പാട്ട്', catKey: 'supersenior', catLabel: 'Super Senior', start: '08:00', end: '09:00', isBreak: false },
-      { day: '2026-10-04', stage: 1, title: 'സീനിയർ ഇസ്ലാമിക ഗാനം (അറബി)', catKey: 'senior', catLabel: 'Senior', start: '09:00', end: '10:00', isBreak: false },
-      { day: '2026-10-04', stage: 1, title: 'ജൂനിയർ ഇസ്ലാമിക് ഗാനം', catKey: 'junior', catLabel: 'Junior', start: '10:00', end: '11:00', isBreak: false },
-      { day: '2026-10-04', stage: 1, title: 'സീനിയർ മലയാള പ്രസംഗം', catKey: 'senior', catLabel: 'Senior', start: '11:00', end: '12:00', isBreak: false },
-      { day: '2026-10-04', stage: 1, title: 'ജൂനിയർ ഇസ്ലാമിക സമൂഹഗാനം', catKey: 'junior', catLabel: 'Junior', start: '12:00', end: '13:15', isBreak: false },
-      { day: '2026-10-04', stage: 1, title: 'നിസ്കാരം & ഭക്ഷണം', catKey: 'break', catLabel: 'Break', start: '13:15', end: '14:00', isBreak: true },
-      { day: '2026-10-04', stage: 1, title: 'സീനിയർ മാപ്പിളപ്പാട്ട്', catKey: 'senior', catLabel: 'Senior', start: '14:00', end: '15:00', isBreak: false },
-      { day: '2026-10-04', stage: 1, title: 'ജനറൽ അറബി സംഘഗാനം', catKey: 'general', catLabel: 'General', start: '15:00', end: '16:00', isBreak: false },
-
-      // DAY 2 - STAGE 2
-      { day: '2026-10-04', stage: 2, title: 'സൂപ്പർ സീനിയർ പ്രസംഗം', catKey: 'supersenior', catLabel: 'Super Senior', start: '09:00', end: '09:30', isBreak: false },
-      { day: '2026-10-04', stage: 2, title: 'സീനിയർ ഇംഗ്ലീഷ് പ്രസംഗം', catKey: 'senior', catLabel: 'Senior', start: '09:30', end: '10:30', isBreak: false },
-      { day: '2026-10-04', stage: 2, title: 'ജൂനിയർ ഉർദു ഗാനം', catKey: 'junior', catLabel: 'Junior', start: '10:30', end: '11:30', isBreak: false },
-      { day: '2026-10-04', stage: 2, title: 'സീനിയർ ഉർദു പ്രസംഗം', catKey: 'senior', catLabel: 'Senior', start: '11:30', end: '12:15', isBreak: false },
-      { day: '2026-10-04', stage: 2, title: 'സൂപ്പർ സീനിയർ പാടിപ്പറയൽ', catKey: 'supersenior', catLabel: 'Super Senior', start: '12:15', end: '13:15', isBreak: false },
-      { day: '2026-10-04', stage: 2, title: 'നിസ്കാരം & ഭക്ഷണം', catKey: 'break', catLabel: 'Break', start: '13:15', end: '14:00', isBreak: true },
-      { day: '2026-10-04', stage: 2, title: 'ജൂനിയർ അറബി ഗാനം', catKey: 'junior', catLabel: 'Junior', start: '14:00', end: '15:00', isBreak: false },
-      { day: '2026-10-04', stage: 2, title: 'സൂപ്പർ സീനിയർ അറബി പ്രസംഗം', catKey: 'supersenior', catLabel: 'Super Senior', start: '15:00', end: '16:00', isBreak: false },
-
-      // DAY 2 - STAGE 3
-      { day: '2026-10-04', stage: 3, title: 'ജൂനിയർ ഹിഫ്ള്', catKey: 'junior', catLabel: 'Junior', start: '08:00', end: '09:00', isBreak: false },
-      { day: '2026-10-04', stage: 3, title: 'ജൂനിയർ ഖിറാഅത്ത്', catKey: 'junior', catLabel: 'Junior', start: '09:00', end: '09:50', isBreak: false },
-      { day: '2026-10-04', stage: 3, title: 'സീനിയർ ഖിറാഅത്ത്', catKey: 'senior', catLabel: 'Senior', start: '09:50', end: '10:45', isBreak: false },
-      { day: '2026-10-04', stage: 3, title: 'സൂപ്പർ സീനിയർ ഖിറാഅത്ത്', catKey: 'supersenior', catLabel: 'Super Senior', start: '10:45', end: '11:45', isBreak: false },
-      { day: '2026-10-04', stage: 3, title: 'സീനിയർ ഹിഫ്ള്', catKey: 'senior', catLabel: 'Senior', start: '11:45', end: '12:30', isBreak: false },
-      { day: '2026-10-04', stage: 3, title: 'സീനിയർ ബാങ്ക്', catKey: 'senior', catLabel: 'Senior', start: '12:30', end: '13:15', isBreak: false },
-      { day: '2026-10-04', stage: 3, title: 'നിസ്കാരം & ഭക്ഷണം', catKey: 'break', catLabel: 'Break', start: '13:15', end: '14:00', isBreak: true },
-      { day: '2026-10-04', stage: 3, title: 'ജൂനിയർ ബാങ്ക്', catKey: 'junior', catLabel: 'Junior', start: '14:00', end: '14:45', isBreak: false },
-      { day: '2026-10-04', stage: 3, title: 'സൂപ്പർ സീനിയർ ഹിഫ്ള്', catKey: 'supersenior', catLabel: 'Super Senior', start: '14:45', end: '15:30', isBreak: false }
+    // Event Data for October 02, 2026
+    const competitionEvents = [
+      { id: 1, stage: 1, title: 'ഖിറാഅത്ത് (Qur\'an Recitation)', cat: 'Junior', start: '08:30', end: '09:30', venue: 'Main Stage' },
+      { id: 2, stage: 2, title: 'ഹിഫ്ള് (Hifz)', cat: 'Sub Junior', start: '08:30', end: '09:45', venue: 'Stage 02' },
+      { id: 3, stage: 3, title: 'സീനിയർ ക്വിസ് (Islamic Quiz)', cat: 'Senior', start: '09:00', end: '10:00', venue: 'Auditorium' },
+      { id: 4, stage: 1, title: 'മലയാള പ്രസംഗം (Malayalam Speech)', cat: 'Junior', start: '09:30', end: '11:00', venue: 'Main Stage' },
+      { id: 5, stage: 2, title: 'അറബി ഗാനം (Arabic Song)', cat: 'Kids', start: '09:45', end: '11:00', venue: 'Stage 02' },
+      { id: 6, stage: 1, title: 'മാപ്പിളപ്പാട്ട് (Mappilapattu)', cat: 'Super Senior', start: '11:00', end: '12:30', venue: 'Main Stage' },
+      { id: 7, stage: 2, title: 'ഇംഗ്ലീഷ് പ്രസംഗം (English Speech)', cat: 'Senior', start: '11:00', end: '12:00', venue: 'Stage 02' },
+      { id: 8, stage: 3, title: 'ഡിജിറ്റൽ ഡിസൈനിംഗ് (Digital Poster)', cat: 'Muallim', start: '11:00', end: '12:00', venue: 'Media Hall' },
+      { id: 9, stage: 1, title: 'നിസ്കാരം & ഭക്ഷണം (Prayer & Lunch)', cat: 'General', start: '12:30', end: '13:30', venue: 'Dining Hall', isBreak: true },
+      { id: 10, stage: 1, title: 'ജനറൽ ദഫ് മുട്ട് (Duff Muttu)', cat: 'General', start: '14:00', end: '16:00', venue: 'Main Stage' },
+      { id: 11, stage: 2, title: 'ബുർദ ആലാപനം (Burda)', cat: 'Muallim', start: '14:00', end: '15:30', venue: 'Stage 02' }
     ];
 
-    let selectedDay = '2026-10-03';
-    let selectedStage = 'all';
+    let currentStage = 'all';
 
-    function formatTime12(timeStr) {
-      const [h, m] = timeStr.split(':').map(Number);
+    // 44. Preloader Dismiss
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const loader = document.getElementById('preloader');
+        loader.style.opacity = '0';
+        setTimeout(() => loader.style.display = 'none', 600);
+      }, 700);
+    });
+
+    // 9. Navbar Scroll Effect & Back-to-top
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('navbar');
+      const btt = document.getElementById('backToTop');
+      if (window.scrollY > 60) {
+        nav.classList.add('scrolled');
+        btt.classList.add('show');
+      } else {
+        nav.classList.remove('scrolled');
+        btt.classList.remove('show');
+      }
+    });
+
+    function formatTime12(str) {
+      const [h, m] = str.split(':').map(Number);
       const ampm = h >= 12 ? 'PM' : 'AM';
-      const hours = h % 12 || 12;
-      return `${hours}:${m.toString().padStart(2, '0')} ${ampm}`;
+      return `${h % 12 || 12}:${m.toString().padStart(2, '0')} ${ampm}`;
     }
 
-    function switchDay(day) {
-      selectedDay = day;
-      const buttons = document.querySelectorAll('.day-card-btn');
-      buttons[0].classList.toggle('active', day === '2026-10-03');
-      buttons[1].classList.toggle('active', day === '2026-10-04');
-      renderSchedule();
-    }
-
-    function switchStage(stage) {
-      selectedStage = stage;
-      document.querySelectorAll('.pill-btn').forEach(btn => {
-        const text = btn.innerText;
-        if (stage === 'all' && text.includes('ALL')) btn.classList.add('active');
-        else if (stage !== 'all' && text.includes(`STAGE 0${stage}`)) btn.classList.add('active');
+    function setStage(stage) {
+      currentStage = stage;
+      document.querySelectorAll('.stage-btn').forEach(btn => {
+        const txt = btn.innerText;
+        if (stage === 'all' && txt.includes('ALL')) btn.classList.add('active');
+        else if (stage !== 'all' && txt.includes(`0${stage}`)) btn.classList.add('active');
         else btn.classList.remove('active');
       });
-      renderSchedule();
+      renderTimeline();
     }
 
-    function renderSchedule() {
-      const timeline = document.getElementById('scheduleTimeline');
-      const query = document.getElementById('liveSearch').value.trim().toLowerCase();
+    function renderTimeline() {
+      const container = document.getElementById('timelineContainer');
+      const query = document.getElementById('scheduleSearch').value.trim().toLowerCase();
       const now = new Date();
 
-      const matched = scheduleData.filter(item => {
-        const matchesDay = item.day === selectedDay;
-        const matchesStage = selectedStage === 'all' || item.stage === selectedStage;
-        const matchesQuery = item.title.toLowerCase().includes(query) ||
-                             item.catLabel.toLowerCase().includes(query) ||
-                             `stage ${item.stage}`.includes(query);
-        return matchesDay && matchesStage && matchesQuery;
+      const filtered = competitionEvents.filter(ev => {
+        const matchStage = currentStage === 'all' || ev.stage === currentStage;
+        const matchQuery = ev.title.toLowerCase().includes(query) ||
+                             ev.cat.toLowerCase().includes(query) ||
+                             `stage ${ev.stage}`.includes(query);
+        return matchStage && matchQuery;
       });
 
-      if (matched.length === 0) {
-        timeline.innerHTML = `<div style="text-align:center; padding: 50px 15px; color:#64748b; font-size:14px;">No programs found matching your search.</div>`;
+      if (!filtered.length) {
+        container.innerHTML = `<div style="padding: 40px; color: var(--text-muted); text-align: center;">No competitions found.</div>`;
         return;
       }
 
-      timeline.innerHTML = matched.map((ev, index) => {
+      container.innerHTML = filtered.map(ev => {
         const [sH, sM] = ev.start.split(':').map(Number);
         const [eH, eM] = ev.end.split(':').map(Number);
-        const [y, m, d] = ev.day.split('-').map(Number);
-
-        const startObj = new Date(y, m - 1, d, sH, sM, 0);
-        const endObj = new Date(y, m - 1, d, eH, eM, 0);
+        const startObj = new Date(2026, 9, 2, sH, sM, 0); // Oct 2, 2026
+        const endObj = new Date(2026, 9, 2, eH, eM, 0);
 
         const isLive = now >= startObj && now <= endObj;
 
-        if (ev.isBreak) {
-          return `
-            <div class="web-card break-item">
-              <div class="time-slot" style="margin-bottom: 4px;">${formatTime12(ev.start)} – ${formatTime12(ev.end)}</div>
-              <div class="card-title">${ev.title}</div>
-            </div>
-          `;
-        }
-
         return `
-          <div class="web-card ${isLive ? 'is-live' : ''}" onclick="openModal(${index})">
-            <div class="card-head">
-              <span class="stage-label">STAGE 0${ev.stage}</span>
-              <span class="time-slot">${formatTime12(ev.start)} – ${formatTime12(ev.end)}</span>
-            </div>
-            <div class="card-title">${ev.title}</div>
-            <div class="card-foot">
-              <span class="cat-badge cat-${ev.catKey}">${ev.catLabel}</span>
-              ${isLive ? `<span class="live-chip"><span class="live-dot-pulse"></span> LIVE NOW</span>` : ''}
+          <div class="timeline-node ${isLive ? 'live' : ''}">
+            <div class="node-dot"></div>
+            <div class="prog-card ${isLive ? 'live-card' : ''}">
+              <div class="card-top-row">
+                <span class="stage-pill">STAGE 0${ev.stage}</span>
+                <span class="card-time">${formatTime12(ev.start)} – ${formatTime12(ev.end)}</span>
+              </div>
+              <div class="card-title">${ev.title}</div>
+              <div class="card-bottom-row">
+                <span class="cat-tag">${ev.cat}</span>
+                <span class="view-link" onclick="openModal(${ev.id})">VIEW DETAILS →</span>
+              </div>
             </div>
           </div>
         `;
@@ -853,58 +988,56 @@
     }
 
     // Modal Control
-    function openModal(index) {
-      const ev = scheduleData[index];
-      if (ev.isBreak) return;
+    function openModal(id) {
+      const item = competitionEvents.find(e => e.id === id);
+      if (!item) return;
 
-      document.getElementById('mTitle').innerText = ev.title;
-      document.getElementById('mStage').innerText = `Stage 0${ev.stage}`;
-      document.getElementById('mTime').innerText = `${formatTime12(ev.start)} – ${formatTime12(ev.end)}`;
-      
-      const cat = document.getElementById('mCat');
-      cat.innerText = ev.catLabel;
-      cat.className = `cat-badge cat-${ev.catKey}`;
-      
-      document.getElementById('eventModal').classList.add('is-open');
+      document.getElementById('mStage').innerText = `STAGE 0${item.stage}`;
+      document.getElementById('mTitle').innerText = item.title;
+      document.getElementById('mTime').innerText = `${formatTime12(item.start)} – ${formatTime12(item.end)}`;
+      document.getElementById('mCat').innerText = item.cat;
+      document.getElementById('mVenue').innerText = item.venue;
+
+      document.getElementById('detailsModal').classList.add('open');
     }
 
-    function hideModal() {
-      document.getElementById('eventModal').classList.remove('is-open');
+    function closeModal() {
+      document.getElementById('detailsModal').classList.remove('open');
     }
 
-    function closeModal(e) {
-      if (e.target.id === 'eventModal') hideModal();
+    function closeModalOnBackdrop(e) {
+      if (e.target.id === 'detailsModal') closeModal();
     }
 
-    // Countdown Logic (Target: Oct 3, 2026 08:00 AM)
+    // 5. Countdown to October 2, 2026 08:00 AM
     function updateCountdown() {
-      const eventTarget = new Date(2026, 9, 3, 8, 0, 0).getTime();
+      const target = new Date(2026, 9, 2, 8, 0, 0).getTime();
       const now = new Date().getTime();
-      const diff = eventTarget - now;
+      const diff = target - now;
+
+      const livePill = document.getElementById('livePill');
 
       if (diff <= 0) {
-        document.getElementById('tDays').innerText = '00';
-        document.getElementById('tHours').innerText = '00';
-        document.getElementById('tMins').innerText = '00';
-        document.getElementById('tSecs').innerText = '00';
+        document.getElementById('countdownHeader').innerText = "COMPETITIONS ARE LIVE";
+        livePill.innerHTML = '<span class="status-dot"></span> LIVE NOW';
+        livePill.classList.add('live');
         return;
       }
 
       const days = Math.floor(diff / (1000 * 60 * 60 * 24));
       const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const secs = Math.floor((diff % (1000 * 60)) / 1000);
 
-      document.getElementById('tDays').innerText = String(days).padStart(2, '0');
-      document.getElementById('tHours').innerText = String(hours).padStart(2, '0');
-      document.getElementById('tMins').innerText = String(minutes).padStart(2, '0');
-      document.getElementById('tSecs').innerText = String(seconds).padStart(2, '0');
+      document.getElementById('cDays').innerText = String(days).padStart(2, '0');
+      document.getElementById('cHours').innerText = String(hours).padStart(2, '0');
+      document.getElementById('cMins').innerText = String(mins).padStart(2, '0');
+      document.getElementById('cSecs').innerText = String(secs).padStart(2, '0');
     }
 
     setInterval(updateCountdown, 1000);
-    setInterval(renderSchedule, 30000);
     updateCountdown();
-    renderSchedule();
+    renderTimeline();
   </script>
 </body>
 </html>
