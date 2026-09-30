@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KUTTIADY RANGE MUSABAQA 2026 | Grand Event Portal</title>
 
-  <!-- Typography: Cinzel Decorative, Plus Jakarta Sans, Manjari -->
+  <!-- Typography: Cinzel Decorative, Noto Sans Malayalam (Clean spacing), Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@600;700;800&family=Manjari:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@600;700;800&family=Noto+Sans+Malayalam:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -184,7 +184,6 @@
       z-index: 1;
     }
 
-    /* ASYMMETRICAL REALISTIC MICROPHONE ACCENT */
     .hero-mic-accent {
       position: absolute;
       right: 8%;
@@ -235,11 +234,12 @@
       display: block;
     }
     .hero-malayalam {
-      font-family: 'Manjari', sans-serif;
+      font-family: 'Noto Sans Malayalam', sans-serif;
       font-size: 17px;
       font-weight: 700;
       color: var(--text-muted);
       margin-bottom: 8px;
+      letter-spacing: 0.5px;
     }
     .hero-date {
       font-size: 13px;
@@ -316,7 +316,7 @@
       display: block;
     }
 
-    /* HERO PILL BUTTONS */
+    /* BUTTONS */
     .hero-btn-row {
       display: flex;
       gap: 14px;
@@ -362,7 +362,7 @@
       border-color: var(--gold-soft);
     }
 
-    /* SCHEDULE TIMELINE SECTION */
+    /* SCHEDULE SECTION */
     .section-wrap {
       max-width: 780px;
       margin: 0 auto;
@@ -371,7 +371,6 @@
       z-index: 1;
     }
 
-    /* 2-DAY SELECTOR */
     .day-switch-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -408,7 +407,6 @@
       display: block;
     }
 
-    /* SEARCH & STAGE FILTERS */
     .filter-bar {
       display: flex;
       flex-direction: column;
@@ -456,7 +454,6 @@
       box-shadow: 0 4px 15px rgba(226, 194, 117, 0.25);
     }
 
-    /* TIMELINE WRAP */
     .timeline-wrap {
       position: relative;
       padding-left: 24px;
@@ -485,7 +482,7 @@
       border: 2px solid var(--champagne-gold);
     }
 
-    /* PROGRAM CARDS */
+    /* CARDS WITH FIXED MALAYALAM SPACING */
     .prog-card {
       background: var(--glass-panel);
       border: 1px solid var(--glass-border);
@@ -522,11 +519,13 @@
       color: #cbd5e1;
     }
     .card-title {
-      font-family: 'Manjari', sans-serif;
-      font-size: 18.5px;
+      font-family: 'Noto Sans Malayalam', sans-serif;
+      font-size: 18px;
       font-weight: 700;
       color: #fff;
-      line-height: 1.45;
+      line-height: 1.5;
+      letter-spacing: 0.6px;
+      word-spacing: 2px;
       margin-bottom: 12px;
     }
     .card-bottom-row {
@@ -558,7 +557,6 @@
     }
     .view-link:hover { text-decoration: underline; }
 
-    /* BREAK ITEM */
     .prog-card.break-item {
       background: rgba(226, 194, 117, 0.04);
       border: 1px dashed rgba(226, 194, 117, 0.3);
@@ -571,7 +569,7 @@
       margin-bottom: 0;
     }
 
-    /* DETAILS POPUP MODAL */
+    /* MODAL */
     .modal-overlay {
       position: fixed;
       inset: 0;
@@ -610,10 +608,11 @@
       margin-bottom: 6px;
     }
     .modal-title {
-      font-family: 'Manjari', sans-serif;
-      font-size: 22px;
+      font-family: 'Noto Sans Malayalam', sans-serif;
+      font-size: 21px;
       font-weight: 700;
       color: #fff;
+      line-height: 1.45;
       margin: 10px 0 18px;
     }
     .modal-spec-grid {
@@ -682,7 +681,6 @@
     <div class="preloader-title">KUTTIADY RJM 2026</div>
   </div>
 
-  <!-- Background Ambience -->
   <div class="bg-gradient-mesh"></div>
   <div class="bg-gold-bloom"></div>
   <div class="bg-geometric-arabesque"></div>
@@ -702,7 +700,6 @@
 
   <!-- Hero Section -->
   <section class="hero-section" id="hero">
-    <!-- SVG Studio Microphone Accent -->
     <svg class="hero-mic-accent" viewBox="0 0 100 200" fill="none" stroke="currentColor">
       <rect x="35" y="20" width="30" height="60" rx="15" fill="#e2c275" fill-opacity="0.15" stroke="#e2c275" stroke-width="2"/>
       <line x1="35" y1="40" x2="65" y2="40" stroke="#e2c275" stroke-width="1.5"/>
@@ -722,7 +719,6 @@
     <div class="hero-malayalam">കുറ്റ്യാടി റേഞ്ച് മുസാബഖ 2026</div>
     <div class="hero-date">OCTOBER 03 & 04, 2026</div>
 
-    <!-- Countdown -->
     <div class="countdown-wrapper">
       <div class="countdown-header" id="countdownHeader">THE COUNTDOWN BEGINS</div>
       <div class="countdown-grid">
@@ -733,7 +729,6 @@
       </div>
     </div>
 
-    <!-- Hero Pill Buttons -->
     <div class="hero-btn-row">
       <a href="#schedule" class="btn-gold">EXPLORE PROGRAMMES →</a>
       <a href="#schedule" class="btn-glass">VIEW SCHEDULE</a>
@@ -811,11 +806,10 @@
   </footer>
 
   <script>
-    // Complete 2-Day Programs Dataset
     const competitionEvents = [
       // DAY 1 - STAGE 1 (Oct 03)
       { id: 101, day: '2026-10-03', stage: 1, title: 'കിഡ്സ് കഥാകഥനം', cat: 'Kids', start: '09:00', end: '09:50', venue: 'Stage 01' },
-      { id: 102, day: '2026-10-03', stage: 1, title: 'സബ്ജൂനിയർ മദ്‌ഹുനബി ഗാനം', cat: 'Sub Junior', start: '09:50', end: '11:00', venue: 'Stage 01' },
+      { id: 102, day: '2026-10-03', stage: 1, title: 'സബ് ജൂനിയർ മദ്‌ഹുനബി ഗാനം', cat: 'Sub Junior', start: '09:50', end: '11:00', venue: 'Stage 01' },
       { id: 103, day: '2026-10-03', stage: 1, title: 'ജൂനിയർ പ്രസംഗം', cat: 'Junior', start: '11:00', end: '12:00', venue: 'Stage 01' },
       { id: 104, day: '2026-10-03', stage: 1, title: 'സൂപ്പർ സീനിയർ ഇസ്ലാമിക് അറബി ഗാനം', cat: 'Super Senior', start: '12:00', end: '13:00', venue: 'Stage 01' },
       { id: 105, day: '2026-10-03', stage: 1, title: 'അലുംനി മാപ്പിളപ്പാട്ട്', cat: 'Alumni', start: '13:00', end: '13:15', venue: 'Stage 01' },
@@ -829,10 +823,10 @@
       { id: 113, day: '2026-10-03', stage: 1, title: 'മുഅല്ലിം ബുർദ', cat: 'Muallim', start: '19:10', end: '19:35', venue: 'Stage 01' },
 
       // DAY 1 - STAGE 2 (Oct 03)
-      { id: 120, day: '2026-10-03', stage: 2, title: 'സബ്ജൂനിയർ ഖിറാഅത്ത്', cat: 'Sub Junior', start: '09:00', end: '09:50', venue: 'Stage 02' },
+      { id: 120, day: '2026-10-03', stage: 2, title: 'സബ് ജൂനിയർ ഖിറാഅത്ത്', cat: 'Sub Junior', start: '09:00', end: '09:50', venue: 'Stage 02' },
       { id: 121, day: '2026-10-03', stage: 2, title: 'കിഡ്സ് ഫാത്തിഹ പാരായണം', cat: 'Kids', start: '09:50', end: '10:40', venue: 'Stage 02' },
-      { id: 122, day: '2026-10-03', stage: 2, title: 'സബ്ജൂനിയർ ഹിഫ്ള്', cat: 'Sub Junior', start: '10:40', end: '11:40', venue: 'Stage 02' },
-      { id: 123, day: '2026-10-03', stage: 2, title: 'സബ്ജൂനിയർ ഓർമ പരിശോധന', cat: 'Sub Junior', start: '11:40', end: '12:30', venue: 'Stage 02' },
+      { id: 122, day: '2026-10-03', stage: 2, title: 'സബ് ജൂനിയർ ഹിഫ്ള്', cat: 'Sub Junior', start: '10:40', end: '11:40', venue: 'Stage 02' },
+      { id: 123, day: '2026-10-03', stage: 2, title: 'സബ് ജൂനിയർ ഓർമ പരിശോധന', cat: 'Sub Junior', start: '11:40', end: '12:30', venue: 'Stage 02' },
       { id: 124, day: '2026-10-03', stage: 2, title: 'മുഅല്ലിം മുശാഅറ & മുനാഖശ', cat: 'Muallim', start: '12:30', end: '13:30', venue: 'Stage 02' },
       { id: 125, day: '2026-10-03', stage: 2, title: 'നിസ്കാരം & ഭക്ഷണം', cat: 'General', start: '13:30', end: '14:30', venue: 'Dining Hall', isBreak: true },
       { id: 126, day: '2026-10-03', stage: 2, title: 'മുഅല്ലിം ഹിസ്ബ്', cat: 'Muallim', start: '14:30', end: '15:00', venue: 'Stage 02' },
