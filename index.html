@@ -3,31 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kuttiadi RJM Musabaqa 2026 | Schedule Portal</title>
+  <title>KUTTIADI RJM MUSABAQA 2026 | Grand Schedule Portal</title>
 
-  <!-- Google Modern Ultra-Fonts -->
+  <!-- Google Ultra Aesthetic Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&family=Manjari:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&family=Manjari:wght@700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg-base: #040907;
-      --surface-glass: rgba(13, 26, 20, 0.65);
-      --surface-hover: rgba(22, 45, 35, 0.85);
-      --border-glass: rgba(212, 175, 55, 0.22);
+      --bg-dark: #020617;
+      --surface-glass: rgba(15, 23, 42, 0.72);
+      --surface-hover: rgba(30, 41, 59, 0.88);
+      --border-glass: rgba(245, 158, 11, 0.22);
       --border-subtle: rgba(255, 255, 255, 0.08);
       --gold-primary: #f59e0b;
       --gold-glow: #fbbf24;
-      --emerald-accent: #10b981;
-      --text-white: #ffffff;
+      --teal-glow: #06b6d4;
+      --emerald-glow: #10b981;
+      --text-white: #f8fafc;
       --text-dim: #94a3b8;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      background-color: var(--bg-base);
+      background-color: var(--bg-dark);
       font-family: 'Plus Jakarta Sans', sans-serif;
       color: var(--text-white);
       min-height: 100vh;
@@ -36,58 +37,78 @@
       padding-bottom: 90px;
     }
 
-    /* Ambient Dynamic Glowing Meshes (World Class SaaS / Web3 Feel) */
-    .ambient-glow-1 {
+    /* Modern Dynamic Aura & Ambient Glow (Obsidian + Teal + Gold) */
+    .ambient-teal {
       position: fixed;
-      top: -150px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 700px;
+      top: -120px;
+      left: 15%;
+      width: 550px;
       height: 450px;
-      background: radial-gradient(circle, rgba(16, 185, 129, 0.2) 0%, rgba(245, 158, 11, 0.1) 45%, transparent 70%);
+      background: radial-gradient(circle, rgba(6, 182, 212, 0.16) 0%, transparent 65%);
       filter: blur(90px);
       pointer-events: none;
       z-index: 0;
     }
-
-    .ambient-glow-2 {
+    .ambient-gold {
       position: fixed;
-      bottom: -100px;
-      right: -100px;
+      top: 100px;
+      right: 5%;
       width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(16, 185, 129, 0.12) 0%, transparent 60%);
-      filter: blur(100px);
+      height: 450px;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.14) 0%, transparent 65%);
+      filter: blur(95px);
       pointer-events: none;
       z-index: 0;
     }
 
-    /* Subtle Architectural Islamic Geometry Canvas */
-    .geometric-backdrop {
+    /* Subtle Floating Islamic Sparkles/Stars */
+    .sparkle-layer {
       position: fixed;
       inset: 0;
-      background-image: 
-        radial-gradient(1px 1px at 20px 30px, rgba(255,255,255,0.15), rgba(0,0,0,0)),
-        radial-gradient(1.5px 1.5px at 120px 140px, rgba(245, 158, 11, 0.35), rgba(0,0,0,0)),
-        url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0 L65 35 L100 50 L65 65 L50 100 L35 65 L0 50 L35 35 Z' fill='none' stroke='%23f59e0b' stroke-width='0.4' stroke-opacity='0.08'/%3E%3C/svg%3E");
       pointer-events: none;
       z-index: 0;
-      opacity: 0.6;
+      background: 
+        radial-gradient(1.5px 1.5px at 40px 60px, #fbbf24, transparent),
+        radial-gradient(1.5px 1.5px at 140px 180px, #38bdf8, transparent),
+        radial-gradient(2px 2px at 280px 110px, #f59e0b, transparent),
+        radial-gradient(1px 1px at 320px 290px, #ffffff, transparent);
+      background-size: 360px 360px;
+      opacity: 0.5;
+      animation: floatSparkles 24s linear infinite;
+    }
+    @keyframes floatSparkles {
+      from { transform: translateY(0); }
+      to { transform: translateY(-360px); }
     }
 
-    /* Modern Glass Navigation Bar */
+    /* Elegant Festive Thoraanam (Islamic Bunting Garland) */
+    .festive-thoraanam {
+      position: relative;
+      width: 100%;
+      height: 38px;
+      overflow: hidden;
+      z-index: 10;
+      pointer-events: none;
+      opacity: 0.85;
+    }
+    .thoraanam-svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Top Sticky Modern App Nav */
     .top-navbar {
       position: sticky;
       top: 0;
       z-index: 50;
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-      background: rgba(4, 9, 7, 0.75);
+      background: rgba(2, 6, 23, 0.8);
       border-bottom: 1px solid var(--border-subtle);
-      padding: 14px 20px;
+      padding: 12px 20px;
     }
     .nav-inner {
-      max-width: 780px;
+      max-width: 740px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
@@ -96,29 +117,27 @@
     .brand-title {
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 700;
-      font-size: 15px;
+      font-size: 14.5px;
       letter-spacing: 0.5px;
-      background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: #fff;
       display: flex;
       align-items: center;
       gap: 8px;
     }
     .brand-dot {
-      width: 9px;
-      height: 9px;
+      width: 8px;
+      height: 8px;
       background: var(--gold-primary);
       border-radius: 50%;
       box-shadow: 0 0 10px var(--gold-primary);
     }
     .status-pill {
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 700;
-      letter-spacing: 1px;
-      color: #34d399;
-      background: rgba(16, 185, 129, 0.12);
-      border: 1px solid rgba(16, 185, 129, 0.3);
+      letter-spacing: 0.8px;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
       padding: 5px 12px;
       border-radius: 99px;
       display: flex;
@@ -128,52 +147,66 @@
     .status-ping {
       width: 6px;
       height: 6px;
-      background: #34d399;
+      background: #38bdf8;
       border-radius: 50%;
       animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
     }
     @keyframes ping {
       0% { transform: scale(1); opacity: 1; }
-      100% { transform: scale(2.4); opacity: 0; }
+      100% { transform: scale(2.2); opacity: 0; }
     }
 
-    /* Container */
     .app-container {
       max-width: 740px;
       margin: 0 auto;
-      padding: 30px 18px 0;
+      padding: 24px 16px 0;
       position: relative;
       z-index: 1;
     }
 
-    /* Hero Section */
+    /* Hero Section with Floating Accents */
     .hero-panel {
       text-align: center;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
+      position: relative;
     }
+    .floating-accent {
+      position: absolute;
+      font-size: 19px;
+      filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.5));
+      animation: gentleBob 3s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+    .accent-mic { top: 0px; left: 12%; }
+    .accent-trophy { top: 10px; right: 12%; animation-delay: 1.5s; }
+    @keyframes gentleBob {
+      from { transform: translateY(0) rotate(-6deg); }
+      to { transform: translateY(-8px) rotate(6deg); }
+    }
+
     .hero-badge {
       display: inline-flex;
       align-items: center;
       gap: 6px;
       background: rgba(245, 158, 11, 0.1);
-      border: 1px solid rgba(245, 158, 11, 0.25);
+      border: 1px solid rgba(245, 158, 11, 0.28);
       color: #fde68a;
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 700;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      padding: 6px 16px;
+      padding: 5px 14px;
       border-radius: 99px;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
     .hero-heading {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(26px, 6vw, 40px);
-      font-weight: 700;
+      font-size: clamp(24px, 6vw, 38px);
+      font-weight: 800;
       line-height: 1.15;
       letter-spacing: -0.5px;
       color: #fff;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
     .hero-heading span {
       background: linear-gradient(135deg, #fef08a 0%, #f59e0b 50%, #d97706 100%);
@@ -182,53 +215,53 @@
     }
     .hero-sub {
       font-family: 'Manjari', sans-serif;
-      font-size: 16px;
+      font-size: 15.5px;
       font-weight: 700;
       color: #94a3b8;
     }
 
-    /* Futuristic Live Countdown Component */
+    /* Modern Countdown Dashboard */
     .countdown-card {
       background: var(--surface-glass);
       border: 1px solid var(--border-glass);
-      border-radius: 20px;
-      padding: 16px;
-      margin-bottom: 24px;
+      border-radius: 18px;
+      padding: 14px;
+      margin-bottom: 22px;
       backdrop-filter: blur(16px);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
     }
     .cd-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
+      gap: 8px;
     }
     .cd-cell {
-      background: rgba(0, 0, 0, 0.45);
+      background: rgba(2, 6, 23, 0.65);
       border: 1px solid rgba(255, 255, 255, 0.05);
-      border-radius: 14px;
-      padding: 10px 4px;
+      border-radius: 12px;
+      padding: 9px 4px;
       text-align: center;
       transition: all 0.3s;
     }
     .cd-cell:hover {
-      border-color: rgba(245, 158, 11, 0.4);
+      border-color: rgba(245, 158, 11, 0.45);
       transform: translateY(-2px);
     }
     .cd-val {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(24px, 5.5vw, 32px);
+      font-size: clamp(22px, 5vw, 29px);
       font-weight: 700;
       color: #fff;
       display: block;
       line-height: 1;
     }
     .cd-lbl {
-      font-size: 10px;
+      font-size: 9.5px;
       font-weight: 700;
       letter-spacing: 1px;
       color: #64748b;
       text-transform: uppercase;
-      margin-top: 6px;
+      margin-top: 5px;
       display: block;
     }
 
@@ -237,42 +270,27 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 12px;
-      margin-bottom: 16px;
+      margin-bottom: 15px;
     }
     .day-card-btn {
       background: var(--surface-glass);
       border: 1px solid var(--border-subtle);
-      border-radius: 16px;
-      padding: 14px;
+      border-radius: 14px;
+      padding: 13px;
       cursor: pointer;
       text-align: left;
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
       overflow: hidden;
     }
-    .day-card-btn::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(16, 185, 129, 0.1) 100%);
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-    .day-card-btn:hover {
-      border-color: rgba(245, 158, 11, 0.4);
-    }
+    .day-card-btn:hover { border-color: rgba(245, 158, 11, 0.4); }
     .day-card-btn.active {
       border: 1.5px solid var(--gold-primary);
-      background: rgba(24, 48, 38, 0.7);
-      box-shadow: 0 8px 30px rgba(245, 158, 11, 0.15);
-    }
-    .day-card-btn.active::before {
-      opacity: 1;
+      background: rgba(30, 41, 59, 0.7);
+      box-shadow: 0 6px 25px rgba(245, 158, 11, 0.16);
     }
     .d-tag {
-      position: relative;
-      z-index: 1;
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 800;
       letter-spacing: 1px;
       color: var(--gold-glow);
@@ -280,16 +298,14 @@
       display: block;
     }
     .d-main {
-      position: relative;
-      z-index: 1;
-      font-size: 15px;
+      font-size: 14.5px;
       font-weight: 700;
       color: #fff;
-      margin-top: 3px;
+      margin-top: 2px;
       display: block;
     }
 
-    /* Live Search Toolbar */
+    /* Search Bar */
     .search-bar-wrap {
       position: relative;
       margin-bottom: 14px;
@@ -298,10 +314,10 @@
       width: 100%;
       background: var(--surface-glass);
       border: 1px solid var(--border-subtle);
-      border-radius: 14px;
-      padding: 14px 18px 14px 44px;
+      border-radius: 12px;
+      padding: 13px 18px 13px 44px;
       color: #fff;
-      font-size: 14px;
+      font-size: 13.5px;
       font-family: inherit;
       outline: none;
       backdrop-filter: blur(12px);
@@ -309,13 +325,13 @@
     }
     .search-field:focus {
       border-color: var(--gold-primary);
-      box-shadow: 0 0 25px rgba(245, 158, 11, 0.18);
-      background: rgba(18, 38, 30, 0.9);
+      box-shadow: 0 0 20px rgba(245, 158, 11, 0.18);
+      background: rgba(15, 23, 42, 0.9);
     }
     .search-field::placeholder { color: #64748b; }
     .search-icon-pos {
       position: absolute;
-      left: 16px;
+      left: 15px;
       top: 50%;
       transform: translateY(-50%);
       font-size: 15px;
@@ -327,18 +343,18 @@
       display: flex;
       gap: 8px;
       overflow-x: auto;
-      padding-bottom: 16px;
+      padding-bottom: 15px;
       scrollbar-width: none;
     }
     .filter-pills::-webkit-scrollbar { display: none; }
     .pill-btn {
       flex-shrink: 0;
-      background: rgba(18, 38, 30, 0.6);
+      background: rgba(15, 23, 42, 0.65);
       border: 1px solid var(--border-subtle);
       color: #94a3b8;
-      padding: 8px 18px;
+      padding: 8px 16px;
       border-radius: 99px;
-      font-size: 12px;
+      font-size: 11.5px;
       font-weight: 700;
       letter-spacing: 0.5px;
       cursor: pointer;
@@ -347,13 +363,13 @@
     .pill-btn:hover { color: #fff; border-color: rgba(255,255,255,0.2); }
     .pill-btn.active {
       background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-      color: #040907;
+      color: #020617;
       border-color: transparent;
-      box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
+      box-shadow: 0 4px 18px rgba(245, 158, 11, 0.3);
       font-weight: 800;
     }
 
-    /* Timeline & Modern Cards */
+    /* Cards Stack */
     .timeline-container {
       display: flex;
       flex-direction: column;
@@ -363,80 +379,74 @@
     .web-card {
       background: var(--surface-glass);
       border: 1px solid var(--border-glass);
-      border-radius: 18px;
-      padding: 18px 20px;
+      border-radius: 16px;
+      padding: 16px 18px;
       backdrop-filter: blur(14px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
       cursor: pointer;
       position: relative;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .web-card:hover {
       background: var(--surface-hover);
       border-color: rgba(245, 158, 11, 0.5);
       transform: translateY(-2px);
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
     .web-card.is-live {
-      border: 1.5px solid var(--emerald-accent);
-      background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(6, 26, 18, 0.95) 100%);
-      box-shadow: 0 0 30px rgba(16, 185, 129, 0.25);
+      border: 1.5px solid var(--emerald-glow);
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(15, 23, 42, 0.95) 100%);
+      box-shadow: 0 0 25px rgba(16, 185, 129, 0.25);
     }
 
     .card-head {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 10px;
+      margin-bottom: 9px;
     }
     .stage-label {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 700;
-      letter-spacing: 1px;
+      letter-spacing: 0.8px;
       color: var(--gold-glow);
       background: rgba(245, 158, 11, 0.12);
       border: 1px solid rgba(245, 158, 11, 0.3);
-      padding: 4px 10px;
-      border-radius: 8px;
+      padding: 3px 9px;
+      border-radius: 6px;
     }
     .time-slot {
-      font-size: 12.5px;
+      font-size: 12px;
       font-weight: 600;
       color: #cbd5e1;
     }
 
+    /* Program Title in Malayalam (No Emojis) */
     .card-title {
       font-family: 'Manjari', sans-serif;
-      font-size: 19px;
+      font-size: 18.5px;
       font-weight: 700;
       color: #ffffff;
       line-height: 1.45;
-      margin-bottom: 14px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .prog-icon {
-      font-size: 16px;
-      opacity: 0.9;
+      margin-bottom: 12px;
     }
 
     .card-foot {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-top: 10px;
+      padding-top: 8px;
       border-top: 1px solid var(--border-subtle);
     }
 
-    /* Premium Category Tags */
+    /* Clean Category Badges (No Emojis, Pure Sleek Glass) */
     .cat-badge {
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 700;
       letter-spacing: 0.6px;
-      padding: 4px 12px;
-      border-radius: 7px;
+      padding: 4px 11px;
+      border-radius: 6px;
       text-transform: uppercase;
     }
     .cat-kids { background: rgba(244, 63, 94, 0.14); border: 1px solid #f43f5e; color: #fda4af; }
@@ -449,24 +459,24 @@
     .cat-general { background: rgba(245, 158, 11, 0.14); border: 1px solid #f59e0b; color: #fde68a; }
 
     .live-chip {
-      font-size: 10.5px;
+      font-size: 10px;
       font-weight: 800;
-      letter-spacing: 1px;
+      letter-spacing: 0.8px;
       color: #34d399;
       background: rgba(16, 185, 129, 0.15);
       border: 1px solid #10b981;
-      padding: 3px 10px;
+      padding: 3px 9px;
       border-radius: 99px;
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
     }
     .live-dot-pulse {
       width: 6px;
       height: 6px;
       background: #34d399;
       border-radius: 50%;
-      box-shadow: 0 0 10px #34d399;
+      box-shadow: 0 0 8px #34d399;
     }
 
     /* Interval Break Card */
@@ -474,20 +484,19 @@
       background: rgba(245, 158, 11, 0.05);
       border: 1px dashed rgba(245, 158, 11, 0.35);
       text-align: center;
-      padding: 14px;
+      padding: 12px;
     }
     .web-card.break-item .card-title {
-      justify-content: center;
       color: #fcd34d;
       font-size: 15px;
       margin-bottom: 0;
     }
 
-    /* Modern Web App Modal Popup */
+    /* Interactive Event Details Pop-up Modal */
     .app-modal-backdrop {
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.85);
+      background: rgba(2, 6, 23, 0.85);
       backdrop-filter: blur(12px);
       z-index: 100;
       display: flex;
@@ -503,24 +512,26 @@
       pointer-events: auto;
     }
     .app-modal-sheet {
-      background: linear-gradient(180deg, #0e241b 0%, #05100c 100%);
-      border: 1px solid var(--gold-primary);
-      border-radius: 28px;
+      background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+      border: 1.5px solid var(--gold-primary);
+      border-radius: 24px;
       max-width: 440px;
       width: 100%;
-      padding: 32px 24px;
+      padding: 30px 22px;
       text-align: center;
       position: relative;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.9), 0 0 40px rgba(245, 158, 11, 0.15);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.9), 0 0 35px rgba(245, 158, 11, 0.2);
       transform: scale(0.95);
       transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
     .app-modal-backdrop.is-open .app-modal-sheet {
       transform: scale(1);
     }
-    .modal-cat-tag {
-      display: inline-block;
-      margin-bottom: 12px;
+    .modal-sparkles {
+      font-size: 26px;
+      margin-bottom: 8px;
+      display: block;
+      filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.5));
     }
     .modal-main-heading {
       font-family: 'Manjari', sans-serif;
@@ -528,16 +539,16 @@
       font-weight: 700;
       color: #fff;
       line-height: 1.4;
-      margin-bottom: 20px;
+      margin: 12px 0 18px;
     }
     .modal-meta-grid {
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(2, 6, 23, 0.55);
       border: 1px solid var(--border-subtle);
-      border-radius: 16px;
-      padding: 14px;
+      border-radius: 14px;
+      padding: 12px;
       display: flex;
       justify-content: space-around;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
     }
     .meta-box span {
       display: block;
@@ -550,26 +561,26 @@
     .meta-box strong {
       font-family: 'Space Grotesk', sans-serif;
       color: var(--gold-glow);
-      font-size: 14px;
+      font-size: 13.5px;
     }
     .modal-dismiss-btn {
       width: 100%;
       background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
       border: none;
-      padding: 13px;
-      border-radius: 14px;
-      color: #040907;
+      padding: 12px;
+      border-radius: 12px;
+      color: #020617;
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 700;
       font-size: 13px;
       letter-spacing: 0.5px;
       cursor: pointer;
-      box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
+      box-shadow: 0 4px 18px rgba(245, 158, 11, 0.3);
     }
 
     footer {
       text-align: center;
-      margin-top: 50px;
+      margin-top: 45px;
       color: #64748b;
       font-size: 12px;
     }
@@ -581,11 +592,25 @@
 </head>
 <body>
 
-  <div class="ambient-glow-1"></div>
-  <div class="ambient-glow-2"></div>
-  <div class="geometric-backdrop"></div>
+  <!-- Aesthetic Festive Thoraanam (Garland) -->
+  <div class="festive-thoraanam">
+    <svg class="thoraanam-svg" preserveAspectRatio="none" viewBox="0 0 1200 40">
+      <path d="M0,0 Q100,25 200,0 Q300,25 400,0 Q500,25 600,0 Q700,25 800,0 Q900,25 1000,0 Q1100,25 1200,0" fill="none" stroke="rgba(245, 158, 11, 0.35)" stroke-width="1.5"/>
+      <!-- Hanging Pennants -->
+      <polygon points="90,13 100,32 110,13" fill="#f59e0b" opacity="0.6"/>
+      <polygon points="290,13 300,32 310,13" fill="#06b6d4" opacity="0.6"/>
+      <polygon points="490,13 500,32 510,13" fill="#10b981" opacity="0.6"/>
+      <polygon points="690,13 700,32 710,13" fill="#f59e0b" opacity="0.6"/>
+      <polygon points="890,13 900,32 910,13" fill="#06b6d4" opacity="0.6"/>
+      <polygon points="1090,13 1100,32 1110,13" fill="#10b981" opacity="0.6"/>
+    </svg>
+  </div>
 
-  <!-- Modern App Top Navbar -->
+  <div class="ambient-teal"></div>
+  <div class="ambient-gold"></div>
+  <div class="sparkle-layer"></div>
+
+  <!-- Modern Top Navigation Bar -->
   <nav class="top-navbar">
     <div class="nav-inner">
       <div class="brand-title">
@@ -601,8 +626,11 @@
 
   <main class="app-container">
     
-    <!-- Hero Dashboard Header -->
+    <!-- Hero Dashboard Header with Mic & Trophy Accents -->
     <header class="hero-panel">
+      <div class="floating-accent accent-mic">🎙️</div>
+      <div class="floating-accent accent-trophy">🏆</div>
+
       <div class="hero-badge">✦ Stage Schedules & Timings ✦</div>
       <h1 class="hero-heading">KUTTIADI RANGE <span>MUSABAQA</span></h1>
       <p class="hero-sub">കുറ്റ്യാടി റെയ്ഞ്ച് ജംഇയ്യത്തുൽ മുഅല്ലിമീൻ • Oct 03 & 04</p>
@@ -654,89 +682,91 @@
 
   </main>
 
-  <!-- Interactive Modal Popup -->
+  <!-- Interactive Event Details Pop-up Modal (Prize, Mic, Glowing details) -->
   <div class="app-modal-backdrop" id="eventModal" onclick="closeModal(event)">
     <div class="app-modal-sheet">
-      <span class="cat-badge modal-cat-tag" id="mCat">Category</span>
+      <span class="modal-sparkles">✨ 🏆 🎙️</span>
+      <span class="cat-badge" id="mCat">Category</span>
       <h2 class="modal-main-heading" id="mTitle">Program Title</h2>
       <div class="modal-meta-grid">
         <div class="meta-box"><span>Stage</span><strong id="mStage">Stage 01</strong></div>
         <div class="meta-box"><span>Time Slot</span><strong id="mTime">09:00 AM</strong></div>
-        <div class="meta-box"><span>Category</span><strong id="mType">Competition</strong></div>
+        <div class="meta-box"><span>Session</span><strong id="mType">Competition</strong></div>
       </div>
-      <button class="modal-dismiss-btn" onclick="hideModal()">CLOSE DETAILS</button>
+      <button class="modal-dismiss-btn" onclick="hideModal()">CLOSE</button>
     </div>
   </div>
 
   <script>
+    // Clean Program Names (Pure Malayalam, No Emojis inside categories)
     const scheduleData = [
       // DAY 1 - STAGE 1
-      { day: '2026-10-03', stage: 1, title: 'കിഡ്സ് കഥാകഥനം', catKey: 'kids', catLabel: 'Kids', icon: '🎙️', start: '09:00', end: '09:50', isBreak: false },
-      { day: '2026-10-03', stage: 1, title: 'സബ്ജൂനിയർ മദ്‌ഹുനബി ഗാനം', catKey: 'subjunior', catLabel: 'Sub Junior', icon: '✨', start: '09:50', end: '11:00', isBreak: false },
-      { day: '2026-10-03', stage: 1, title: 'ജൂനിയർ പ്രസംഗം', catKey: 'junior', catLabel: 'Junior', icon: '🎙️', start: '11:00', end: '12:00', isBreak: false },
-      { day: '2026-10-03', stage: 1, title: 'സൂപ്പർ സീനിയർ ഇസ്ലാമിക് അറബി ഗാനം', catKey: 'supersenior', catLabel: 'Super Senior', icon: '✨', start: '12:00', end: '13:00', isBreak: false },
-      { day: '2026-10-03', stage: 1, title: 'അലുംനി മാപ്പിളപ്പാട്ട്', catKey: 'alumni', catLabel: 'Alumni', icon: '✨', start: '13:00', end: '13:15', isBreak: false },
-      { day: '2026-10-03', stage: 1, title: 'മാഷപ്പ്', catKey: 'general', catLabel: 'General', icon: '✨', start: '13:15', end: '13:30', isBreak: false },
-      { day: '2026-10-03', stage: 1, title: 'നിസ്കാരം & ഭക്ഷണം', catKey: 'break', catLabel: 'Break', icon: '☕', start: '13:30', end: '14:00', isBreak: true },
-      { day: '2026-10-03', stage: 1, title: 'ജനറൽ മൗലൂദ്', catKey: 'general', catLabel: 'General', icon: '📖', start: '14:00', end: '15:30', isBreak: false },
-      { day: '2026-10-03', stage: 1, title: 'ജനറൽ ബുർദ', catKey: 'general', catLabel: 'General', icon: '✨', start: '15:30', end: '17:30', isBreak: false },
-      { day: '2026-10-03', stage: 1, title: 'മുഅല്ലിം സമസ്ത കിസ്സപ്പാട്ട്', catKey: 'muallim', catLabel: 'Muallim', icon: '✨', start: '17:40', end: '18:00', isBreak: false },
-      { day: '2026-10-03', stage: 1, title: 'നിസ്കാരം', catKey: 'break', catLabel: 'Break', icon: '🕌', start: '18:00', end: '18:45', isBreak: true },
-      { day: '2026-10-03', stage: 1, title: 'ജനറൽ ദഫ് മുട്ട്', catKey: 'general', catLabel: 'General', icon: '🥁', start: '18:45', end: '19:10', isBreak: false },
-      { day: '2026-10-03', stage: 1, title: 'മുഅല്ലിം ബുർദ', catKey: 'muallim', catLabel: 'Muallim', icon: '✨', start: '19:10', end: '19:35', isBreak: false },
+      { day: '2026-10-03', stage: 1, title: 'കിഡ്സ് കഥാകഥനം', catKey: 'kids', catLabel: 'Kids', start: '09:00', end: '09:50', isBreak: false },
+      { day: '2026-10-03', stage: 1, title: 'സബ്ജൂനിയർ മദ്‌ഹുനബി ഗാനം', catKey: 'subjunior', catLabel: 'Sub Junior', start: '09:50', end: '11:00', isBreak: false },
+      { day: '2026-10-03', stage: 1, title: 'ജൂനിയർ പ്രസംഗം', catKey: 'junior', catLabel: 'Junior', start: '11:00', end: '12:00', isBreak: false },
+      { day: '2026-10-03', stage: 1, title: 'സൂപ്പർ സീനിയർ ഇസ്ലാമിക് അറബി ഗാനം', catKey: 'supersenior', catLabel: 'Super Senior', start: '12:00', end: '13:00', isBreak: false },
+      { day: '2026-10-03', stage: 1, title: 'അലുംനി മാപ്പിളപ്പാട്ട്', catKey: 'alumni', catLabel: 'Alumni', start: '13:00', end: '13:15', isBreak: false },
+      { day: '2026-10-03', stage: 1, title: 'മാഷപ്പ്', catKey: 'general', catLabel: 'General', start: '13:15', end: '13:30', isBreak: false },
+      { day: '2026-10-03', stage: 1, title: 'നിസ്കാരം & ഭക്ഷണം', catKey: 'break', catLabel: 'Break', start: '13:30', end: '14:00', isBreak: true },
+      { day: '2026-10-03', stage: 1, title: 'ജനറൽ മൗലൂദ്', catKey: 'general', catLabel: 'General', start: '14:00', end: '15:30', isBreak: false },
+      { day: '2026-10-03', stage: 1, title: 'ജനറൽ ബുർദ', catKey: 'general', catLabel: 'General', start: '15:30', end: '17:30', isBreak: false },
+      { day: '2026-10-03', stage: 1, title: 'മുഅല്ലിം സമസ്ത കിസ്സപ്പാട്ട്', catKey: 'muallim', catLabel: 'Muallim', start: '17:40', end: '18:00', isBreak: false },
+      { day: '2026-10-03', stage: 1, title: 'നിസ്കാരം', catKey: 'break', catLabel: 'Break', start: '18:00', end: '18:45', isBreak: true },
+      { day: '2026-10-03', stage: 1, title: 'ജനറൽ ദഫ് മുട്ട്', catKey: 'general', catLabel: 'General', start: '18:45', end: '19:10', isBreak: false },
+      { day: '2026-10-03', stage: 1, title: 'മുഅല്ലിം ബുർദ', catKey: 'muallim', catLabel: 'Muallim', start: '19:10', end: '19:35', isBreak: false },
 
       // DAY 1 - STAGE 2
-      { day: '2026-10-03', stage: 2, title: 'സബ്ജൂനിയർ ഖിറാഅത്ത്', catKey: 'subjunior', catLabel: 'Sub Junior', icon: '📖', start: '09:00', end: '09:50', isBreak: false },
-      { day: '2026-10-03', stage: 2, title: 'കിഡ്സ് ഫാത്തിഹ പാരായണം', catKey: 'kids', catLabel: 'Kids', icon: '📖', start: '09:50', end: '10:40', isBreak: false },
-      { day: '2026-10-03', stage: 2, title: 'സബ്ജൂനിയർ ഹിഫ്ള്', catKey: 'subjunior', catLabel: 'Sub Junior', icon: '📖', start: '10:40', end: '11:40', isBreak: false },
-      { day: '2026-10-03', stage: 2, title: 'സബ്ജൂനിയർ ഓർമ പരിശോധന', catKey: 'subjunior', catLabel: 'Sub Junior', icon: '🧠', start: '11:40', end: '12:30', isBreak: false },
-      { day: '2026-10-03', stage: 2, title: 'മുഅല്ലിം മുശാഅറ & മുനാഖശ', catKey: 'muallim', catLabel: 'Muallim', icon: '🎙️', start: '12:30', end: '13:30', isBreak: false },
-      { day: '2026-10-03', stage: 2, title: 'നിസ്കാരം & ഭക്ഷണം', catKey: 'break', catLabel: 'Break', icon: '☕', start: '13:30', end: '14:30', isBreak: true },
-      { day: '2026-10-03', stage: 2, title: 'മുഅല്ലിം ഹിസ്ബ്', catKey: 'muallim', catLabel: 'Muallim', icon: '📖', start: '14:30', end: '15:00', isBreak: false },
-      { day: '2026-10-03', stage: 2, title: 'മുഅല്ലിം ഹിഫ്ള്', catKey: 'muallim', catLabel: 'Muallim', icon: '📖', start: '15:00', end: '15:30', isBreak: false },
-      { day: '2026-10-03', stage: 2, title: 'മുഅല്ലിം ബാങ്ക്', catKey: 'muallim', catLabel: 'Muallim', icon: '🕌', start: '15:30', end: '16:00', isBreak: false },
-      { day: '2026-10-03', stage: 2, title: 'മുഅല്ലിം അറബിക് പ്രസംഗം', catKey: 'muallim', catLabel: 'Muallim', icon: '🎙️', start: '16:00', end: '16:30', isBreak: false },
-      { day: '2026-10-03', stage: 2, title: 'മുഅല്ലിം നിമിഷ പ്രസംഗം', catKey: 'muallim', catLabel: 'Muallim', icon: '🎙️', start: '16:30', end: '16:50', isBreak: false },
-      { day: '2026-10-03', stage: 2, title: 'അലുംനി മാസ്റ്റർ ഹണ്ട്', catKey: 'alumni', catLabel: 'Alumni', icon: '🏆', start: '17:00', end: '17:30', isBreak: false },
-      { day: '2026-10-03', stage: 2, title: 'അലുംനി നിമിഷ പ്രസംഗം', catKey: 'alumni', catLabel: 'Alumni', icon: '🎙️', start: '17:30', end: '18:00', isBreak: false },
+      { day: '2026-10-03', stage: 2, title: 'സബ്ജൂനിയർ ഖിറാഅത്ത്', catKey: 'subjunior', catLabel: 'Sub Junior', start: '09:00', end: '09:50', isBreak: false },
+      { day: '2026-10-03', stage: 2, title: 'കിഡ്സ് ഫാത്തിഹ പാരായണം', catKey: 'kids', catLabel: 'Kids', start: '09:50', end: '10:40', isBreak: false },
+      { day: '2026-10-03', stage: 2, title: 'സബ്ജൂനിയർ ഹിഫ്ള്', catKey: 'subjunior', catLabel: 'Sub Junior', start: '10:40', end: '11:40', isBreak: false },
+      { day: '2026-10-03', stage: 2, title: 'സബ്ജൂനിയർ ഓർമ പരിശോധന', catKey: 'subjunior', catLabel: 'Sub Junior', start: '11:40', end: '12:30', isBreak: false },
+      { day: '2026-10-03', stage: 2, title: 'മുഅല്ലിം മുശാഅറ & മുനാഖശ', catKey: 'muallim', catLabel: 'Muallim', start: '12:30', end: '13:30', isBreak: false },
+      { day: '2026-10-03', stage: 2, title: 'നിസ്കാരം & ഭക്ഷണം', catKey: 'break', catLabel: 'Break', start: '13:30', end: '14:30', isBreak: true },
+      { day: '2026-10-03', stage: 2, title: 'മുഅല്ലിം ഹിസ്ബ്', catKey: 'muallim', catLabel: 'Muallim', start: '14:30', end: '15:00', isBreak: false },
+      { day: '2026-10-03', stage: 2, title: 'മുഅല്ലിം ഹിഫ്ള്', catKey: 'muallim', catLabel: 'Muallim', start: '15:00', end: '15:30', isBreak: false },
+      { day: '2026-10-03', stage: 2, title: 'മുഅല്ലിം ബാങ്ക്', catKey: 'muallim', catLabel: 'Muallim', start: '15:30', end: '16:00', isBreak: false },
+      { day: '2026-10-03', stage: 2, title: 'മുഅല്ലിം അറബിക് പ്രസംഗം', catKey: 'muallim', catLabel: 'Muallim', start: '16:00', end: '16:30', isBreak: false },
+      { day: '2026-10-03', stage: 2, title: 'മുഅല്ലിം നിമിഷ പ്രസംഗം', catKey: 'muallim', catLabel: 'Muallim', start: '16:30', end: '16:50', isBreak: false },
+      { day: '2026-10-03', stage: 2, title: 'അലുംനി മാസ്റ്റർ ഹണ്ട്', catKey: 'alumni', catLabel: 'Alumni', start: '17:00', end: '17:30', isBreak: false },
+      { day: '2026-10-03', stage: 2, title: 'അലുംനി നിമിഷ പ്രസംഗം', catKey: 'alumni', catLabel: 'Alumni', start: '17:30', end: '18:00', isBreak: false },
 
       // DAY 1 - STAGE 3
-      { day: '2026-10-03', stage: 3, title: 'സീനിയർ ക്വിസ്', catKey: 'senior', catLabel: 'Senior', icon: '🧠', start: '08:00', end: '09:00', isBreak: false },
-      { day: '2026-10-03', stage: 3, title: 'സൂപ്പർ സീനിയർ പദപ്പയറ്റ്', catKey: 'supersenior', catLabel: 'Super Senior', icon: '🎙️', start: '09:00', end: '10:00', isBreak: false },
-      { day: '2026-10-03', stage: 3, title: 'ജൂനിയർ കുരുന്നുകൾ ടെസ്റ്റ്', catKey: 'junior', catLabel: 'Junior', icon: '📝', start: '10:00', end: '10:45', isBreak: false },
-      { day: '2026-10-03', stage: 3, title: 'മുഅല്ലിം പ്രബന്ധം', catKey: 'muallim', catLabel: 'Muallim', icon: '📜', start: '11:00', end: '12:00', isBreak: false },
-      { day: '2026-10-03', stage: 3, title: 'മുഅല്ലിം & അലുംനി ഡിജിറ്റൽ പോസ്റ്റർ ഡിസൈനിംഗ്', catKey: 'muallim', catLabel: 'Muallim & Alumni', icon: '🎨', start: '11:00', end: '12:00', isBreak: false },
+      { day: '2026-10-03', stage: 3, title: 'സീനിയർ ക്വിസ്', catKey: 'senior', catLabel: 'Senior', start: '08:00', end: '09:00', isBreak: false },
+      { day: '2026-10-03', stage: 3, title: 'സൂപ്പർ സീനിയർ പദപ്പയറ്റ്', catKey: 'supersenior', catLabel: 'Super Senior', start: '09:00', end: '10:00', isBreak: false },
+      { day: '2026-10-03', stage: 3, title: 'ജൂനിയർ കുരുന്നുകൾ ടെസ്റ്റ്', catKey: 'junior', catLabel: 'Junior', start: '10:00', end: '10:45', isBreak: false },
+      { day: '2026-10-03', stage: 3, title: 'മുഅല്ലിം പ്രബന്ധം', catKey: 'muallim', catLabel: 'Muallim', start: '11:00', end: '12:00', isBreak: false },
+      { day: '2026-10-03', stage: 3, title: 'മുഅല്ലിം & അലുംനി ഡിജിറ്റൽ പോസ്റ്റർ ഡിസൈനിംഗ്', catKey: 'muallim', catLabel: 'Muallim & Alumni', start: '11:00', end: '12:00', isBreak: false },
 
       // DAY 2 - STAGE 1
-      { day: '2026-10-04', stage: 1, title: 'സൂപ്പർ സീനിയർ മാപ്പിളപ്പാട്ട്', catKey: 'supersenior', catLabel: 'Super Senior', icon: '✨', start: '08:00', end: '09:00', isBreak: false },
-      { day: '2026-10-04', stage: 1, title: 'സീനിയർ ഇസ്ലാമിക ഗാനം (അറബി)', catKey: 'senior', catLabel: 'Senior', icon: '✨', start: '09:00', end: '10:00', isBreak: false },
-      { day: '2026-10-04', stage: 1, title: 'ജൂനിയർ ഇസ്ലാമിക് ഗാനം', catKey: 'junior', catLabel: 'Junior', icon: '✨', start: '10:00', end: '11:00', isBreak: false },
-      { day: '2026-10-04', stage: 1, title: 'സീനിയർ മലയാള പ്രസംഗം', catKey: 'senior', catLabel: 'Senior', icon: '🎙️', start: '11:00', end: '12:00', isBreak: false },
-      { day: '2026-10-04', stage: 1, title: 'ജൂനിയർ ഇസ്ലാമിക സമൂഹഗാനം', catKey: 'junior', catLabel: 'Junior', icon: '👥', start: '12:00', end: '13:15', isBreak: false },
-      { day: '2026-10-04', stage: 1, title: 'നിസ്കാരം & ഭക്ഷണം', catKey: 'break', catLabel: 'Break', icon: '☕', start: '13:15', end: '14:00', isBreak: true },
-      { day: '2026-10-04', stage: 1, title: 'സീനിയർ മാപ്പിളപ്പാട്ട്', catKey: 'senior', catLabel: 'Senior', icon: '✨', start: '14:00', end: '15:00', isBreak: false },
-      { day: '2026-10-04', stage: 1, title: 'ജനറൽ അറബി സംഘഗാനം', catKey: 'general', catLabel: 'General', icon: '👥', start: '15:00', end: '16:00', isBreak: false },
+      { day: '2026-10-04', stage: 1, title: 'സൂപ്പർ സീനിയർ മാപ്പിളപ്പാട്ട്', catKey: 'supersenior', catLabel: 'Super Senior', start: '08:00', end: '09:00', isBreak: false },
+      { day: '2026-10-04', stage: 1, title: 'സീനിയർ ഇസ്ലാമിക ഗാനം (അറബി)', catKey: 'senior', catLabel: 'Senior', start: '09:00', end: '10:00', isBreak: false },
+      { day: '2026-10-04', stage: 1, title: 'ജൂനിയർ ഇസ്ലാമിക് ഗാനം', catKey: 'junior', catLabel: 'Junior', start: '10:00', end: '11:00', isBreak: false },
+      { day: '2026-10-04', stage: 1, title: 'സീനിയർ മലയാള പ്രസംഗം', catKey: 'senior', catLabel: 'Senior', start: '11:00', end: '12:00', isBreak: false },
+      { day: '2026-10-04', stage: 1, title: 'ജൂനിയർ ഇസ്ലാമിക സമൂഹഗാനം', catKey: 'junior', catLabel: 'Junior', start: '12:00', end: '13:15', isBreak: false },
+      { day: '2026-10-04', stage: 1, title: 'നിസ്കാരം & ഭക്ഷണം', catKey: 'break', catLabel: 'Break', start: '13:15', end: '14:00', isBreak: true },
+      { day: '2026-10-04', stage: 1, title: 'സീനിയർ മാപ്പിളപ്പാട്ട്', catKey: 'senior', catLabel: 'Senior', start: '14:00', end: '15:00', isBreak: false },
+      { day: '2026-10-04', stage: 1, title: 'ജനറൽ അറബി സംഘഗാനം', catKey: 'general', catLabel: 'General', start: '15:00', end: '16:00', isBreak: false },
 
       // DAY 2 - STAGE 2
-      { day: '2026-10-04', stage: 2, title: 'സൂപ്പർ സീനിയർ പ്രസംഗം', catKey: 'supersenior', catLabel: 'Super Senior', icon: '🎙️', start: '09:00', end: '09:30', isBreak: false },
-      { day: '2026-10-04', stage: 2, title: 'സീനിയർ ഇംഗ്ലീഷ് പ്രസംഗം', catKey: 'senior', catLabel: 'Senior', icon: '🎙️', start: '09:30', end: '10:30', isBreak: false },
-      { day: '2026-10-04', stage: 2, title: 'ജൂനിയർ ഉർദു ഗാനം', catKey: 'junior', catLabel: 'Junior', icon: '✨', start: '10:30', end: '11:30', isBreak: false },
-      { day: '2026-10-04', stage: 2, title: 'സീനിയർ ഉർദു പ്രസംഗം', catKey: 'senior', catLabel: 'Senior', icon: '🎙️', start: '11:30', end: '12:15', isBreak: false },
-      { day: '2026-10-04', stage: 2, title: 'സൂപ്പർ സീനിയർ പാടിപ്പറയൽ', catKey: 'supersenior', catLabel: 'Super Senior', icon: '🎙️', start: '12:15', end: '13:15', isBreak: false },
-      { day: '2026-10-04', stage: 2, title: 'നിസ്കാരം & ഭക്ഷണം', catKey: 'break', catLabel: 'Break', icon: '☕', start: '13:15', end: '14:00', isBreak: true },
-      { day: '2026-10-04', stage: 2, title: 'ജൂനിയർ അറബി ഗാനം', catKey: 'junior', catLabel: 'Junior', icon: '✨', start: '14:00', end: '15:00', isBreak: false },
-      { day: '2026-10-04', stage: 2, title: 'സൂപ്പർ സീനിയർ അറബി പ്രസംഗം', catKey: 'supersenior', catLabel: 'Super Senior', icon: '🎙️', start: '15:00', end: '16:00', isBreak: false },
+      { day: '2026-10-04', stage: 2, title: 'സൂപ്പർ സീനിയർ പ്രസംഗം', catKey: 'supersenior', catLabel: 'Super Senior', start: '09:00', end: '09:30', isBreak: false },
+      { day: '2026-10-04', stage: 2, title: 'സീനിയർ ഇംഗ്ലീഷ് പ്രസംഗം', catKey: 'senior', catLabel: 'Senior', start: '09:30', end: '10:30', isBreak: false },
+      { day: '2026-10-04', stage: 2, title: 'ജൂനിയർ ഉർദു ഗാനം', catKey: 'junior', catLabel: 'Junior', start: '10:30', end: '11:30', isBreak: false },
+      { day: '2026-10-04', stage: 2, title: 'സീനിയർ ഉർദു പ്രസംഗം', catKey: 'senior', catLabel: 'Senior', start: '11:30', end: '12:15', isBreak: false },
+      { day: '2026-10-04', stage: 2, title: 'സൂപ്പർ സീനിയർ പാടിപ്പറയൽ', catKey: 'supersenior', catLabel: 'Super Senior', start: '12:15', end: '13:15', isBreak: false },
+      { day: '2026-10-04', stage: 2, title: 'നിസ്കാരം & ഭക്ഷണം', catKey: 'break', catLabel: 'Break', start: '13:15', end: '14:00', isBreak: true },
+      { day: '2026-10-04', stage: 2, title: 'ജൂനിയർ അറബി ഗാനം', catKey: 'junior', catLabel: 'Junior', start: '14:00', end: '15:00', isBreak: false },
+      { day: '2026-10-04', stage: 2, title: 'സൂപ്പർ സീനിയർ അറബി പ്രസംഗം', catKey: 'supersenior', catLabel: 'Super Senior', start: '15:00', end: '16:00', isBreak: false },
 
       // DAY 2 - STAGE 3
-      { day: '2026-10-04', stage: 3, title: 'ജൂനിയർ ഹിഫ്ള്', catKey: 'junior', catLabel: 'Junior', icon: '📖', start: '08:00', end: '09:00', isBreak: false },
-      { day: '2026-10-04', stage: 3, title: 'ജൂനിയർ ഖിറാഅത്ത്', catKey: 'junior', catLabel: 'Junior', icon: '📖', start: '09:00', end: '09:50', isBreak: false },
-      { day: '2026-10-04', stage: 3, title: 'സീനിയർ ഖിറാഅത്ത്', catKey: 'senior', catLabel: 'Senior', icon: '📖', start: '09:50', end: '10:45', isBreak: false },
-      { day: '2026-10-04', stage: 3, title: 'സൂപ്പർ സീനിയർ ഖിറാഅത്ത്', catKey: 'supersenior', catLabel: 'Super Senior', icon: '📖', start: '10:45', end: '11:45', isBreak: false },
-      { day: '2026-10-04', stage: 3, title: 'സീനിയർ ഹിഫ്ള്', catKey: 'senior', catLabel: 'Senior', icon: '📖', start: '11:45', end: '12:30', isBreak: false },
-      { day: '2026-10-04', stage: 3, title: 'സീനിയർ ബാങ്ക്', catKey: 'senior', catLabel: 'Senior', icon: '🕌', start: '12:30', end: '13:15', isBreak: false },
-      { day: '2026-10-04', stage: 3, title: 'നിസ്കാരം & ഭക്ഷണം', catKey: 'break', catLabel: 'Break', icon: '☕', start: '13:15', end: '14:00', isBreak: true },
-      { day: '2026-10-04', stage: 3, title: 'ജൂനിയർ ബാങ്ക്', catKey: 'junior', catLabel: 'Junior', icon: '🕌', start: '14:00', end: '14:45', isBreak: false },
-      { day: '2026-10-04', stage: 3, title: 'സൂപ്പർ സീനിയർ ഹിഫ്ള്', catKey: 'supersenior', catLabel: 'Super Senior', icon: '📖', start: '14:45', end: '15:30', isBreak: false }
+      { day: '2026-10-04', stage: 3, title: 'ജൂനിയർ ഹിഫ്ള്', catKey: 'junior', catLabel: 'Junior', start: '08:00', end: '09:00', isBreak: false },
+      { day: '2026-10-04', stage: 3, title: 'ജൂനിയർ ഖിറാഅത്ത്', catKey: 'junior', catLabel: 'Junior', start: '09:00', end: '09:50', isBreak: false },
+      { day: '2026-10-04', stage: 3, title: 'സീനിയർ ഖിറാഅത്ത്', catKey: 'senior', catLabel: 'Senior', start: '09:50', end: '10:45', isBreak: false },
+      { day: '2026-10-04', stage: 3, title: 'സൂപ്പർ സീനിയർ ഖിറാഅത്ത്', catKey: 'supersenior', catLabel: 'Super Senior', start: '10:45', end: '11:45', isBreak: false },
+      { day: '2026-10-04', stage: 3, title: 'സീനിയർ ഹിഫ്ള്', catKey: 'senior', catLabel: 'Senior', start: '11:45', end: '12:30', isBreak: false },
+      { day: '2026-10-04', stage: 3, title: 'സീനിയർ ബാങ്ക്', catKey: 'senior', catLabel: 'Senior', start: '12:30', end: '13:15', isBreak: false },
+      { day: '2026-10-04', stage: 3, title: 'നിസ്കാരം & ഭക്ഷണം', catKey: 'break', catLabel: 'Break', start: '13:15', end: '14:00', isBreak: true },
+      { day: '2026-10-04', stage: 3, title: 'ജൂനിയർ ബാങ്ക്', catKey: 'junior', catLabel: 'Junior', start: '14:00', end: '14:45', isBreak: false },
+      { day: '2026-10-04', stage: 3, title: 'സൂപ്പർ സീനിയർ ഹിഫ്ള്', catKey: 'supersenior', catLabel: 'Super Senior', start: '14:45', end: '15:30', isBreak: false }
     ];
 
     let selectedDay = '2026-10-03';
@@ -783,7 +813,7 @@
       });
 
       if (matched.length === 0) {
-        timeline.innerHTML = `<div style="text-align:center; padding: 50px 15px; color:#64748b; font-size:14px;">No programs found matching your search criteria.</div>`;
+        timeline.innerHTML = `<div style="text-align:center; padding: 50px 15px; color:#64748b; font-size:14px;">No programs found matching your search.</div>`;
         return;
       }
 
@@ -801,7 +831,7 @@
           return `
             <div class="web-card break-item">
               <div class="time-slot" style="margin-bottom: 4px;">${formatTime12(ev.start)} – ${formatTime12(ev.end)}</div>
-              <div class="card-title">${ev.icon} ${ev.title}</div>
+              <div class="card-title">${ev.title}</div>
             </div>
           `;
         }
@@ -812,7 +842,7 @@
               <span class="stage-label">STAGE 0${ev.stage}</span>
               <span class="time-slot">${formatTime12(ev.start)} – ${formatTime12(ev.end)}</span>
             </div>
-            <div class="card-title"><span class="prog-icon">${ev.icon}</span> ${ev.title}</div>
+            <div class="card-title">${ev.title}</div>
             <div class="card-foot">
               <span class="cat-badge cat-${ev.catKey}">${ev.catLabel}</span>
               ${isLive ? `<span class="live-chip"><span class="live-dot-pulse"></span> LIVE NOW</span>` : ''}
@@ -833,9 +863,8 @@
       
       const cat = document.getElementById('mCat');
       cat.innerText = ev.catLabel;
-      cat.className = `cat-badge cat-${ev.catKey} modal-cat-tag`;
+      cat.className = `cat-badge cat-${ev.catKey}`;
       
-      document.getElementById('mType').innerText = ev.icon === '🎙️' ? 'Speech / Recitation' : 'Competition';
       document.getElementById('eventModal').classList.add('is-open');
     }
 
