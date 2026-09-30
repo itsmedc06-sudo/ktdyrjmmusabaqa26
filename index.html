@@ -3,33 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KUTTIADY RANGE MUSABAQA 2026 | Official Grand Portal</title>
+  <title>KUTTIADY RANGE MUSABAQA 2026 | Grand Event Portal</title>
 
-  <!-- Typography: Cinzel Decorative, Space Grotesk, Plus Jakarta Sans, Manjari -->
+  <!-- Typography: Cinzel Decorative, Plus Jakarta Sans, Manjari -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@600;700;800&family=Manjari:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@600;700;800&family=Manjari:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --navy-950: #050A16;
-      --navy-900: #08152B;
-      --royal-blue: #103A70;
-      --gold-primary: #D4A84F;
-      --gold-light: #F4D98A;
-      --gold-gradient: linear-gradient(135deg, #F4D98A 0%, #D4A84F 50%, #996515 100%);
-      --text-white: #F5F7FB;
-      --text-muted: #94A8C5;
-      --glass-bg: rgba(8, 21, 43, 0.72);
-      --glass-border: rgba(212, 168, 79, 0.22);
-      --glass-subtle: rgba(255, 255, 255, 0.06);
+      --bg-emerald-deep: #03140e;
+      --bg-teal-dark: #062319;
+      --bg-forest: #082d20;
+      --champagne-gold: #e2c275;
+      --gold-soft: #f1dfa8;
+      --gold-gradient: linear-gradient(135deg, #f7ebd0 0%, #e2c275 45%, #b58d3d 100%);
+      --ivory-white: #fcfbf7;
+      --text-muted: #9bb0a5;
+      --glass-panel: rgba(6, 35, 25, 0.65);
+      --glass-border: rgba(226, 194, 117, 0.25);
+      --glass-subtle: rgba(255, 255, 255, 0.05);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
 
     body {
-      background-color: var(--navy-950);
-      color: var(--text-white);
+      background-color: var(--bg-emerald-deep);
+      color: var(--ivory-white);
       font-family: 'Plus Jakarta Sans', sans-serif;
       overflow-x: hidden;
       min-height: 100vh;
@@ -40,7 +40,7 @@
     #preloader {
       position: fixed;
       inset: 0;
-      background: var(--navy-950);
+      background: var(--bg-emerald-deep);
       z-index: 10000;
       display: flex;
       flex-direction: column;
@@ -49,62 +49,74 @@
       transition: opacity 0.6s ease, visibility 0.6s;
     }
     .preloader-ring {
-      width: 70px;
-      height: 70px;
-      border: 2px dashed var(--gold-primary);
+      width: 65px;
+      height: 65px;
+      border: 1.5px dashed var(--champagne-gold);
       border-radius: 50%;
       animation: rotateRing 8s linear infinite;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
-    @keyframes rotateRing {
-      to { transform: rotate(360deg); }
-    }
+    @keyframes rotateRing { to { transform: rotate(360deg); } }
     .preloader-title {
       font-family: 'Cinzel', serif;
       font-size: 13px;
       letter-spacing: 4px;
-      color: var(--gold-light);
+      color: var(--gold-soft);
       text-transform: uppercase;
     }
 
-    /* BACKGROUND ATMOSPHERE */
-    .bg-star-pattern {
+    /* CINEMATIC LAYERED BACKGROUND */
+    .bg-gradient-mesh {
+      position: fixed;
+      inset: 0;
+      background: 
+        radial-gradient(circle at 15% 20%, rgba(8, 64, 46, 0.5) 0%, transparent 50%),
+        radial-gradient(circle at 85% 75%, rgba(6, 45, 33, 0.45) 0%, transparent 55%),
+        linear-gradient(180deg, #020d09 0%, #041912 50%, #020c08 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .bg-gold-bloom {
+      position: fixed;
+      top: -120px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 750px;
+      height: 480px;
+      background: radial-gradient(ellipse, rgba(226, 194, 117, 0.12) 0%, transparent 65%);
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .bg-geometric-arabesque {
       position: fixed;
       inset: 0;
       background-image: 
-        radial-gradient(1px 1px at 30px 40px, rgba(244, 217, 138, 0.3), transparent),
-        radial-gradient(1.5px 1.5px at 150px 180px, rgba(16, 58, 112, 0.6), transparent),
-        url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 0 L52 28 L80 40 L52 52 L40 80 L28 52 L0 40 L28 28 Z' fill='none' stroke='%23D4A84F' stroke-width='0.5' stroke-opacity='0.04'/%3E%3C/svg%3E");
+        radial-gradient(1px 1px at 30px 40px, rgba(241, 223, 168, 0.25), transparent),
+        radial-gradient(1.5px 1.5px at 150px 180px, rgba(226, 194, 117, 0.2), transparent),
+        url("data:image/svg+xml,%3Csvg width='70' height='70' viewBox='0 0 70 70' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M35 0 L43 25 L68 35 L43 45 L35 70 L27 45 L2 35 L27 25 Z' fill='none' stroke='%23e2c275' stroke-width='0.4' stroke-opacity='0.04'/%3E%3C/svg%3E");
       pointer-events: none;
       z-index: 0;
+      opacity: 0.7;
     }
-    .faint-crescent {
-      position: fixed;
-      top: 50px;
-      right: 8%;
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      box-shadow: -18px 18px 0 0 rgba(212, 168, 79, 0.06);
-      pointer-events: none;
-      z-index: 0;
-      transform: rotate(-15deg);
-    }
-    .mosque-silhouette {
+
+    .faint-mosque-silhouette {
       position: fixed;
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 180px;
+      height: 160px;
       pointer-events: none;
       z-index: 0;
-      opacity: 0.06;
+      opacity: 0.04;
       background: repeat-x bottom center;
-      background-size: 600px 180px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 180'%3E%3Cpath fill='%23D4A84F' d='M0 180V120h40v-20c0-10 10-20 20-20s20 10 20 20v20h40V80h10V40h5l5-20 5 20h5v40h10v40h40V90c0-25 25-45 50-45s50 20 50 45v30h40v-40h10V40h5l5-20 5 20h5v40h10v40h40v-20c0-10 10-20 20-20s20 10 20 20v20h40v60H0z'/%3E%3C/svg%3E");
+      background-size: 550px 160px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 180'%3E%3Cpath fill='%23e2c275' d='M0 180V120h40v-20c0-10 10-20 20-20s20 10 20 20v20h40V80h10V40h5l5-20 5 20h5v40h10v40h40V90c0-25 25-45 50-45s50 20 50 45v30h40v-40h10V40h5l5-20 5 20h5v40h10v40h40v-20c0-10 10-20 20-20s20 10 20 20v20h40v60H0z'/%3E%3C/svg%3E");
     }
 
-    /* NAVBAR */
+    /* STICKY NAV */
     .navbar {
       position: fixed;
       top: 0;
@@ -115,13 +127,13 @@
       transition: all 0.3s ease;
     }
     .navbar.scrolled {
-      background: rgba(5, 10, 22, 0.85);
+      background: rgba(3, 20, 14, 0.85);
       backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--glass-subtle);
       padding: 12px 24px;
     }
     .nav-container {
-      max-width: 1100px;
+      max-width: 950px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
@@ -132,54 +144,36 @@
       font-size: 14px;
       font-weight: 700;
       letter-spacing: 1px;
-      color: var(--text-white);
+      color: var(--ivory-white);
       display: flex;
       align-items: center;
       gap: 8px;
     }
-    .nav-brand span { color: var(--gold-primary); }
-    .nav-links {
-      display: flex;
-      gap: 24px;
-      list-style: none;
-    }
-    .nav-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 12.5px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--gold-light); }
+    .nav-brand span { color: var(--champagne-gold); }
     .nav-status {
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 700;
       letter-spacing: 1px;
       padding: 5px 14px;
       border-radius: 99px;
-      border: 1px solid rgba(212, 168, 79, 0.3);
-      color: var(--gold-light);
-      background: rgba(212, 168, 79, 0.08);
+      border: 1px solid var(--glass-border);
+      color: var(--gold-soft);
+      background: rgba(226, 194, 117, 0.08);
       display: inline-flex;
       align-items: center;
       gap: 6px;
     }
-    .nav-status.live {
-      border-color: #10B981;
-      color: #34D399;
-      background: rgba(16, 185, 129, 0.1);
-    }
     .status-dot {
       width: 6px;
       height: 6px;
-      background: currentColor;
+      background: var(--champagne-gold);
       border-radius: 50%;
+      box-shadow: 0 0 8px var(--champagne-gold);
     }
 
     /* HERO SECTION */
     .hero-section {
-      min-height: 100vh;
+      min-height: 94vh;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -189,34 +183,50 @@
       position: relative;
       z-index: 1;
     }
+
+    /* ASYMMETRICAL REALISTIC MICROPHONE ACCENT */
+    .hero-mic-accent {
+      position: absolute;
+      right: 8%;
+      top: 25%;
+      width: 80px;
+      height: 140px;
+      opacity: 0.28;
+      pointer-events: none;
+      transform: rotate(14deg);
+      filter: drop-shadow(0 0 25px rgba(226, 194, 117, 0.4));
+      animation: floatMic 5s ease-in-out infinite alternate;
+    }
+    @keyframes floatMic {
+      0% { transform: translateY(0) rotate(12deg); }
+      100% { transform: translateY(-12px) rotate(16deg); }
+    }
+
     .hero-badge {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 6px 16px;
+      padding: 6px 18px;
       border-radius: 99px;
       border: 1px solid var(--glass-border);
-      background: rgba(212, 168, 79, 0.08);
-      color: var(--gold-light);
-      font-size: 11px;
+      background: rgba(226, 194, 117, 0.08);
+      color: var(--gold-soft);
+      font-size: 10.5px;
       font-weight: 700;
-      letter-spacing: 2px;
+      letter-spacing: 2.5px;
       text-transform: uppercase;
-      margin-bottom: 20px;
-      animation: pulseAura 4s infinite alternate;
+      margin-bottom: 22px;
+      box-shadow: 0 0 20px rgba(226, 194, 117, 0.12);
     }
-    @keyframes pulseAura {
-      0% { box-shadow: 0 0 10px rgba(212, 168, 79, 0.1); }
-      100% { box-shadow: 0 0 25px rgba(212, 168, 79, 0.25); }
-    }
+
     .hero-title-main {
       font-family: 'Cinzel Decorative', serif;
-      font-size: clamp(28px, 6vw, 56px);
+      font-size: clamp(28px, 6vw, 54px);
       font-weight: 900;
-      line-height: 1.15;
-      letter-spacing: 2px;
-      color: var(--text-white);
-      margin-bottom: 6px;
+      line-height: 1.18;
+      letter-spacing: 1.5px;
+      color: var(--ivory-white);
+      margin-bottom: 8px;
     }
     .hero-title-main span {
       background: var(--gold-gradient);
@@ -226,43 +236,42 @@
     }
     .hero-malayalam {
       font-family: 'Manjari', sans-serif;
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 700;
       color: var(--text-muted);
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     .hero-date {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 13.5px;
+      font-size: 13px;
       font-weight: 700;
       letter-spacing: 3px;
-      color: var(--gold-primary);
+      color: var(--champagne-gold);
       text-transform: uppercase;
       margin-bottom: 30px;
     }
 
     /* COUNTDOWN */
     .countdown-wrapper {
-      max-width: 620px;
+      max-width: 600px;
       width: 100%;
-      background: var(--glass-bg);
+      background: var(--glass-panel);
       border: 1px solid var(--glass-border);
       border-radius: 20px;
-      padding: 24px 18px;
+      padding: 22px 16px;
       backdrop-filter: blur(16px);
       position: relative;
       overflow: hidden;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-      margin-bottom: 24px;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+      margin-bottom: 26px;
     }
     .countdown-wrapper::after {
       content: '';
       position: absolute;
       top: -50%;
       left: -60%;
-      width: 20%;
+      width: 25%;
       height: 200%;
-      background: linear-gradient(to right, transparent, rgba(244, 217, 138, 0.15), transparent);
+      background: linear-gradient(to right, transparent, rgba(241, 223, 168, 0.12), transparent);
       transform: rotate(30deg);
       animation: lightShine 6s infinite ease-in-out;
     }
@@ -273,9 +282,9 @@
     .countdown-header {
       font-family: 'Cinzel', serif;
       font-size: 11px;
-      letter-spacing: 2.5px;
-      color: var(--gold-light);
-      margin-bottom: 14px;
+      letter-spacing: 2px;
+      color: var(--gold-soft);
+      margin-bottom: 12px;
       text-transform: uppercase;
     }
     .countdown-grid {
@@ -284,14 +293,14 @@
       gap: 10px;
     }
     .countdown-box {
-      background: rgba(5, 10, 22, 0.7);
+      background: rgba(3, 16, 12, 0.65);
       border: 1px solid var(--glass-subtle);
       border-radius: 12px;
       padding: 10px 4px;
     }
     .countdown-val {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(24px, 5.5vw, 36px);
+      font-family: 'Cinzel', serif;
+      font-size: clamp(22px, 5vw, 32px);
       font-weight: 700;
       color: #fff;
       display: block;
@@ -300,14 +309,14 @@
     .countdown-lbl {
       font-size: 9.5px;
       font-weight: 700;
-      letter-spacing: 1.5px;
+      letter-spacing: 1px;
       color: var(--text-muted);
       text-transform: uppercase;
-      margin-top: 6px;
+      margin-top: 5px;
       display: block;
     }
 
-    /* HERO BUTTONS */
+    /* HERO PILL BUTTONS */
     .hero-btn-row {
       display: flex;
       gap: 14px;
@@ -315,89 +324,51 @@
       flex-wrap: wrap;
     }
     .btn-gold {
-      background: var(--gold-gradient);
-      color: var(--navy-950);
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 13px;
+      background: var(--glass-panel);
+      border: 1.5px solid var(--champagne-gold);
+      color: var(--gold-soft);
+      font-size: 12.5px;
       font-weight: 700;
-      letter-spacing: 1px;
+      letter-spacing: 1.2px;
       text-decoration: none;
-      padding: 13px 26px;
-      border-radius: 12px;
+      padding: 12px 28px;
+      border-radius: 99px;
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      box-shadow: 0 8px 24px rgba(212, 168, 79, 0.25);
+      box-shadow: 0 4px 20px rgba(226, 194, 117, 0.2);
       transition: all 0.3s;
     }
     .btn-gold:hover {
+      background: var(--gold-gradient);
+      color: var(--bg-emerald-deep);
+      box-shadow: 0 8px 30px rgba(226, 194, 117, 0.35);
       transform: translateY(-2px);
-      box-shadow: 0 12px 30px rgba(212, 168, 79, 0.4);
     }
     .btn-glass {
-      background: var(--glass-bg);
-      color: var(--text-white);
-      border: 1px solid var(--glass-subtle);
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 13px;
+      background: transparent;
+      color: var(--ivory-white);
+      border: 1px solid var(--glass-border);
+      font-size: 12.5px;
       font-weight: 700;
       letter-spacing: 1px;
       text-decoration: none;
-      padding: 13px 26px;
-      border-radius: 12px;
-      backdrop-filter: blur(10px);
+      padding: 12px 28px;
+      border-radius: 99px;
       transition: all 0.3s;
     }
     .btn-glass:hover {
-      border-color: var(--gold-primary);
-      background: rgba(16, 58, 112, 0.4);
+      background: rgba(226, 194, 117, 0.1);
+      border-color: var(--gold-soft);
     }
 
-    /* SECTION LAYOUT */
+    /* SCHEDULE TIMELINE SECTION */
     .section-wrap {
-      max-width: 900px;
+      max-width: 780px;
       margin: 0 auto;
-      padding: 70px 20px;
+      padding: 40px 20px 80px;
       position: relative;
       z-index: 1;
-    }
-
-    /* COMPETITION OVERVIEW CARDS */
-    .overview-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-      gap: 16px;
-      margin-top: 20px;
-    }
-    .overview-card {
-      background: var(--glass-bg);
-      border: 1px solid var(--glass-subtle);
-      border-radius: 16px;
-      padding: 22px 18px;
-      backdrop-filter: blur(12px);
-      text-align: center;
-      transition: all 0.35s ease-out;
-    }
-    .overview-card:hover {
-      transform: translateY(-6px);
-      border-color: var(--gold-primary);
-      box-shadow: 0 12px 30px rgba(16, 58, 112, 0.35);
-    }
-    .overview-icon {
-      font-size: 26px;
-      margin-bottom: 12px;
-      display: block;
-    }
-    .overview-title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 15px;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 4px;
-    }
-    .overview-sub {
-      font-size: 12px;
-      color: var(--text-muted);
     }
 
     /* 2-DAY SELECTOR */
@@ -408,29 +379,29 @@
       margin: 20px 0 16px;
     }
     .day-selector-btn {
-      background: var(--glass-bg);
+      background: var(--glass-panel);
       border: 1px solid var(--glass-subtle);
       border-radius: 14px;
-      padding: 13px;
+      padding: 14px;
       cursor: pointer;
       text-align: left;
       transition: all 0.3s;
     }
     .day-selector-btn.active {
-      border: 1.5px solid var(--gold-primary);
-      background: rgba(16, 58, 112, 0.5);
-      box-shadow: 0 6px 20px rgba(212, 168, 79, 0.2);
+      border: 1.5px solid var(--champagne-gold);
+      background: rgba(8, 45, 32, 0.7);
+      box-shadow: 0 6px 20px rgba(226, 194, 117, 0.15);
     }
     .day-selector-btn .d-tag {
-      font-size: 10.5px;
+      font-size: 10px;
       font-weight: 800;
       letter-spacing: 1px;
-      color: var(--gold-light);
+      color: var(--champagne-gold);
       text-transform: uppercase;
       display: block;
     }
     .day-selector-btn .d-main {
-      font-size: 14px;
+      font-size: 14.5px;
       font-weight: 700;
       color: #fff;
       margin-top: 3px;
@@ -441,12 +412,12 @@
     .filter-bar {
       display: flex;
       flex-direction: column;
-      gap: 14px;
-      margin-bottom: 24px;
+      gap: 12px;
+      margin-bottom: 22px;
     }
     .search-box {
       width: 100%;
-      background: var(--glass-bg);
+      background: var(--glass-panel);
       border: 1px solid var(--glass-subtle);
       border-radius: 14px;
       padding: 13px 18px;
@@ -456,8 +427,8 @@
       transition: all 0.3s;
     }
     .search-box:focus {
-      border-color: var(--gold-primary);
-      box-shadow: 0 0 20px rgba(212, 168, 79, 0.2);
+      border-color: var(--champagne-gold);
+      box-shadow: 0 0 20px rgba(226, 194, 117, 0.2);
     }
     .stage-filters {
       display: flex;
@@ -468,7 +439,7 @@
     .stage-filters::-webkit-scrollbar { display: none; }
     .stage-btn {
       flex-shrink: 0;
-      background: rgba(8, 21, 43, 0.8);
+      background: rgba(4, 20, 15, 0.7);
       border: 1px solid var(--glass-subtle);
       color: var(--text-muted);
       padding: 8px 18px;
@@ -480,12 +451,12 @@
     }
     .stage-btn.active {
       background: var(--gold-gradient);
-      color: var(--navy-950);
+      color: var(--bg-emerald-deep);
       border-color: transparent;
-      box-shadow: 0 4px 15px rgba(212, 168, 79, 0.3);
+      box-shadow: 0 4px 15px rgba(226, 194, 117, 0.25);
     }
 
-    /* TIMELINE */
+    /* TIMELINE WRAP */
     .timeline-wrap {
       position: relative;
       padding-left: 24px;
@@ -496,46 +467,38 @@
       top: 10px;
       bottom: 10px;
       left: 7px;
-      width: 2px;
-      background: linear-gradient(to bottom, var(--gold-primary), var(--royal-blue), transparent);
+      width: 1.5px;
+      background: linear-gradient(to bottom, var(--champagne-gold), rgba(8, 45, 32, 0.4), transparent);
     }
     .timeline-node {
       position: relative;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
     .node-dot {
       position: absolute;
       left: -24px;
       top: 18px;
-      width: 16px;
-      height: 16px;
+      width: 15px;
+      height: 15px;
       border-radius: 50%;
-      background: var(--navy-950);
-      border: 2px solid var(--gold-primary);
-    }
-    .timeline-node.live .node-dot {
-      background: #10B981;
-      border-color: #34D399;
-      box-shadow: 0 0 12px #34D399;
+      background: var(--bg-emerald-deep);
+      border: 2px solid var(--champagne-gold);
     }
 
     /* PROGRAM CARDS */
     .prog-card {
-      background: var(--glass-bg);
+      background: var(--glass-panel);
       border: 1px solid var(--glass-border);
       border-radius: 16px;
       padding: 16px 20px;
       backdrop-filter: blur(14px);
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.35);
       transition: all 0.3s;
     }
     .prog-card:hover {
       transform: translateY(-2px);
-      border-color: var(--gold-primary);
-      box-shadow: 0 8px 30px rgba(0,0,0,0.4);
-    }
-    .prog-card.live-card {
-      border: 1.5px solid #10B981;
-      background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(8, 21, 43, 0.95) 100%);
+      border-color: var(--champagne-gold);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
     .card-top-row {
       display: flex;
@@ -544,18 +507,17 @@
       margin-bottom: 8px;
     }
     .stage-pill {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 10px;
+      font-size: 10.5px;
       font-weight: 700;
-      letter-spacing: 1px;
-      color: var(--gold-light);
-      background: rgba(212, 168, 79, 0.1);
-      border: 1px solid rgba(212, 168, 79, 0.3);
+      letter-spacing: 0.8px;
+      color: var(--gold-soft);
+      background: rgba(226, 194, 117, 0.1);
+      border: 1px solid rgba(226, 194, 117, 0.25);
       padding: 3px 8px;
       border-radius: 6px;
     }
     .card-time {
-      font-size: 12.5px;
+      font-size: 12px;
       font-weight: 600;
       color: #cbd5e1;
     }
@@ -564,7 +526,7 @@
       font-size: 18.5px;
       font-weight: 700;
       color: #fff;
-      line-height: 1.4;
+      line-height: 1.45;
       margin-bottom: 12px;
     }
     .card-bottom-row {
@@ -575,37 +537,36 @@
       border-top: 1px solid var(--glass-subtle);
     }
     .cat-tag {
-      font-size: 10.5px;
+      font-size: 10px;
       font-weight: 700;
       letter-spacing: 0.5px;
       padding: 3px 10px;
       border-radius: 6px;
       text-transform: uppercase;
-      background: rgba(16, 58, 112, 0.4);
-      border: 1px solid rgba(255,255,255,0.1);
-      color: #E2E8F0;
+      background: rgba(6, 45, 33, 0.7);
+      border: 1px solid var(--glass-border);
+      color: var(--gold-soft);
     }
     .view-link {
-      font-size: 11.5px;
+      font-size: 11px;
       font-weight: 700;
-      color: var(--gold-light);
+      color: var(--champagne-gold);
       cursor: pointer;
       display: inline-flex;
       align-items: center;
       gap: 4px;
-      transition: gap 0.2s;
     }
-    .view-link:hover { gap: 7px; }
+    .view-link:hover { text-decoration: underline; }
 
-    /* BREAK CARD */
+    /* BREAK ITEM */
     .prog-card.break-item {
-      background: rgba(245, 158, 11, 0.05);
-      border: 1px dashed rgba(245, 158, 11, 0.35);
+      background: rgba(226, 194, 117, 0.04);
+      border: 1px dashed rgba(226, 194, 117, 0.3);
       text-align: center;
       padding: 13px;
     }
     .prog-card.break-item .card-title {
-      color: #fcd34d;
+      color: var(--gold-soft);
       font-size: 15px;
       margin-bottom: 0;
     }
@@ -614,7 +575,7 @@
     .modal-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(5, 10, 22, 0.85);
+      background: rgba(2, 10, 7, 0.85);
       backdrop-filter: blur(12px);
       z-index: 2000;
       display: flex;
@@ -630,22 +591,22 @@
       pointer-events: auto;
     }
     .modal-content {
-      background: linear-gradient(180deg, #0d1e38 0%, #050a16 100%);
-      border: 1px solid var(--gold-primary);
+      background: linear-gradient(180deg, #093325 0%, #03140e 100%);
+      border: 1px solid var(--champagne-gold);
       border-radius: 24px;
       max-width: 440px;
       width: 100%;
       padding: 30px 24px;
       text-align: center;
       position: relative;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.9);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.9), 0 0 35px rgba(226, 194, 117, 0.15);
       transform: scale(0.92);
       transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
     .modal-overlay.open .modal-content { transform: scale(1); }
     .modal-header-star {
       font-size: 20px;
-      color: var(--gold-light);
+      color: var(--champagne-gold);
       margin-bottom: 6px;
     }
     .modal-title {
@@ -656,7 +617,7 @@
       margin: 10px 0 18px;
     }
     .modal-spec-grid {
-      background: rgba(5, 10, 22, 0.6);
+      background: rgba(2, 13, 9, 0.6);
       border: 1px solid var(--glass-subtle);
       border-radius: 14px;
       padding: 14px;
@@ -674,83 +635,25 @@
       letter-spacing: 1px;
     }
     .spec-item strong {
-      font-family: 'Space Grotesk', sans-serif;
       font-size: 13.5px;
-      color: var(--gold-light);
+      color: var(--gold-soft);
     }
     .modal-close-btn {
       width: 100%;
       background: var(--gold-gradient);
       border: none;
       padding: 12px;
-      border-radius: 12px;
-      color: var(--navy-950);
-      font-family: 'Space Grotesk', sans-serif;
+      border-radius: 99px;
+      color: var(--bg-emerald-deep);
       font-weight: 700;
-      font-size: 13px;
+      font-size: 12.5px;
       letter-spacing: 1px;
       cursor: pointer;
     }
 
-    /* MOBILE NAVIGATION */
-    .mobile-bottom-nav {
-      display: none;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(5, 10, 22, 0.92);
-      backdrop-filter: blur(20px);
-      border-top: 1px solid var(--glass-subtle);
-      z-index: 1000;
-      padding: 8px 16px;
-      justify-content: space-around;
-    }
-    .m-nav-item {
-      color: var(--text-muted);
-      text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-size: 10px;
-      font-weight: 600;
-      gap: 4px;
-    }
-    .m-nav-item.active { color: var(--gold-light); }
-    .m-nav-icon { font-size: 16px; }
-
-    /* BACK TO TOP */
-    .back-to-top {
-      position: fixed;
-      bottom: 24px;
-      right: 20px;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: var(--gold-gradient);
-      color: var(--navy-950);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      cursor: pointer;
-      border: none;
-      box-shadow: 0 4px 15px rgba(212, 168, 79, 0.3);
-      z-index: 900;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s, transform 0.3s;
-    }
-    .back-to-top.show {
-      opacity: 1;
-      pointer-events: auto;
-    }
-    .back-to-top:hover { transform: translateY(-3px); }
-
-    /* FOOTER */
     footer {
       border-top: 1px solid var(--glass-subtle);
-      background: #03070f;
+      background: #020a07;
       text-align: center;
       padding: 40px 20px;
       color: var(--text-muted);
@@ -760,16 +663,13 @@
     }
     .footer-brand {
       font-family: 'Cinzel', serif;
-      font-size: 14px;
-      color: var(--gold-light);
+      font-size: 13.5px;
+      color: var(--champagne-gold);
       margin-bottom: 6px;
     }
 
     @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .mobile-bottom-nav { display: flex; }
-      body { padding-bottom: 65px; }
-      .back-to-top { bottom: 75px; }
+      .hero-mic-accent { display: none; }
       .countdown-grid { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
@@ -782,9 +682,11 @@
     <div class="preloader-title">KUTTIADY RJM 2026</div>
   </div>
 
-  <div class="bg-star-pattern"></div>
-  <div class="faint-crescent"></div>
-  <div class="mosque-silhouette"></div>
+  <!-- Background Ambience -->
+  <div class="bg-gradient-mesh"></div>
+  <div class="bg-gold-bloom"></div>
+  <div class="bg-geometric-arabesque"></div>
+  <div class="faint-mosque-silhouette"></div>
 
   <!-- Sticky Navbar -->
   <nav class="navbar" id="navbar">
@@ -792,12 +694,7 @@
       <div class="nav-brand">
         <span>✦</span> KUTTIADY RJM 2026
       </div>
-      <ul class="nav-links">
-        <li><a href="#hero">HOME</a></li>
-        <li><a href="#overview">COMPETITIONS</a></li>
-        <li><a href="#schedule">SCHEDULE</a></li>
-      </ul>
-      <div class="nav-status" id="livePill">
+      <div class="nav-status">
         <span class="status-dot"></span> COMING SOON
       </div>
     </div>
@@ -805,6 +702,16 @@
 
   <!-- Hero Section -->
   <section class="hero-section" id="hero">
+    <!-- SVG Studio Microphone Accent -->
+    <svg class="hero-mic-accent" viewBox="0 0 100 200" fill="none" stroke="currentColor">
+      <rect x="35" y="20" width="30" height="60" rx="15" fill="#e2c275" fill-opacity="0.15" stroke="#e2c275" stroke-width="2"/>
+      <line x1="35" y1="40" x2="65" y2="40" stroke="#e2c275" stroke-width="1.5"/>
+      <line x1="35" y1="55" x2="65" y2="55" stroke="#e2c275" stroke-width="1.5"/>
+      <path d="M25,50 C25,85 75,85 75,50" stroke="#e2c275" stroke-width="2" fill="none"/>
+      <line x1="50" y1="85" x2="50" y2="120" stroke="#e2c275" stroke-width="3"/>
+      <ellipse cx="50" cy="125" rx="25" ry="6" stroke="#e2c275" stroke-width="2" fill="#e2c275" fill-opacity="0.2"/>
+    </svg>
+
     <div class="hero-badge">✦ OFFICIAL COMPETITION PORTAL ✦</div>
     
     <h1 class="hero-title-main">
@@ -815,7 +722,7 @@
     <div class="hero-malayalam">കുറ്റ്യാടി റേഞ്ച് മുസാബഖ 2026</div>
     <div class="hero-date">OCTOBER 03 & 04, 2026</div>
 
-    <!-- Countdown Wrapper -->
+    <!-- Countdown -->
     <div class="countdown-wrapper">
       <div class="countdown-header" id="countdownHeader">THE COUNTDOWN BEGINS</div>
       <div class="countdown-grid">
@@ -826,52 +733,21 @@
       </div>
     </div>
 
-    <!-- Hero Actions -->
+    <!-- Hero Pill Buttons -->
     <div class="hero-btn-row">
       <a href="#schedule" class="btn-gold">EXPLORE PROGRAMMES →</a>
-      <a href="#overview" class="btn-glass">VIEW CATEGORIES</a>
+      <a href="#schedule" class="btn-glass">VIEW SCHEDULE</a>
     </div>
   </section>
 
-  <!-- Competition Categories Overview -->
-  <div class="section-wrap" id="overview">
-    <div style="text-align: center; margin-bottom: 10px;">
-      <span style="font-size: 11px; letter-spacing: 2px; color: var(--gold-primary); text-transform: uppercase;">A JOURNEY OF TALENT</span>
-      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 26px; margin-top: 4px;">COMPETITION CATEGORIES</h2>
-    </div>
-
-    <div class="overview-grid">
-      <div class="overview-card">
-        <span class="overview-icon">📖</span>
-        <div class="overview-title">QUR'AN</div>
-        <div class="overview-sub">Recitation & Hifz</div>
-      </div>
-      <div class="overview-card">
-        <span class="overview-icon">🎤</span>
-        <div class="overview-title">SPEECH</div>
-        <div class="overview-sub">Elocution & Presentations</div>
-      </div>
-      <div class="overview-card">
-        <span class="overview-icon">🧠</span>
-        <div class="overview-title">QUIZ</div>
-        <div class="overview-sub">Knowledge Competitions</div>
-      </div>
-      <div class="overview-card">
-        <span class="overview-icon">✍️</span>
-        <div class="overview-title">ACADEMIC</div>
-        <div class="overview-sub">Creative & Writing Arts</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Complete 2-Day Programme Schedule Timeline -->
+  <!-- Complete Schedule Timeline -->
   <section class="section-wrap" id="schedule">
-    <div style="text-align: center; margin-bottom: 10px;">
-      <span style="font-size: 11px; letter-spacing: 2px; color: var(--gold-primary); text-transform: uppercase;">STAGE SCHEDULES & TIMINGS</span>
-      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 28px; margin-top: 4px;">COMPETITION TIMELINE</h2>
+    <div style="text-align: center; margin-bottom: 12px;">
+      <span style="font-size: 11px; letter-spacing: 2px; color: var(--champagne-gold); text-transform: uppercase;">STAGE SCHEDULES & TIMINGS</span>
+      <h2 style="font-family: 'Cinzel', serif; font-size: 26px; margin-top: 4px;">COMPETITION TIMELINE</h2>
     </div>
 
-    <!-- Day Selector Buttons -->
+    <!-- Day Switcher -->
     <div class="day-switch-row">
       <div class="day-selector-btn active" onclick="switchDay('2026-10-03')">
         <span class="d-tag">Day 01</span>
@@ -883,7 +759,7 @@
       </div>
     </div>
 
-    <!-- Filter Bar -->
+    <!-- Search & Filters -->
     <div class="filter-bar">
       <input type="text" id="scheduleSearch" class="search-box" placeholder="🔍 Search programme, category or stage..." oninput="renderTimeline()">
       <div class="stage-filters">
@@ -897,7 +773,7 @@
     <div class="timeline-wrap" id="timelineContainer"></div>
   </section>
 
-  <!-- Interactive Details Modal -->
+  <!-- Details Modal -->
   <div class="modal-overlay" id="detailsModal" onclick="closeModalOnBackdrop(event)">
     <div class="modal-content">
       <div class="modal-header-star">✦</div>
@@ -926,16 +802,6 @@
       <button class="modal-close-btn" onclick="closeModal()">CLOSE DETAILS</button>
     </div>
   </div>
-
-  <!-- Mobile Bottom Nav -->
-  <div class="mobile-bottom-nav">
-    <a href="#hero" class="m-nav-item active"><span class="m-nav-icon">⌂</span>Home</a>
-    <a href="#schedule" class="m-nav-item"><span class="m-nav-icon">▣</span>Schedule</a>
-    <a href="#overview" class="m-nav-item"><span class="m-nav-icon">🏆</span>Categories</a>
-  </div>
-
-  <!-- Back to Top -->
-  <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
 
   <!-- Footer -->
   <footer>
@@ -1019,7 +885,6 @@
     let selectedDay = '2026-10-03';
     let currentStage = 'all';
 
-    // Preloader Dismiss
     window.addEventListener('load', () => {
       setTimeout(() => {
         const loader = document.getElementById('preloader');
@@ -1028,17 +893,10 @@
       }, 700);
     });
 
-    // Navbar Scroll & Back to Top
     window.addEventListener('scroll', () => {
       const nav = document.getElementById('navbar');
-      const btt = document.getElementById('backToTop');
-      if (window.scrollY > 60) {
-        nav.classList.add('scrolled');
-        btt.classList.add('show');
-      } else {
-        nav.classList.remove('scrolled');
-        btt.classList.remove('show');
-      }
+      if (window.scrollY > 60) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
     });
 
     function formatTime12(str) {
@@ -1069,7 +927,6 @@
     function renderTimeline() {
       const container = document.getElementById('timelineContainer');
       const query = document.getElementById('scheduleSearch').value.trim().toLowerCase();
-      const now = new Date();
 
       const filtered = competitionEvents.filter(ev => {
         const matchDay = ev.day === selectedDay;
@@ -1086,14 +943,6 @@
       }
 
       container.innerHTML = filtered.map(ev => {
-        const [sH, sM] = ev.start.split(':').map(Number);
-        const [eH, eM] = ev.end.split(':').map(Number);
-        const [y, m, d] = ev.day.split('-').map(Number);
-
-        const startObj = new Date(y, m - 1, d, sH, sM, 0);
-        const endObj = new Date(y, m - 1, d, eH, eM, 0);
-        const isLive = now >= startObj && now <= endObj;
-
         if (ev.isBreak) {
           return `
             <div class="timeline-node">
@@ -1107,9 +956,9 @@
         }
 
         return `
-          <div class="timeline-node ${isLive ? 'live' : ''}">
+          <div class="timeline-node">
             <div class="node-dot"></div>
-            <div class="prog-card ${isLive ? 'live-card' : ''}">
+            <div class="prog-card">
               <div class="card-top-row">
                 <span class="stage-pill">STAGE 0${ev.stage}</span>
                 <span class="card-time">${formatTime12(ev.start)} – ${formatTime12(ev.end)}</span>
@@ -1125,7 +974,6 @@
       }).join('');
     }
 
-    // Modal Control
     function openModal(id) {
       const item = competitionEvents.find(e => e.id === id);
       if (!item || item.isBreak) return;
@@ -1148,18 +996,13 @@
       if (e.target.id === 'detailsModal') closeModal();
     }
 
-    // Countdown to Day 1: October 03, 2026 08:00 AM
     function updateCountdown() {
       const target = new Date(2026, 9, 3, 8, 0, 0).getTime();
       const now = new Date().getTime();
       const diff = target - now;
 
-      const livePill = document.getElementById('livePill');
-
       if (diff <= 0) {
         document.getElementById('countdownHeader').innerText = "COMPETITIONS ARE LIVE";
-        livePill.innerHTML = '<span class="status-dot"></span> LIVE NOW';
-        livePill.classList.add('live');
         return;
       }
 
@@ -1175,7 +1018,6 @@
     }
 
     setInterval(updateCountdown, 1000);
-    setInterval(renderTimeline, 30000);
     updateCountdown();
     renderTimeline();
   </script>
